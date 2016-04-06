@@ -1,0 +1,106 @@
+	/*基本定义*/
+	.blueco{
+		color: #2EAEDF;
+	}
+	.shadeco{
+		color: #888888;
+	}
+	p{
+		padding: 2px 0px;
+	}
+	.weiwen-btn-div{
+		text-align: center;margin-top: 5px;border: 0px;
+	}
+	.weiwen-btn{
+		width: 90%;
+		 border: #47a1ec;
+		 height:40px;
+		 color: #FFFFFF;
+	}
+	.weiwen-btn-bclan{
+		background-color: #2eaedf;
+	}
+	.weiwen-btn-bcred{
+		background-color: #e72020;
+	}
+	.repdetail{
+		border-top: 1px solid #EEEEEE;
+		padding: 10px 0px;
+	}
+	.repdetail div{
+		line-height: 26px;
+	}
+	.tiply{
+		margin: 10px 0px;vertical-align: middle;
+	}
+	/*预约信息*/
+	.adc{
+		padding: 10px 0px;margin-bottom: 15px;height: 110px;background-color: #FFFFFF;
+	}
+	.doc-indro{
+		position: relative;top: 20px;
+	}
+	.doc-hospital{
+		/*line-height: 30px;*/
+	}
+	.order-time{
+		text-align: center;border: 1px dotted #007AFF;border-radius: 8px;line-height: 30px;margin: 3% 5%;
+	}
+	.order-time p{
+		line-height: 30px;margin: 0px;
+	}
+	.register-info{
+		margin-top: 10px;
+	}
+	.iphon{
+		text-align:center;
+	}
+	.register-rule{
+		margin-top: 10px;
+	}
+	.register-rule p{
+		text-align: right;line-height: 30px;
+	}
+	/*预约列表*/
+
+	.register-icon{
+		max-height:20px;height:20px;width:20px;position: relative ;top: 4px;
+	}
+	.register-Ltimer{
+		font-size: 14px;line-height: 26px;
+	}
+	.register-state{
+		font-size: 14px;line-height: 26px;
+	}
+	/*重新定义项*/
+	.mui-icon-forward:before{
+		font-size: 19px;
+		color: #2EAEDF;
+	}
+	.mui-table-view:before{
+		background-color:#FFF;
+	}
+	.mui-table-view-cell{
+		padding: 3px 15px;
+	}
+	/*重新定义*/
+	.mui-input-row label{
+		width:45%
+	}
+	.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+		width: 55%;
+	}
+	/*图片切圆*/
+	.pdiv{
+		width: 80px;
+		height: 80px;
+		float:left;
+
+		margin-left:10px;
+		margin-right: 20px;
+		border-radius:50%;
+		overflow: hidden;
+		border: 1px solid #FFF;
+		text-align:center; position:relative;				
+	}
+	.pdiv img{position:relative; /*vertical-align:text-top;*/}

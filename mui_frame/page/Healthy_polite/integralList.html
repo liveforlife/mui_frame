@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>积分兑换商品</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	/*var scale = 1 / devicePixelRatio;
+		document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';*/
+    </script>
+    <style>
+	    body{
+	    	font-size: 12px;
+	    }
+	    p{
+	    	font-size: 12px;
+	    }
+		h4{
+			font-weight: normal;
+			font-size: 17px;
+		}
+		/*.mui-table-view.mui-grid-view{
+			padding-right: 0px;	
+		}*/
+		.mui-table-view.mui-grid-view .mui-table-view-cell{
+			font-size: 12px;
+			/*border-top: 1px solid #eee;
+			border-right: 1px solid #EEEEEE;*/
+			/*margin-right: 0px;
+			padding: 11px 7px;
+			border-bottom: 0px;
+			padding-bottom: 5px;*/
+		}
+		.mui-table-view-cell{
+			
+		}
+		.mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){
+			margin-left:-7px;margin-right: -7px;
+		}
+		.mui-table-view-cell>a:not(.mui-btn){
+			margin-left:-7px;margin-right: -7px;padding-bottom:7px;
+		}
+		#myIntegal{line-height: 44px;text-align: left;padding-left:15px ;color: #2b2b2b;}
+    	.commo_myInte{color: #66cc66;font-size: 1.3em;margin-left: 15px;vertical-align:middle}
+    	.mui-icon-forward:before{vertical-align: text-bottom;margin: 0px;color: #66cc66;font-size: 16px;}
+    	#myHistory{line-height: 44px;text-align: right;padding-right: 10px;}
+    	#myHistory span{color:#afafaf;border:1px solid #afafaf;padding: 5px 10px;border-radius: 4px;}
+    	
+    	.commo_poli_all{background-color: #FFFFFF;}
+    	.commo_poli_img{margin: 0px;margin-left: 10px;padding-top: 10px;font-size: 1.4em;color: #888888;}
+    	.commo_all{text-align: left;}
+    	.commo_all_name{font-weight: 400;font-size: 1em;color: #2b2b2b;white-space:nowrap;text-overflow: ellipsis;overflow: hidden;}
+    	.commo_all_num{color: #f34258;padding-right: 5px;font-size: 1.3em;}
+    	.commo_all_str{font-size: .6em;color:#888888}
+    	.commo_saleout{filter:alpha(opacity=40); -moz-opacity:0.4; -khtml-opacity: 0.4; opacity: 0.4;}/*售完或结束的商品半透明*/
+    	.commo_saleout_mask{width: 40px;background-color: rgba(0,0,0,0.5);height: 40px;position:absolute;left: 45%;top:23%;text-align: center;vertical-align: middle;line-height: 40px;color: #FFF;font-size: 1.1em;}
+    	.line{height: 10px;border-top:1px solid #E1E1E1 ;background-color: #F7F9F8}
+		/*.mui-table-view-cell{padding-top: 5px;padding: 11px 10px;}*/
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="mui-table-view mui-grid-view clearStyle"><!--功能区-->
+			<div id="myIntegal" class="mui-table-view-cell mui-media mui-col-xs-7 clearStyle" onclick="myIntegral()">
+				我的积分<span class="commo_myInte">0</span><span class="mui-icon mui-icon-forward"></span>
+			</div>
+			<div id="myHistory" class="mui-table-view-cell mui-media mui-col-xs-5 clearStyle" onclick="myHistory()">
+				<span>我的礼品</span> 
+			</div>
+		</div>
+		<div class="line"　style="border-top: 0px"></div>
+		<div class="commo_poli_all" ><!--兑换商品-->
+				<ul class="mui-table-view mui-grid-view" style="padding-left: 0px;background-color: #FFF;">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+				        <a href="<%=basePath%>/webapi/searchPhar" style="">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <!--<li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num">50</span><span class="commo_all_str">积分</span></p>
+				            </div>
+				        </a>
+				    </li>-->
+				</ul> 
+			
+		</div>
+	</div>
+	<script>
+	var slnum='',num='';
+		function setProcess(){  
+			  var processbar = document.getElementById("processbar");  
+			  processbar.style.width = parseInt((slnum/num)*100)+ "%";
+			  /*processbar.innerHTML = processbar.style.width;  */
+			  /*if(processbar.style.width == "100%"){  
+			     window.clearInterval(bartimer);  
+			  } */ 
+	 	}  
+		/*var bartimer = window.setInterval(function(){setProcess();},100);  */
+		window.onload = function(){  
+		   slnum=875;
+		   num=900;
+		   setProcess();
+		} 
+	</script>
+</body>
+</html>

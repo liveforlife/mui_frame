@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+			<link href="css/mui.min.css" rel="stylesheet" />
+		<title>nativeUI Example</title>
+		<script src="js/mui.min.js"></script>
+		<style>
+		.mui-input-group .mui-input-row:after{
+			height: 0px
+		}
+			
+		</style>
+		<script type="text/javascript">
+		
+// H5 plus事件处理
+function plusReady(){
+}
+if(window.plus){
+	plusReady();
+}else{
+	document.addEventListener("plusready",plusReady,false);
+}
+// 选择日期
+function pickDate(){
+	plus.nativeUI.pickDate( function(e){
+		var d=e.date;
+		console.log( "选择的日期："+d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate() );
+	},function(e){
+		console.log( "未选择日期："+e.message );
+	});
+}
+		</script>
+	</head>
+	<body>
+	弹出系统日期选择对话框
+	<br/>
+	<button onclick="pickDate()">选择日期</button>
+	
+	<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="margin-bottom: 50px;height: 200px;">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-col-xs-3" >
+							<img class=""  src="img/touxiang.png"  >
+							<p style="margin: 0px;">所在科室</p>
+							<p>1000咨询</p>
+						</a>
+						<a class="mui-control-item" href="#item2mobile">
+							热点
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							北京
+						</a>
+						<a class="mui-control-item" href="#item4mobile">
+							社会
+						</a>
+						<a class="mui-control-item" href="#item5mobile">
+							娱乐
+						</a>
+						<a class="mui-control-item" href="#item6mobile">
+							科技
+						</a>
+					</div>
+				</div>
+				<li class="mui-table-view-cell mui-media tab6">
+					<div class=" mui-pull-left mui-col-xs-4">
+						<div class="pdiv"><img class="mui-media-object mui-pull-left t-img"    style=""></div>
+						<p style="color：#888888;font-size:.7em;margin-top:80px;margin-left:25px">&nbsp粉丝</p>
+					</div>
+					<span style="z-index:11;position:absolute;float:left;margin-left:-50px;margin-top:62px;"><img src="<%=basePath%>/images/icon_online.png" style="width:17px"/></span>
+					<span class="clear"></span>
+					<div class="mui-media-body"><div style="height: 25px;"><span class="black" style="font-size:1.1em">FGDFGDG</span><span class="mui-pull-right"><img src="<%=basePath%>/images/statusCare.png" width="30"/></span></div>
+					<div><span class="blue">GDFGDGFD</span></div><p style="white-space: normal;height: 55px;border-top:1px solid #e9edee;padding-top:10px" class="mui-ellipsis-2">GFDGDFGD</p></div>
+				</li>
+				
+				
+	<!--<div id="popover" class="mui-popover" style="height: 150px;left: 10%;width: 80%">-->
+		<div class="mui-content">
+			<div  style="text-align:left;color:#2eaedf;font-size: 19px ;border-bottom: 1px solid #2eaedf; padding: 10px 10px">取消用车</div> 
+			<div class="mui-card" style="padding:0px ;margin: 0px;border: 0px">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-radio mui-left">
+						<label>病情好转，已不需要用车</label>
+						<input name="reason" type="radio" value="病情好转，已不需要用车" checked />
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>已自行就医</label>
+						<input name="reason" type="radio" value="已自行就医" />
+					</div>
+					<div class="mui-input-row mui-radio mui-left" style="height: 100px">
+						<label>其他原因</label>
+						<input name="reason" type="radio" value="其他原因" />
+						<textarea class="mui-input-row " id="symptom" name=""   placeholder="请简述症状" style="font-size: 1em;margin: 0px;margin-bottom: 10px;border: 1px solid #CCC; width: 80%;margin-right: 5%;"></textarea>
+					</div>
+				</form>
+				<div class="row" style="text-align:center;margin-top:5%;margin-bottom:5%;">
+					<div class="mui-pull-left" style="width: 50%;border-radiu:0px">
+						<button id="cancel" style="color:#2eaedf;width: 100%;border: 0px;border-top:1px solid #CCC;border-right:1px solid #CCC;border-radiu:0px;height: 40px">取消</button>
+					</div>
+					<div class=" mui-pull-right" style="width: 50%;border-radiu:0px">
+					
+						<button id="confirm" style="color:#888888;width: 100%;border: 0px;border-top:1px solid #CCC;border-radiu:0px;height: 40px">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	
+	</body>
+</html>

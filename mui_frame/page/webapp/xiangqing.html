@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>药师详情界面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+		.clear{
+			clear: both;
+			font-weight:200 ;
+		}
+		mui-content{
+				background-color: #FFFFFF;
+				box-shadow:0 0 1px rgba(0, 0, 0, 0);
+			}
+			.mui-bar{
+				background-color: #FFFFFF;
+				box-shadow:0 0 1px rgba(0, 0, 0, 0);
+			}
+			.mui-bar div{
+				margin: auto;
+			}
+			.weiwen-btn-div{
+				text-align: center;margin-top: 10px;border: 0px;
+			}
+			.weiwem-xq-gray{
+				background-color:#E9EEED;
+				border-top: 1px solid #e1e1e1;
+				height: 30px;
+			}
+			.weiwem-xq-gray div{
+				text-align: center;
+				vertical-align: middle;
+			}
+			.weiwem-xq-gray img{
+				vertical-align: middle;
+			}
+			.weiwem-xq-gray span{
+				height: 30px;
+				line-height: 30px;
+			}
+			.weiwen-btn{
+				width: 90%;
+				background-color: #2eaedf;
+				 border: #47a1ec;
+				 height:40px;
+				 color: #FFFFFF;
+			}
+			.weiwen-xq-pj{
+				
+			}
+			.weiwen-qa-rq{
+				margin-left: 20px;color: #b4b4b4;
+			}
+			.weiwen-xq-p{
+				margin: 10px 20px;
+				color: #525755;
+			}
+			.weiwen-xq-hf{
+				background-color: #d4eff7;
+				text-indent: 20px;
+			}
+			.weiwen-xq-nm:first-child{
+				color: #c8c8c8;
+			}
+			.weiwen-xq-nm:last-child{
+				color: #efaa58;
+			}
+			.sanjiao{
+				width: 0;
+			    height: 0;
+			    margin-left: 30px;
+			    margin-top:2px ;
+			    border-left: 10px solid transparent;
+			    border-right: 10px solid transparent;
+			    border-bottom: 13px solid #D4EFF7;
+			}
+			.arrange-timer{
+				font-size: 12px;border-bottom:1px solid #e1e1e1 ;margin:0% 2%;
+			}
+			.arrange-tr{
+				height: 50px;border-bottom:1px solid #e1e1e1 ;
+			}
+			.arrange-td{
+				width: 11%;padding: 0% 0.5%;min-width: 12px;max-width: 35;text-align: center;
+			}
+			.timer-btn{
+				width: 30px;height: 30px;font-size: 12px;margin: 0px;padding: 0px;background-color: #66cbff;color: #FFFFFF;
+			}
+			.mui-icon-arrowright{
+				color: #55b4e1;
+			}
+			.info_type{
+				display: inline-block;width: 22%;border-right:1px solid #c7c7c7 ;
+			}
+			.info_typenum{
+				margin: 0px;color: #3bb3e1;font-size: 1.1em;
+			}
+			.info_typechara{
+				margin: 0px;font-size:13px 
+			}
+		</style>
+		</head>
+	<body>
+		<header  class="mui-bar mui-bar-nav">
+			<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left" datasrc="index">
+				<span class="mui-icon mui-icon-left-nav"></span>首页
+			</button>
+			<h1 class="mui-title">医生详情</h1>
+		</header>
+		<!--<nav class="mui-bar mui-bar-tab">
+			<div class="row weiwen-btn-div">
+				<button class="weiwen-btn">免费咨询</button>
+			</div?>
+		</nav>-->
+		<p style="height: 2px;background-color: #000000;padding: 0px;margin: 0px;"></p>
+		<div class="mui-content">
+			<p style="height: 2px;background-color: #000000;padding: 0px;margin: 0px;"></p>
+			<div class="row" style="background-color: #2eaedf;padding: 0px;margin: 0px;">
+				<p style="height: 2px;background-color: #000000;padding: 0px;margin: 0px;"></p>
+        		<div class="pdiv">
+        			<img class="t-img" id="avatar"/>
+        		</div>
+        		<p style="height: 2px;background-color: #000000;padding: 0px;margin: 0px;"></p>
+        		<div class="mui-col-xs-12" >
+        			<p style="padding-top:15px;padding-left:10px;font-size:1.4em;color: #FFF;">dsfsfsd</p>
+        			<div style="padding-top:5px;font-size:1em;color: #FFF;">
+        				<p><span style="color: #FFF;">医师</span><span style="color: #FFF;">全科医生</span></p>
+        				<p style="color: #FFF;">成都市第一人民医院</p>
+        			</div>
+        		</div>
+			</div>
+			<div style="top: 50px;right: 10px;position: absolute;">
+				<img src="img/notcare.png" width="70px"/>
+			</div>
+			<div class="clear"></div>
+			<!--点赞数和评论数总结-->
+			<div class="row" style="text-align: center;margin: 5px 0px;">
+				<div class="info_type" style="">
+					<p class="info_typenum" style="">4.8</p>
+					<p class="info_typechara" style="">评分</p>
+				</div>
+				<div class="info_type">
+					<p style="margin: 0px;color: #3bb3e1;font-size: 1.1em;">198</p>
+					<p style="margin: 0px;font-size:13px ">评论</p>
+				</div>
+				<div style="display: inline-block;width: 22%;border-right:1px solid #c7c7c7 ;">
+					<p style="margin: 0px;color: #3bb3e1;font-size: 1.1em;">4.8</p>
+					<p style="margin: 0px;font-size:13px ">服务</p>
+				</div>
+				<div style="display: inline-block;width: 22%;">
+					<p style="margin: 0px;color: #3bb3e1;font-size: 1.1em;">198</p>
+					<p style="margin: 0px;font-size:13px ;">粉丝</p>
+				</div>
+			</div>
+			<!--简介模块-->
+			<div class="clear"></div>
+			<div class="row weiwem-xq-gray">
+				<div class="mui-col-xs-2 mui-pull-left" >
+					<img src="../images/jianjie@2x.png" style="margin: auto;" width="20px" />
+				</div>
+				<span class="mui-col-xs-10">简介</span>
+				<div class="clear"></div>
+			</div>
+			<p class="weiwen-xq-p">某某某，男，全科医生，毕业于成都中医药大学临床医学院， 中西医结合全科医学专业，本科学历。六年华西医院临床工作经验。对于内科常见病和多发病具有丰富的临床经验。</p>
+			<!--擅长内容-->
+			<div class="row weiwem-xq-gray">
+				<div class="mui-col-xs-2 mui-pull-left" >
+					<img src="../images/shanchang@2x.png" width="20px" />
+				</div>
+				<span class="mui-col-xs-10">擅长</span>
+				<div class="clear"></div>
+			</div>
+			<p class="weiwen-xq-p">在内科常见病和多发病具有丰富的临场经验</p>
+			<!--排班时间-->
+			<div class="row weiwem-xq-gray">
+				<div class="mui-col-xs-2 mui-pull-left" >
+					<img src="../images/shanchang@2x.png" width="20px" />
+				</div>
+				<span class="mui-col-xs-10">排班时间</span>
+				<div class="clear"></div>
+			</div>
+			<!--<p class="weiwen-xq-p">在内科常见病和多发病具有丰富的临场经验</p>-->
+				<table id="week1" class="arrange-timer">
+					<tr class="arrange-tr" >
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td">
+							<span class="mui-icon mui-icon-arrowright" onclick="nextweek(1)"></span>
+						</td>
+					</tr>
+					<tr class="arrange-tr" >
+						
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td">
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td">上午</td>
+					</tr>
+					<tr class="arrange-tr">
+						<td class="arrange-td">
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td">
+						</td>
+						<td class="arrange-td">下午</td>
+					</tr>
+				</table>
+				<table id="week2" style="font-size: 12px;display: none;">
+					<tr class="arrange-tr" >
+						<td class="arrange-td" >
+							<span class="mui-icon mui-icon-arrowleft" onclick="nextweek(2)"></span>
+						</td>
+						<td class="arrange-td" >07/29 周四</td>
+						<td class="arrange-td" >07/29 周五</td>
+						<td class="arrange-td" >07/29 周六</td>
+						<td class="arrange-td" >07/29 周日</td>
+						<td class="arrange-td" >07/29 周一</td>
+						<td class="arrange-td" >07/29 周二</td>
+						<td class="arrange-td" >07/29 周三</td>
+					</tr>
+					<tr class="arrange-tr">
+						<td class="arrange-td" >上午</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						
+					</tr>
+					<tr class="arrange-tr">
+						<td class="arrange-td" >下午</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+						<td class="arrange-td" >
+							<button class="timer-btn">号</button>
+						</td>
+					</tr>
+				</table>
+				<div>
+					<p>点击预约</p>
+					<p>预约挂号需提前一日以上预约</p>
+				</div>
+			<!--咨询评价模块-->
+			<div class="row weiwem-xq-gray">
+				<div class="mui-col-xs-2 mui-pull-left">
+					<img src="../images/zixun@2x.png" width="20px" />
+				</div>
+				<span class="mui-col-xs-10">咨询评价</span>
+				<div class="clear"></div>
+			</div>
+			<!--一次咨询评价内容-->
+			<div class="weiwen-xq-pj">
+				<div class="row weiwen-qa-rq" >
+					<span>2015-5-26</span>
+					<span>17.47</span>
+				</div>
+				<div class="row">
+					<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+				</div>
+				<div >
+					<span class="sanjiao"></span>
+					<p class="weiwen-xq-p weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+				</div>
+				<div>
+					<div class="mui-pull-right weiwen-xq-nm">
+						<span>匿名</span>
+						<span>4.8</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<div class="weiwen-xq-pj">
+				<div class="row weiwen-qa-rq" >
+					<span>2015-5-26</span>
+					<span>17.47</span>
+				</div>
+				<div class="row">
+					<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+				</div>
+				<div >
+					<p class="weiwen-xq-p weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+				</div>
+				<div>
+					<div class="mui-pull-right weiwen-xq-nm">
+						<span>匿名</span>
+						<span>4.8</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>			
+		</div>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+	function nextweek(index){
+		if(index==1){
+			document.getElementById("week1").style.display="none";
+			document.getElementById("week2").style.display="block";
+		}else{
+			document.getElementById("week2").style.display="none";
+			document.getElementById("week1").style.display="block";
+		}
+		
+	}
+</script>
+	</body>
+</html>

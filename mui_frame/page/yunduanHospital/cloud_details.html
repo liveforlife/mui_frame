@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>药师详情界面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+		body{
+			font-family: "微软雅黑","Helvetica Neue",Helvetica,sans-serif;
+		}
+		.clear{
+			clear: both;
+		}
+		.black{
+			color: #2e2d2d;
+		}
+		.orange{
+			color: #e86a44;
+		}
+		.mui-content{
+				background-color: #FFFFFF;
+				box-shadow:0 0 1px rgba(0, 0, 0, 0);
+			}
+			.mui-bar{
+				background-color: #FFFFFF;
+				box-shadow:0 0 1px rgba(0, 0, 0, 0);
+			}
+			.mui-bar div{
+				margin: auto;
+			}
+			.weiwen-btn-div{
+				text-align: center;margin-top: 10px;border: 0px;
+			}
+			.weiwen-btn{
+				width: 90%;
+				background-color: #2eaedf;
+				 border: #47a1ec;
+				 height:40px;
+				 color: #FFFFFF;
+			}
+			.weiwen-xq-p{
+				margin: 5px 10px;
+				text-indent: 20px;
+				color: #525755;
+			}
+			.cloud_name{
+				margin-left:10px ;
+			}
+			.cloud_name p{
+				margin-bottom: 5px;;
+			}
+			.cloud_name_font{
+				font-size: 1.2em;
+				font-weight:100;
+			}
+			.line{
+				background-color:#E9EEED;
+				height: 5px;
+			}
+			.cloud_det{
+				margin: 5px 10px;
+			}
+		</style>
+		</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left" datasrc="index">
+				<span class="mui-icon mui-icon-left-nav"></span>医院详情
+			</button>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<div class="row weiwen-btn-div mui-col-xs-4 mui-pull-left">
+				<button class="weiwen-btn" onclick="javascript:mui.toast('即将开放，敬请期待哦^_^');">预约挂号</a></button>
+			</div>
+			<div class="row weiwen-btn-div mui-col-xs-4 mui-pull-left">
+				<button class="weiwen-btn">咨询医生</button>
+			</div>
+			<div class="row weiwen-btn-div mui-col-xs-4 mui-pull-left">
+				<button class="weiwen-btn" onclick="javascript:mui.toast('即将开放，敬请期待哦^_^');">科室介绍</button>
+			</div>
+		</nav>
+		<div class="mui-content">
+			<div class="row">
+				<img class="" style="width: 100%;" src="../img/cloud/logo(2).jpg" />
+			</div>
+			<div class="clear"></div>
+			<!--医院名-->
+			<div class="row cloud_name">
+				<p class="black cloud_name_font">台湾秀传医疗</p>
+				<p class="orange">三级甲等</p>
+			</div>
+			<!--医院简介模块-->
+			<div class="clear"></div>
+			<div class="line"></div>
+			<div class="row cloud_det">
+				<span class="mui-col-xs-10">医院简介</span>
+				<div class="clear">
+				</div>
+			</div>
+			<p class="weiwen-xq-p">贵州医科大学附属医院建于1941年10月25日，是西南地区创办较早的高等医学院校附属医院之一，医院创建于抗战时期，扎根于黔中大地，成长于建国之后，发展于改革开放。</p>
+			<p class="weiwen-xq-p">医院占地面积12.8万㎡，建筑面积13.4万㎡，医院编制床位2035张，实际开放床位2000至2300张。有52个</p>
+			<div class="line"></div>
+			<div class="row cloud_det">
+				<span class="mui-col-xs-10">医院地址</span>
+				<div class="clear">
+				</div>
+			</div>
+			<p class="weiwen-xq-p">地　　址：贵阳市贵医街28号</p>
+			<p class="weiwen-xq-p">电　　话：0851-86855119(总机)</p>
+
+		</div>
+<script src="../js/mui.min.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
+
+	</body>
+</html>

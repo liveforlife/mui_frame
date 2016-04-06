@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>私人医生套餐</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style>
+		body{background-color: #FFF;}
+		p{margin-bottom: 0px;}
+		.mui-bar-tab~.mui-content{padding-bottom: 1.06rem;}
+		.mui-bar{box-shadow:0 0 0px}
+    	.weiwen-btn-div{
+			text-align: center;margin-top: 5px;border: 0px;padding: 0rem 0.21rem;;
+		}
+		.weiwen-btn{
+			width: 100%;
+			 border: #47a1ec;
+			 height:1.06rem;
+			 color: #FFFFFF;
+			 font-size: 0.42rem
+		}
+		.weiwen-btn-bcred{
+			background-color: #2eaedf;
+		}
+		.borderT{border-bottom:0.01rem solid #E1E1E1;}
+		.borderA{border:0.01rem solid #E1E1E1;}
+		
+		.mui-content{background-color: #FFF;}
+	   	.mui-media-body{padding:0.48rem 0.48rem 0.4rem 0.48rem ;}
+    	.private_num{font-size: 0.34rem;color: #2EAEDF;line-height: 1.4;padding-bottom: 0.48rem;margin-bottom: 0px;}
+    	.private_content{font-size: 0.34rem;line-height: 1.4;color: #2b2b2b;margin-bottom: 0px;}
+    	.private_range{line-height: 1.4;padding: 0.4rem 0rem 0.4rem 0.34rem;}
+    	.private_ran{font-size: 0.37rem;color: #d2d2d2;}
+    	.private_ran span{color: #2B2B2B;}
+    	.private_fee{display: inline-block;float: right;padding-right: 0.34rem;}
+    	.privte_fir{font-size: 0.24rem;color: #d2d2d2;text-decoration: line-through;}
+    	.private_sec{font-size: 0.48rem;color: #f34258;}
+    	.private_sec span{font-size: 0.24rem;}
+    	.line{
+    		color: #E1E1E1;height: 0.01rem;background-color: #E1E1E1;margin: 0rem 0.21rem;
+    	}
+    	.block-mar{height: 0.26rem;background-color: #f7f9f8;}
+    	.detail-title{font-size: 0.34rem;color: #888888;margin:0.33rem 0rem 0.33rem 0.37rem ;}
+    	.detail_image{height:0.4rem;padding-right: 0.24rem;vertical-align:text-bottom}
+    	.detail-comcon{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;line-height: 1.1;}
+    	.detail-comcon1{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;}
+		.weiwen-qa-rq{color: #B3B3B3;line-height: 1.4;}
+		.weiwen-xq-p{color: #525755;font-size: 0.34rem;line-height: 1.4;margin-top:0.28rem ;}
+		.weiwen-xq-hf{color: #525755;font-size: 0.34rem;line-height: 1.4;background-color: #d4eff7;padding:0.22rem 0.2rem ;margin-top: 0.26rem;}
+		.weiwen-xq-n{color: #d6d6d6;}
+		.weiwen-xq-m{color: #f34258;}
+		.sanjiao{
+			width: 0;
+		    height:0;
+		  	margin-left: 0.32rem;
+		    margin-top:0.13rem ;
+		    border-left: 0.14rem solid transparent;
+		    border-right: 0.14rem solid transparent;
+		    border-bottom: 0.16rem solid #D5EFF9;
+		}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="row weiwen-btn-div">
+			<button class="weiwen-btn weiwen-btn-bcred"  onclick="ab()">选择您的私人医生</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div><!--广告栏,尺寸大小：2:1;700:350-->
+			<img src="../img/private/detail_back.png"  style="width: 100%;margin-bottom: -7px;"/>
+		</div>
+		<div class="borderT">
+			<div class="mui-media-body">
+				<p class="private_num">317人使用<img class="mui-pull-right" style="height:0.4rem;" src="../img/private/detail_service.png"/></p>
+				<p class="private_content">固定、专属医生药师团队服务，7*24小时实时咨询，不限次数硬食品咨询、个人健康档案建立和维护，体检报告、就诊记录解读</p>
+			</div>
+			<div class="line"></div>
+			<div class="private_range">
+				<span class="private_ran">服务范围：<span>全国</span></span>
+				<p class="private_fee">
+					<span class="privte_fir">&#165;3000/年</span>&nbsp;&nbsp;
+					<span class="private_sec">&#165;3000/<span >年</span></span>
+				</p>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<p class="detail-title"><img class="detail_image" src="../img/private/detail_term.png"/>服务期限</p>
+			<div class="line"></div>
+			<p class="detail-comcon">365天</p>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA">
+			<p class="detail-title"><img class="detail_image" src="../img/private/detail_apply.png"/>适用人群</p>
+			<div class="line"></div>
+			<p class="detail-comcon">适用于所有家庭感到了寄过来的军阀割据福建师范婚纱礼服控件是</p>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA">
+			<p class="detail-title"><img class="detail_image" src="../img/private/icon_content.png"/>服务内容</p>
+			<div class="line"></div>
+			<ul class="detail-comcon" style="line-height: 1.4;">
+				<li>免费咨询</li>
+				<li>7*24电话</li>
+				<li>体检报告解读</li>
+				<li>处方查看</li>
+				<li>定期回访</li>
+				<li>测量数据分析</li>
+			</ul>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<p class="detail-title"><img class="detail_image" src="../img/private/detail_evaluate.png"/>服务评价</p>
+			<div class="line"></div>
+			<div class="detail-comcon"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+					<div >
+						<span class="sanjiao"></span>
+						<p class="weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+					</div>
+				</div>	
+			</div>
+			<div class="line"></div>
+			<div class="detail-comcon1"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+					<div >
+						<span class="sanjiao"></span>
+						<p class="weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	document.addEventListener()
+	function ab(){
+		window.location.href='doclist.html'
+	}
+</script>
+</body>
+
+</html>

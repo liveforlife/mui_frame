@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../../css/mui.min.css">
+	<style>
+	body{
+		font-size: 14px;
+	}
+	/*定义基本的颜色，字体等*/
+		.shade{
+			color: #888888;
+		}
+		.blackcol{
+			color: #2b2b2b;
+		}
+		.blueco{
+			color: #2eaedf;
+		}
+		.yellowco{
+			color: #faa701;
+		}
+		.greenco{
+			color: #0ac40e;
+		}
+		.userCar{
+			background-color:#ff5534 ;padding: 2px 13px;color: #FFFFFF;border-radius: 3px;font-size: .9em;
+		}
+		.carImg{
+			max-height:20px;height:15px;width:15px;position: relative;top: 4px;
+		}
+		.line{
+			height: 10px;background-color: #f7f9f8;
+		}
+		.userTime{
+			padding-left: 10px;
+		}
+		.carStatue{
+			display: inline-block;
+		}
+	/*定义基本的样式*/
+		.repdetail{
+			border-top: 1px solid #EEEEEE;
+			padding: 10px 0px 0px;
+		}
+		.repdetail div{
+			line-height: 26px;
+		}
+		.tiply{
+			
+		}
+		/*重新定义项*/
+		.mui-icon-forward:before{
+			font-size: 19px;
+			color: #2EAEDF;
+		}
+		.mui-table-view:before{
+			background-color:#FFF;
+		}
+		.mui-table-view:after{
+			background-color:#FFF;
+		}
+		.mui-table-view-cell:after{
+			height: 0px;
+		}
+		.mui-table-view-cell{
+			border-bottom:1px solid #e1e1e1 ;
+			border-top:1px solid #e1e1e1 ;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="mui-content" >
+			<ul id="reportList" class="mui-table-view mui-fullscreen">
+			  	<li class="mui-table-view-cell" >
+					<a  href="reportInfo.html">
+						<div class="tiply">
+							<img  class="mui-pull-left carImg" src="../../img/Shuttle.png" />
+							<span class="userTime">11.20 32:60</span>
+							<div class="mui-pull-right carStatue" >
+								<span class=" blueco">预约成功</span>
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div>
+								<span class="shade">
+									用车地点:
+								</span>
+								<span class="blackcol">
+									贵云市
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									患者姓名:
+								</span>
+								<span class="blackcol"> 
+									李家福，男，24岁
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									症状描述:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									车牌号:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机电话:
+								</span>
+								<span class="mui-pull-right userCar"> 
+									取消用车
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<div class="line" ></div>
+			  	<li class="mui-table-view-cell" >
+					<a  href="reportInfo.html">
+						<div class="tiply">
+							<img  class="mui-pull-left" src="../../../img/Shuttle.png" style="max-height:20px;height:15px;width:15px;position: relative;top: 4px;"/>
+							<span style="padding-left: 10px;">11.20 32:60</span>
+							<div class="mui-pull-right" style="display: inline-block;">
+								<span class="yellowco">待确认</span>
+								
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div>
+								<span class="shade">
+									用车地点:
+								</span>
+								<span class="blackcol">
+									贵云市
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									患者姓名:
+								</span>
+								<span class="blackcol"> 
+									李家福，男，24岁
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									症状描述:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									车牌号:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机电话:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<div style="height: 10px;background-color: #f7f9f8;"></div>
+			  	<li class="mui-table-view-cell" >
+					<a  href="reportInfo.html">
+						<div class="tiply">
+							<img  class="mui-pull-left" src="../../../img/Shuttle.png" style="max-height:20px;height:15px;width:15px;position: relative;top: 4px;"/>
+							<span style="padding-left: 10px;">11.20 32:60</span>
+							<div class="mui-pull-right" style="display: inline-block;">
+								<span class="greenco">派车中</span>
+								
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div>
+								<span class="shade">
+									用车地点:
+								</span>
+								<span class="blackcol">
+									贵云市
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									患者姓名:
+								</span>
+								<span class="blackcol"> 
+									李家福，男，24岁
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									症状描述:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									车牌号:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机电话:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<div style="height: 10px;background-color: #f7f9f8;"></div>
+			  	<li class="mui-table-view-cell" >
+					<a  href="reportInfo.html">
+						<div class="tiply">
+							<img  class="mui-pull-left carImg" src="../../../img/Shuttle.png" style=""/>
+							<span style="padding-left: 10px;">11.20 32:60</span>
+							<div class="mui-pull-right" style="display: inline-block;">
+								<span class="shade">已完成</span>
+								
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div>
+								<span class="shade">
+									用车地点:
+								</span>
+								<span class="blackcol">
+									贵云市
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									患者姓名:
+								</span>
+								<span class="blackcol"> 
+									李家福，男，24岁
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									症状描述:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									车牌号:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+							<div>
+								<span class="shade">
+									司机电话:
+								</span>
+								<span class="blackcol"> 
+									
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+<script src="../../../js/mui.min.js"></script>
+<script src="../../../js/jquery-1.9.1.min.js"></script>
+	</body>
+</html>

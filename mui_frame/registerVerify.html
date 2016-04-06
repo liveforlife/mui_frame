@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>挂号预约界面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link href="css/gyy.css" rel="stylesheet" type="text/css" />
+		<style>
+		.orangeco{
+			color:  #ff5534;	
+		}
+			/*图片切圆*/
+		.pdiv{
+			width: 90px;
+			height: 90px;
+			border: 2px solid #d5eff9;
+			margin-right: 10px;
+		}
+		.doc-indro{
+			top: 15px;
+		}
+		.doc-timer{
+			color: #ff5534;padding: 5px 0px;display: inline-block;
+		}
+		.doc-post{
+			color: #2b2b2b;
+		}
+		.doc-ks{
+			color: #767676;font-size: .9em;padding: 0px 3px;
+		}
+		.doc-free{
+			background-color: #2eaedf;padding: 2px 10px;color: #FFFFFF;border-radius:7px ;font-size: .9em;
+		}
+		.doc-hospital{
+			margin-bottom: 0px;
+		}
+		</style>
+	</head>
+	<body>
+		<nav class="mui-bar mui-bar-tab ">
+			<div class="row weiwen-btn-div">
+				<button class="weiwen-btn weiwen-btn-bclan">同意预约规则，提交预约</button>
+			</div>
+		</nav>
+		<div class="mui-content">
+			<!--挂号医生信息-->
+			<div >
+				<div class="row adc">
+					<div  class="pdiv" >
+						<img class="t-img" src="img/xg.png" />
+					</div>
+					<div class="mui-col-xs-12 doc-indro">
+						<div ><span class="doc-post" >富小梅 </span><span class="doc-ks">骨科</span><span class="doc-ks">副主任医师</span></div>
+						<p class="doc-hospital" >成都中医药大学附属医院</p>
+						<p><span >普通门诊</span></p><!--class="doc-free"-->
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="mui-table-view" style="text-align: center;line-height: 30px;">
+				<div  class="mui-input-row">
+					<label class="shadeco" style="width: 37%;padding: 10px 0px 10px 15px;">就诊时间：</label>
+					<span class="doc-timer" style="width: 63%;text-align: left;">2015年7月31日 下午</span>
+				</div>
+			</div>
+			<!--输入就诊人的信息-->
+			<div class="mui-table-view register-info">
+				<form class="mui-input-group" >
+					<div class="mui-input-row">
+						<label class="shadeco" style="width: 37%;padding: 10px 0px 10px 15px;"><span class="orangeco">*</span>就诊人姓名：</label>
+						<input type="text" placeholder="就诊人姓名" style="width: 63%;">
+					</div>
+					<div class="mui-input-row">
+						<label class="shadeco" style="width: 37%;padding: 10px 0px 10px 15px;"><span class="orangeco">*</span>身份证号码：</label>
+						<input type="text" class="mui-input-clear" style="width: 63%;" placeholder="身份证号码">
+					</div>
+					<div class="mui-input-row">
+						<label class="iphon shadeco" style="width: 37%;padding: 10px 0px 10px 15px;text-align: right;">联系手机：</label>
+						<input type="text" class="mui-input-clear" placeholder="联系手机" style="width: 63%;">
+					</div>
+				</form>
+			</div>
+			<!--预约规则-->
+			<div style="margin-top: 30px;text-align: right;background-color: #FFFFFF;">
+				<p><span style="padding: 7px 28px;line-height: 40px;">预约规则&nbsp;></span></p><!--color: #2eaedf;border: 1px solid #2eaedf;-->
+			</div>
+		</div>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+	zmnImgCenter();
+})
+		/*自适应切割图片*/
+		function zmnImgCenter(){
+			$(".t-img").each(function(index){
+					var $this=$(this);
+					var objHeight=$this.height();//图片高度
+					var objWidth=$this.width();//图片宽度
+					var parentHeight=$this.parent().height();//图片父容器高度
+					var parentWidth=$this.parent().width();//图片父容器宽度
+					var ratio=objHeight/objWidth;
+					if(objHeight>parentHeight && objWidth>parentWidth){//当图片宽高都大于父容器宽高
+						if(objHeight>objWidth) {//赋值宽高
+							$this.width(parentWidth);
+							$this.height(parentWidth*ratio);
+							}
+						else {
+							$this.height(parentHeight);
+							$this.width(parentHeight/ratio);
+							}
+						objHeight=$this.height();//重新获取宽高
+						objWidth=$this.width();
+						if(objHeight>objWidth) {
+							$(this).css("top",(parentHeight-objHeight)/2);
+							//定义top属性
+						}
+						else
+						{
+							//定义left属性
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+					}
+					else{//当图片宽高小于父容器宽高
+						if(objWidth>parentWidth){//当图片宽大于容器宽，小于时利用css text-align属性居中
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+						$(this).css("top",(parentHeight-objHeight)/2);
+						}
+				})
+			}
+		 	document.addEventListener("DOMContentLoaded", function() {
+		
+	    footerOffsetTop = $("footer").offsetTop;
+		});
+		var index = 0;
+		window.addEventListener("resize", function() {
+			alert($("footer").text());
+		    if (mui.os.android) {// 修正:android下输入法让footer上移问题
+		        var offsetTop = $("footer").offsetTop;
+		        if (index % 2 === 0) {
+		            if (offsetTop === 0) {
+		                removeClass($("footer"), "mui-hidden");
+		            } else {
+		                if (offsetTop < footerOffsetTop) {
+		                    addClass($("footer"), "mui-hidden");
+		                }else{
+		                	addClass($("footer"), "mui-hidden");
+		                }
+		            }
+		        }
+		        index++;
+		    }
+		})	 
+</script>
+	</body>
+</html>

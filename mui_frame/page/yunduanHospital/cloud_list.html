@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>医生列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<style>
+			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+				height: auto;
+			}
+			.shallow{
+				color: #B3B3B3;
+			}
+			.orange{
+				color: #e86a44;
+			}
+			.blue{
+				color: #78c4e6;
+			}
+			.black{
+				color: #2e2d2d;
+			}
+			.yelow{
+				color: #86c30c;
+			}
+			/*处理图片的大小*/
+			.mui-table-view .mui-media-object{
+				max-width: 110px;
+				height: 70px;
+				line-height: 70px;
+			}
+			.tab6:after{
+				left:-15px;
+				margin-left:10px; 
+			}
+			.mui-media-body span,p{
+				line-height: 24px;;
+			}
+			.cloud-list-font{
+				font-size:.9em;
+			}
+			.cloud-addr{
+				overflow:hidden;text-overflow:ellipsis;white-space: nowrap;font-size: .8em;
+			}
+			.mui-content>.mui-table-view:first-child{
+				margin-top: 0px;	
+			}
+		</style>
+	</head>
+	<body>
+		<header id="header" class="mui-bar mui-bar-nav">
+			<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left" datasrc="index">
+				<span class="mui-icon mui-icon-left-nav"></span>云端医院
+			</button>
+		</header>
+		<div class="mui-content" >
+			
+			<!--
+            	作者：962383345@qq.com
+            	时间：2015-05-21
+            	描述：医师列表
+            -->
+			<ul id="list"  class="mui-table-view">	           	
+		          <li id='drug_help' class="mui-table-view-cell mui-media">
+		          		<div class="row">
+						<a href="cloud_details.html">
+							<img class="mui-media-object mui-pull-left mui-col-xs-4"  src="../img/cloud/logo(2).jpg"  >
+							<div class="mui-media-body ">
+								<div>
+									<span class="black">台湾秀传医疗</span>
+									
+								<div>
+									<span class="orange cloud-list-font">三级甲等</span>
+									
+								</div>
+								<p class="cloud-addr">
+									台北市光复南路116巷1号fdgdgdgdsgghghfghgfhgf发大幅度
+								</p>
+							</div>
+						</a>
+						</div>
+					</li>
+					<li id='drug_help' class="mui-table-view-cell mui-media">
+		          		<div class="row">
+						<a href="xiangqing.html">
+							<img class="mui-media-object mui-pull-left mui-col-xs-4"  src="../img/cloud/logo(1).jpg"  >
+							<div class="mui-media-body" >
+								<div>
+									<span class="black">台湾秀传医疗</span>
+								</div>	
+								<div>
+									<span class="orange cloud-list-font">三级甲等</span>
+									
+								</div>
+								<p class="cloud-addr">
+									台北市光复南路116巷1号
+								</p>
+							</div>
+						</a>
+						</div>
+					</li>
+					<li id='drug_help' class="mui-table-view-cell mui-media">
+		          		<div class="row">
+						<a href="xiangqing.html">
+							<img class="mui-media-object mui-pull-left mui-col-xs-4"  src="../img/cloud/logo(3).jpg"  >
+							<div class="mui-media-body ">
+								<div>
+									<span class="black">台湾秀传医疗</span>
+									
+								<div>
+									<span class="orange cloud-list-font">三级甲等</span>
+									
+								</div>
+								<p class="cloud-addr">
+									台北市光复南路116巷1号
+								</p>
+							</div>
+						</a>
+						</div>
+					</li>
+	        </ul> 		
+
+<!--			<div id="pullrefresh" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--医生数据列表加载-->
+<!--					<ul class="mui-table-view mui-table-view-chevron">
+						
+					</ul>
+				</div>
+			</div>-->
+		</div>
+<script src="../js/mui.min.js"></script>
+<script src="../js/jquery-1.9.1.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>商品历史记录</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <style>
+	    body{
+	    	font-size: 12px;
+	    }
+	    p{
+	    	font-size: 12px;
+	    	margin-bottom: 0px;
+	    }
+		.mui-table-view .mui-media-object{
+			max-width: 140px;
+			height: 70px;
+		}
+		.mui-table-view .mui-media, .mui-table-view .mui-media-body{
+			overflow:visible;
+		}
+		.mui-media-body{
+			margin-right:15px ;
+		}
+		.mui-table-view-cell>a:not(.mui-btn){
+			white-space:normal;
+		}
+		.mui-table-view-cell{
+			border-bottom: 1px solid #e3e1e2;	
+	
+		}
+		.mui-table-view-cell:before                                                                                                                                                                                                                                                                                                                                                                                                                                {
+			background-color: #e3e1e2;
+		}
+		.mui-table-view-cell:after{
+			background-color: #FFFFFF;
+
+		}
+		.mui-slider-indicator{
+			text-align: right; 
+			bottom: 2px;
+		}
+		.mui-content>.mui-table-view:first-child{margin-top: 0px;}
+		.commo_name{color: #2B2B2B;line-height: 14px;overflow : hidden; text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+		.commo_price{color: #888888;font-weight: bold;margin-top: 3%;line-height:18px ;}
+    	.commo_price_num{font-size: 1.3em;color: #f34258;padding: 0px 2%;}
+    	.commo_price :last-child{font-size: .8em;}
+    </style>
+</head>
+<body>
+	<div class="mui-content mui-fullscreen" >
+		<ul class="mui-table-view tab2">
+			<li class="mui-table-view-cell mui-media " >
+				<a style="padding-bottom:7px;" href="myPromotDetail.html" class="mui-navigate-right">
+					<img class="mui-media-object mui-pull-left" src="../img/Healthy_polite/图1.png"/>
+					<div class="mui-media-body">
+						<p class="commo_name">万达、星美橙天嘉禾影城电影票鬼打鬼和该法规和个梵蒂冈的高度法规的法规的</p>
+						<p class="commo_price"><span>兑换价：</span><span class="commo_price_num">50</span><span >积分</span></p>
+						<p>2016-20-03 17:20:30</p>
+					</div>
+				</a>
+	 		</li>
+	 		<li class="mui-table-view-cell mui-media class="mui-navigate-right"" >
+				<a style="padding-bottom:7px;" class="mui-navigate-right">
+					<img class="mui-media-object mui-pull-left" src="../img/Healthy_polite/图1.png"/>
+					<div class="mui-media-body">
+						<p class="commo_name">万达、星美橙天嘉禾影城电影票</p>
+						<p class="commo_price"><span>兑换价：</span><span class="commo_price_num">50</span><span>积分</span></p>
+						<p>2016-20-03 17:20:30</p>
+					</div>
+				</a>
+	 		</li>
+		</ul>
+	</div>	
+<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+		body{
+			background-color: #EEE;
+		}
+			.box{
+				float: left;
+				margin:5px;
+				padding: 0px 0px 5px;
+				background-color: #FFF;
+			}
+			.box img{
+				text-align: center;
+				width: 120px;
+			}
+			/*.box {
+			  width: 220px;
+			  height: 0;
+			  padding-bottom: 100%;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		    <img class="img" src="../img/060906.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/cloud/logo(1).jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/cloud/logo(2).jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/cloud/logo(3).jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/im_heaf.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/little_heald.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/logo.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/lunbo/6wMAAFZWBLeAAc0fAAE9tOIwCKM430.jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/im_heaf.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/little_heald.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/logo.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/lunbo/6wMAAFZWBLeAAc0fAAE9tOIwCKM430.jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/im_heaf.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/little_heald.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/logo.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/lunbo/6wMAAFZWBLeAAc0fAAE9tOIwCKM430.jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/im_heaf.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/little_heald.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/logo.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/lunbo/6wMAAFZWBLeAAc0fAAE9tOIwCKM430.jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/im_heaf.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/little_heald.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/logo.png" />
+		    <div class="desc">Description</div>
+		</div>
+		<div class="box">
+		    <img class="img" src="../img/lunbo/6wMAAFZWBLeAAc0fAAE9tOIwCKM430.jpg" />
+		    <div class="desc">Description</div>
+		</div>
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<script>
+			var boxArr = $('.box'),
+		    num = Math.floor(document.body.clientWidth / boxArr.eq(0).outerWidth(true)),
+		    columnHeightArr = [];
+			columnHeightArr.length = num;
+			
+			boxArr.each(function(index, item) {
+			　　if (index < num) {
+			　　　　columnHeightArr[index] = $(item).position().top + $(item).outerHeight(true);
+			　　} else {
+			　　　　var minHeight = Math.min.apply(null, columnHeightArr),
+			           minHeightIndex = $.inArray(minHeight, columnHeightArr);
+			
+			　　　　$(item).css({
+			       　　position: 'absolute',
+			       　　top: minHeight,
+			       　　left: boxArr.eq(minHeightIndex).position().left
+			       });
+			
+			　　　　columnHeightArr[minHeightIndex] += $(item).outerHeight(true);
+			　　}
+			});
+		</script>
+	</body>
+</html>

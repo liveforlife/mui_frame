@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<style>
+			.mui-content>.mui-table-view:first-child{
+				margin-top: 5px;
+			}
+			/*.mui-bar{
+				height: 64px;
+			}
+			.mui-bar-nav~.mui-content{
+				padding-top: 64px;
+			}*/
+			
+			.mui-icon-arrowleft:before{
+				color: #82ceec;
+			}
+			.mui-icon-arrowright:before{
+				color: #82ceec;
+			}
+			.textAli{
+				text-align: center;
+			}
+			.verti{
+				vertical-align: middle;
+			}
+			.plan_title{
+				font-size: 1.1em;color: #525755;margin: 5px 0px
+			}
+			.finish_sp{
+				border:1px solid #2eaedf;color:#2EAEDF;border-radius:10px;padding: 4px 8px;
+			}
+			.shade{
+				color: #a5afb2;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <div style="text-align: center;height: 44px;">
+		    	<span class="mui-icon mui-icon-arrowleft"></span>
+		    	<span>
+		    		9月14日 今天
+		    	</span>
+		    	<span class="mui-icon mui-icon-arrowright"></span>
+		    	<span class="mui-pull-right" onclick="headHealth()">
+		    		<img src="img/list.png" width="25"  style="margin-top: 9px;"/>
+		    	</span>
+		    </div>
+		</header>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					
+					<div class="mui-table textAli" >
+						<a href="healrhDetail.html">
+							<div id="plan_timer0" class="mui-table-cell mui-col-xs-3">
+								<p style="color:#2EAEDF;font-size: 1.1em;">全天</p>
+							</div>
+							<div id="plan_content0" class="mui-table-cell mui-col-xs-7 " >
+								<p class="plan_title">每天不超过6克盐</p>
+								<p>来自于血压控制计划</p>
+							</div>
+						</a>
+						<div class="mui-table-cell mui-col-xs-2 mui-text-right verti" >
+							<p id="finishbtn" class="finish_btn"><span class="finish_sp">完成</span></p>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					
+						<div class="mui-table textAli" >
+							<a>
+							<div id="plan_timer1" class="mui-table-cell mui-col-xs-3">
+								<p style="color:#2EAEDF;font-size: 1.1em;">全天</p>
+							</div>
+							<div id="plan_content1" class="mui-table-cell mui-col-xs-7 " >
+								<p class="plan_title">每天不超过6克盐</p>
+								<p>来自于血压控制计划</p>
+							</div>
+							</a>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right verti">
+								<p class="finish_btn"  id="finishbtn1"><span  class="finish_sp">完成</span></p>
+							</div>
+						</div>
+					
+				</li>
+				<li class="mui-table-view-cell">
+					
+						<div class="mui-table textAli" >
+							<a>
+							<div id="plan_timer2" class="mui-table-cell mui-col-xs-3">
+								<p style="color:#2EAEDF;font-size: 1.1em;">06.30</p>
+								<p style="color:#2EAEDF;">上午</p>
+							</div>
+							<div id="plan_content2" class="mui-table-cell mui-col-xs-7 " >
+								<p class="plan_title">每天不超过6克盐</p>
+								<p>来自于血压控制计划</p>
+							</div>
+							</a>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right verti" >
+								<p class="finish_btn" id="finishbtn1"><span class="finish_sp">完成</span></p>
+							</div>
+						</div>
+					
+				</li>
+				<span>fgdgfdg</span>
+			</ul>
+		</div>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/mui.min.js"></script>
+		<script>
+			function headHealth(){
+				window.location.href="headHealth.html";
+			}
+			$(function(){
+				goclick();
+			})
+			function goclick(){
+				$(".finish_btn").each(function(index){
+					this.addEventListener('tap',function(){
+						$("#plan_timer"+index).children().css({color:"#a5afb2"})
+						$("#plan_content"+index).children().addClass("shade");
+						var dom='';
+						dom+='<img src="img/gou.png"/>'
+						this.innerHTML=dom;
+					})
+				})
+			}
+		</script>
+	</body>
+</html>

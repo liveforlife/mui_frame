@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购买私人医生</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+        <style>
+    	body{
+    		font-size: 12px;
+    	}
+    	p{font-size: 12px;}
+    	.mui-table-view-cell>a:not(.mui-btn){
+	    	white-space: normal;
+    	}
+    	.mui-bar{
+	    	box-shadow:0px 0px 0px #FFF;
+	    }
+	    .mui-content{background-color: #FFF;border-top: 0.24rem solid #f7f9f8;}
+	    .mui-table-view:after{
+	    	height: 0px;
+	    }
+	    .line{height: 0.24rem;background-color: #F7F9F8}
+		
+		.order_addre{padding-bottom: 5px;}
+		.order_addre .order_addre_tab{color: #888888;padding: 0.29rem 0rem 0.29rem 0.26rem;font-size:0.35rem ;border-bottom:1px solid #E1E1E1 ;line-height: 1.2;}
+    	.orderCon p{font-size: 0.35rem;color: #2B2B2B;text-indent: 0.26rem;line-height: 1.4;border-bottom: 1px solid #F7F9F8;margin: 0.4rem 0rem;}
+    	.orderCon p span{color: #57b9e3;margin-right: 0.4rem;}
+    	.orderCon .orderfee{color: #f34258;}
+    	.orderMode div{font-size: 0.35rem;color: #2B2B2B;text-indent: 0.26rem;line-height: 1.4;border-bottom: 1px solid #F7F9F8;margin: 0.26rem 0rem 0.26rem;height: 0.8rem;line-height: 1.33rem;padding: 0rem 0.26rem 0rem 0.4rem;}
+    	.prayName{font-size: 0.4rem;line-height: 1.2;}
+    	.prayMode{font-size: 0.24rem;line-height: 1.2;}
+    	
+    	.weiwen-btn-div{
+			text-align: center;margin-top: 5px;border: 0px;padding: 0.24rem 0.21rem;;
+		}
+		.weiwen-btn{
+			width: 100%;
+			 border: #47a1ec;
+			 height:1.06rem;
+			 color: #FFFFFF;
+			 font-size: 0.42rem
+		}
+		.weiwen-btn-bcred{
+			background-color: #2eaedf;
+		}
+		
+		
+		 #sex_male ,
+		 #sex_female ,
+		 #sex_nomale
+		 {
+		  display:none
+		 }
+		 label
+		 {
+		  display:-moz-inline-block;
+		  display:inline-block;
+		  cursor:pointer;
+		  margin:5px 0;
+		  padding-left:20px;
+		  line-height:15px;
+		  background:url(../img/private/gou2.png) no-repeat left top;
+		 }
+		 label.checked
+		 {
+		   background:url(../img/private/gou.png) no-repeat left top;
+		 }
+    </style>
+</head>
+<body>
+	
+	<div class="mui-content">
+		<div class="order_addre">
+			<p class="order_addre_tab">服务内容</p>
+			<div class="orderCon" >
+				<p>套餐名称：<span class="mui-pull-right" style="">家庭医生服务</span></p>
+				<p>签约医生<span class="mui-pull-right">明妃</span></p>
+				<p>服务期限<span class="mui-pull-right">365天</span></p>
+				<p>服务费用<span class="mui-pull-right orderfee">1999元</span></p>
+			</div>
+		</div>
+		<div class="line"></div>
+		<div class="orderCon">
+			<p>服务条款<span class="mui-pull-right" style="">详情 ></span></p>
+		</div>
+		<div class="line"></div>
+		<div class="order_addre">
+			<p class="order_addre_tab">支付方式</p>
+			<form name="reg" onsubmit="return checkform(this);">
+			<div id="male" class="orderMode" >
+				<div style="">
+					<img class="mui-pull-left" src="../img/private/payFor.png" style="height:0.8rem"/>
+					<span class="mui-pull-left" style="display: inline;">
+						<span class="prayName" style="display: block;">支付宝支付</span>
+						<span class="prayMode" style="display: block;">推荐有支付宝账号的用户使用</span>
+					</span>
+					<span class="mui-pull-right">
+						<input type="radio" id="sex_male" checked="checked" name="sex" value="male">
+						<label name="sex_male"  for="" style="width: 0.4rem;height: 0.4rem;"></label>
+					</span>
+				</div>
+				<div style="clear: both;height: 0rem;padding: 0rem;margin: 0rem;"></div>
+				<div style="">
+					<img class="mui-pull-left" src="../img/private/weixin.png" style="height:0.8rem"/>
+					<span class="mui-pull-left" style="display: inline;">
+						<span class="prayName" style="display: block;">微信支付</span>
+						<span class="prayMode" style="display: block;">推荐安装微信5.0及以上版本的使用</span>
+					</span>
+					<span class="mui-pull-right">
+						<input type="radio" id="sex_male" checked="checked" name="sex" value="male">
+						<label name="sex_male" class="checked" for="" style="width: 0.4rem;height: 0.4rem;"></label>
+					</span>
+				</div>
+			</div>
+			</form>
+		</div>
+		<div class="line"></div>
+		<div class="row weiwen-btn-div">
+			<button class="weiwen-btn weiwen-btn-bcred" >确认购买</button>
+		</div>
+	</div>
+	<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	document.addEventListener();
+	window.onload = function() 
+	 {
+	  labels = document.getElementById('male').getElementsByTagName('label');
+	  radios = document.getElementById('male').getElementsByTagName('input');
+	  for(i=0,j=labels.length ; i<j ; i++)
+	  {
+	   labels[i].onclick=function() 
+	   {
+	    if(this.className == '') {
+	     for(k=0,l=labels.length ; k<l ; k++)
+	     {
+	      labels[k].className='';
+		  radios[k].checked = false;
+	     }
+	     this.className='checked';
+		 try{
+		 	document.getElementById(this.name).checked = true;
+		 } catch (e) {}
+	    }
+	   }
+	  }
+	 }
+</script>
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.9.1.min.js"></script>
+		<style>
+			.list_1{
+				background-color: #EEEEEE;
+			}
+			.list_2{
+				background-color: #888888;
+			}
+			.list_3{
+				background-color: #777777;
+			}
+		</style>
+		<script type="text/javascript">
+			
+			/*function plusReady(){
+				plus.nativeUI.alert("plus is ready",function(){
+					console.log("user Pass!");
+				},"nativeUI","ok");
+			}
+			if(window.plus){
+				plusReady();
+			}else{
+				document.addEventListener("plusready",plusReady(),false);
+			}*/
+			$(document).ready(function(){
+				$('ul li:last').addClass(function(){
+					return 'list_'+$(this).index();
+				});
+			});
+				
+			
+		</script>
+	</head>
+	<body>
+		弹出系统提示对话框
+		<ul>
+			<li>第一</li>
+			<li>第二</li>
+			<li>第三</li>
+			<li>第四</li>
+		</ul>
+	</body>
+</html>

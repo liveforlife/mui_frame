@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>挂号预约界面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link href="css/gyy.css" rel="stylesheet" type="text/css" />
+		<style>
+			.pdiv{
+			width: 90px;
+			height: 90px;
+			border: 2px solid #d5eff9;
+			margin-right: 10px;
+		}
+		.doc-hospital{
+			margin-bottom: 0px;
+		}
+			.mui-bar{
+	background-color:rgba(255,255,255,1);
+	box-shadow:0 0 0px;
+	}
+		</style>
+	</head>
+	<body>
+		<nav class="mui-bar mui-bar-tab">
+			<div class="row weiwen-btn-div">
+				<button class="weiwen-btn weiwen-btn-bcred">取消预约</button>
+			</div?>
+		</nav>
+		<div class="mui-content">
+			<!--挂号医生信息-->
+			<div>
+				<div class="row adc">
+					<div  class="pdiv" >
+						<img class="t-img" src="img/xg.png" />
+					</div>
+					<div class="mui-col-xs-12 doc-indro">
+						<div ><span class="doc-post">富小梅 骨科 副主任医师</span></div>
+						<p class="doc-hospital" >成都中医药大学附属医院</p>
+						<p>普通门诊</p>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="order-time">
+					<p>就诊时间：<span>2015年7月31日 下午</span></p>
+				</div>
+			</div>
+			<!--确认就诊人的信息-->
+			<div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<p>
+							<span class="shade">就诊人姓名：</span>
+							<span class="blackcol">徐小吗</span>
+						<p>
+							<span class="shade">身份证号码：</span>
+							<span class="blackcol">510902198007099511</span>
+						</p>
+						<p>
+							<span class="shade">联系手机：</span>
+							<span class="blackcol">13547827609</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!--订单时间-->
+			<div style="padding: 7px 0px;border-top:15px solid #e9edee;">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<p>
+							<span class="shade">下单时间：</span>
+							<span class="blackcol">2015-07-25 17:12:34</span>
+						</p>
+						<p>
+							<span class="shade">确认时间：</span>
+							<span class="blackcol">——</span>
+						</p>
+						<p>
+							<span class="shade">取消时间：</span>
+							<span class="blackcol">——</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+			<!--预约规则-->
+			<div class="mui-table-view register-rule">
+				<p >预约规则>></p>
+			</div>
+			<!--温馨提示-->
+			<div class="mui-table-view">
+				<div class="mui-table-view-cell">
+					<em>温馨提示：</em>
+					<p style="font-size: 15px;">就诊当天，请您带上身份证，凭此预约信息，在医院挂号处取号；</p>
+				</div>
+			</div>
+		</div>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+	zmnImgCenter();
+})
+		/*自适应切割图片*/
+		function zmnImgCenter(){
+			$(".t-img").each(function(index){
+					var $this=$(this);
+					var objHeight=$this.height();//图片高度
+					var objWidth=$this.width();//图片宽度
+					var parentHeight=$this.parent().height();//图片父容器高度
+					var parentWidth=$this.parent().width();//图片父容器宽度
+					var ratio=objHeight/objWidth;
+					if(objHeight>parentHeight && objWidth>parentWidth){//当图片宽高都大于父容器宽高
+						if(objHeight>objWidth) {//赋值宽高
+							$this.width(parentWidth);
+							$this.height(parentWidth*ratio);
+							}
+						else {
+							$this.height(parentHeight);
+							$this.width(parentHeight/ratio);
+							}
+						objHeight=$this.height();//重新获取宽高
+						objWidth=$this.width();
+						if(objHeight>objWidth) {
+							$(this).css("top",(parentHeight-objHeight)/2);
+							//定义top属性
+						}
+						else
+						{
+							//定义left属性
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+					}
+					else{//当图片宽高小于父容器宽高
+						if(objWidth>parentWidth){//当图片宽大于容器宽，小于时利用css text-align属性居中
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+						$(this).css("top",(parentHeight-objHeight)/2);
+						}
+				})
+			}
+</script>
+	</body>
+</html>

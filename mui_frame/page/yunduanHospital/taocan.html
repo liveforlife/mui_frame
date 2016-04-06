@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link href="css/gyy.css" rel="stylesheet" type="text/css" />
+		<style>
+			.mui-table-view-cell{
+				padding:21px 15px;
+			}
+			.mui-table-view-cell.mui-checkbox input[type=checkbox], .mui-table-view-cell.mui-radio input[type=radio]{
+				top:17px;
+			}
+			.mui-icon{
+				line-height: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+			
+			
+			<ul class="mui-table-view">	           	
+		        <li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio"><span>A套餐</span><span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;"></span>
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio">B套餐<span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;"></span>
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio">C套餐<span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;"></span>
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio">D套餐<span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;"></span>
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio">E套餐<span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;"></span>
+				</li>
+				<li class="mui-table-view-cell mui-radio mui-left">
+					<input name="radio" type="radio">F套餐<span style="padding-left:20%">价格：550</span><span class="mui-icon mui-icon-forward" style="float: right;display: inline-block;" onclick="goPlanDetail()"></span>
+				</li>
+		    </ul>
+			<div class="row weiwen-btn-div" style="margin-top: 20px;">
+				<button class="weiwen-btn weiwen-btn-bclan" >提交</button>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			function goPlanDetail(){
+				window.location.href="aaa.html"
+			}
+		</script>
+	</body>
+</html>

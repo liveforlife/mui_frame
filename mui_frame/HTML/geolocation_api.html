@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		<p id="potil"></p>
+		<script type="text/javascript">
+			function getElem(id){
+				return typeof id==='string'?document.getElementById(id):id;
+			}
+			function show_it(le,lt){
+				var str='你当前的位置,纬度'+le+',经度'+lt;
+				getElem('potil').innerHTML=str;
+			}
+			if(navigator.geolocation){
+				navigator.geolocation.getCurrentPosition(function(position){
+					show_it(position.coords.latitude,position.coords.longitude);
+				},function(err){
+					getElem('potil').innerHTML=err.code+"\n"+err.message;
+				})
+			}else{
+				getElem('potil').innerHTML='你当前的浏览器不支持geolocation';
+			}
+		</script>
+	</body>
+</html>

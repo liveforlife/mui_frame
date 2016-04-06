@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style>
+    .mui-badge{
+    	background-color: #FFF;
+    }
+    .icon-font{
+    	line-height: 42px;font-size:1em ;color:#464646 ;
+    }
+    </style>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav">
+		<button class="mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left" datasrc="index" >
+				<a class="mui-btn-link mui-btn-nav" href="<%=basePath%>/webapi/goIndex"><span class="mui-icon mui-icon-left-nav"></span>返回</a>
+			</button>
+			<h1 class="mui-title">个人档案</h1>
+	</header>
+	<div class="mui-content mui-fullscreen">
+		<!--个人基本信息-->
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+                    <!--<span class="mui-pull-right ">15</span>-->
+                     <span class="mui-badge ">杉杉</span>
+             		   姓名
+                </a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+                    <!--<span class="mui-pull-right ">15</span>-->
+                     <span class="mui-badge ">女</span>
+             		   性别
+                </a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+                    <!--<span class="mui-pull-right ">15</span>-->
+                     <span class="mui-badge ">2015-10-09</span>
+             		   出生年月
+                </a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+                    <!--<span class="mui-pull-right ">15</span>-->
+                     <span class="mui-badge ">o</span>
+             		   血型
+                </a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+                    <!--<span class="mui-pull-right ">15</span>-->
+                     <span class="mui-badge ">未婚</span>
+             		   婚姻
+                </a>
+			</li>
+		</ul>
+		<!--身体指标数据-->
+		<div>
+			<p>
+				身体指标
+			</p>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+	                    <!--<span class="mui-pull-right ">15</span>-->
+	                     <span class="mui-badge ">57kg</span>
+	             		   体重
+	                </a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+	                    <!--<span class="mui-pull-right ">15</span>-->
+	                     <span class="mui-badge ">163cm</span>
+	             		   身高
+	                </a>
+				</li>					
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+	                    <!--<span class="mui-pull-right ">15</span>-->
+	                     <span class="mui-badge " style="color: #000000;font-size: 1em;">2.13正常</span>
+	             		   体重指数
+	                </a>
+				</li>
+			</ul>
+		</div>
+		<!--其他基本信息-->
+		<div>
+			<p>我的病史</p>
+			<ul class="mui-table-view ">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 mui-pull-left" >
+					<a>
+						<img class="mui-media-object mui-pull-left" src="img/health/History.png"  style="height: 30px;" />
+						<p class="mui-media-body icon-font" style="">
+							既往病史
+						</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 ">
+					<a>
+						<img class="mui-media-object mui-pull-left" src="img/health/famHistory.png" style="height: 30px;" />
+						<p class="mui-media-body icon-font">
+							家族病史
+						</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media  mui-col-xs-6  mui-pull-left">
+					<a>
+						<img class="mui-media-object mui-pull-left" src="img/health/longHistory.png" style="height: 30px;" />
+						<p class="mui-media-body icon-font">
+							过往病史
+						</p>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6 ">
+					<a>
+						<img class="mui-media-object mui-pull-left" src="img/health/lifeHabit.png" style="height: 30px;"  />
+						<p class="mui-media-body icon-font">
+							生活习惯
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

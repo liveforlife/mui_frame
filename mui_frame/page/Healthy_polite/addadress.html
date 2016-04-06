@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <script src="../../js/jquery-1.9.1.min.js"></script>
+    <script src="../../js/jquery.title.msgbox.js"></script>
+    <style>
+    	.pile{
+    		border-bottom: 1px solid #E1E1E1;
+    		margin: 0px;
+    		padding: 0px;
+    	}
+    	#mb_tit{
+		display: inline;
+	}
+	#mb_msg{
+		padding: 0px
+	}
+    </style>
+</head>
+<body>
+	<div class="mui-content" >
+		<div class="mui-content-padded">
+		<form>
+			<p>收货人</p>
+			<div class="mui-input-row">
+				<input type="text" placeholder="" id="receiver">
+			</div>
+			<p>手机号码</p>
+			<div class="mui-input-row">
+				<input type="text" placeholder="" maxlength="13" id="receivePhone" onkeyup="this.value=this.value.replace(/[^0-9_]/g,'');">
+			</div>
+			<p>收货地址</p>
+			<p style="color: #24292f;">
+				<input type="checkbox" value="2"/>
+			使用速递易</p>
+			<!--<div class="mui-input-row">
+				<input class="mui-col-xs-3" type="text" placeholder="" id="receiveAddr" style="width: 85%;">
+				<span class="mui-icon mui-icon-location mui-pull-right" style="font-size: 34px;"></span>
+			</div>-->
+			<div class="mui-input-row" onclick="dic()">
+				<input class="mui-col-xs-3" type="text" placeholder="" id="receiveAddr" disabled="true">
+				<span class="mui-icon mui-icon-arrowdown" style="position: absolute;top: 9px;right: 5px;color: rgba(0,0,0,0.3);"></span>
+			</div>
+		</form>
+		 <div class="weiwen-btn-div" id="footDiv">
+			<button class="mui-btn mui-btn-primary weiwen-btn" onclick="addAddress();">
+				确认添加
+			</button>
+		</div> 
+		</div>
+	</div>
+	<script>
+		function dic(){
+			$.MsgBox.Alert("选择地址",'<p class="pile">新都</p><p class="pile">北京</p><p class="pile">上海</p>',function(){
+						/*  alert("1"); */
+					 }); 
+		}
+	</script>
+</body>
+</html>

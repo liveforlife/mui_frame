@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		body{
+			background-color: #eee;
+		}
+			.pdiv{
+				width: 120px;
+				height: 120px;
+				border-radius:50%;
+				overflow: hidden; 
+				border: 1px solid #d7d8dc;
+				float:left;
+				text-align:center; position: relative;border:  dotted;
+			}
+			.pdiv img{position: absolute;vertical-align:text-top;z-index:0;border-radius:50%}
+			
+		</style>
+		<script>
+			var a=2.2;
+			b=a+'';
+			console.log(b.indexOf('.'));
+			 var num = 13.1423443;  
+  
+    var bb = num+"";  
+    var dian = bb.indexOf('.');  
+    var result = "";  
+    if(dian == -1){  
+        result =  num.toFixed(2);  
+    }else{  
+        var cc = bb.substring(dian+1,bb.length);  
+        if(cc.length >=3){  
+            result =  (Number(num.toFixed(2))+0.01)*100000000000/100000000000;//js小数计算小数点后显示多位小数  
+        }else{  
+            result =  num.toFixed(2);  
+        }  
+    }  
+    console.log(dian);
+    console.log(cc);
+    console.log(result);  
+ function isdata(index){
+		if(index.indexOf(".pdf") == -1){
+			alert("没有pdf");
+			alert(index.indexOf(".pdf"));
+		}else{
+			alert("有pdf");
+			alert(index.indexOf(".pdf"));
+		}
+	}
+
+function app(){
+	/*var lit='';
+	lit=isdata("pdf/体检报告09.07.pdf");
+	console.log(lit);*/
+	window.open("pdf/体检报告09.07.pdf");
+}
+		</script>
+	</head>
+	<body>
+		<div  class="pdiv">
+			<img src="img/xg.png" />
+		</div>
+		<div></div>
+			<div></div>
+				<div></div>
+					<div></div>
+						<div></div>
+		
+		<button onclick="aprint()">打印</button>
+		<textarea id=txtArea></textarea>
+		<input type=button onclick="getArray()" value="get array">
+			
+			<button onclick="app()">qiege</button>
+			
+			
+		<a href="pdf/体检报告09.07.pdf">
+			<img src="img/060906.png" />
+		</a>
+	</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+			<style>
+	   
+	    p{
+	    	font-size: 12px;
+	    }
+		h4{
+			font-weight: normal;
+			font-size: 17px;
+		}
+		.mui-table-view .mui-media-object{
+			max-width: 210px;
+			height: 105px;
+		}
+		.mui-table-view .mui-media, .mui-table-view .mui-media-body{
+			overflow:visible;
+		}
+		.mui-table-view:before{height: 0px;}
+		.mui-table-view:after{height: 0px;}
+		.mui-media-body{
+			margin-right:5px ;
+			margin-bottom: 15px;
+		}
+		.mui-table-view-cell>a:not(.mui-btn){
+			white-space:normal;
+		}
+		.mui-table-view-cell>a:not(.mui-btn).mui-active{
+			background-color: #FFF;
+		}
+		.mui-table-view-cell{
+			border-bottom: 1px solid #e3e1e2;	
+	
+		}
+		.mui-table-view-cell:before                                                                                                                                                                                                                                                                                                                                                                                                                                {
+			background-color: #e3e1e2;
+		}
+		.mui-table-view-cell:after{
+			background-color: #FFFFFF;
+
+		}
+		.mui-slider-indicator{
+			text-align: right; 
+			bottom: 2px;
+		}
+		.mui-table-view.mui-grid-view .mui-table-view-cell{
+			font-size: 12px;
+		}
+    	.mui-table-view.mui-grid-view.clearStyle{
+    		padding: 0px;
+    		margin: 0px;
+    	}
+    	.mui-table-view.mui-grid-view .mui-table-view-cell.clearStyle{
+    		padding: 0px;
+    		margin: 0px;
+    	}
+    	#myIntegal{line-height: 44px;text-align: left;padding-left:15px ;color: #2b2b2b;}
+    	.commo_myInte{color: #66cc66;font-size: 1.3em;margin-left: 15px;vertical-align:middle}
+    	.mui-icon-forward:before{vertical-align: text-bottom;margin: 0px;color: #66cc66;font-size: 16px;}
+    	#myHistory{line-height: 44px;text-align: right;padding-right: 10px;}
+    	#myHistory span{color:#afafaf;border:1px solid #afafaf;padding: 5px 10px;border-radius: 4px;}
+    	
+    	/*按钮*/
+    	.weiwen-btn-div{
+			text-align: center;margin-top: 5px;border: 0px;
+		}
+		.weiwen-btn{
+			font-size: 12px;
+			width: 35%;
+			 border: #47a1ec;
+			 height:24px;
+			 line-height: 12px;
+			 color: #FFFFFF;
+		}
+		.weiwen-btn-bcred{/*立即抢购*/
+			background-color: #f34258;
+		}
+		.weiwen-btn-bcshred{/*将要开始*/
+			background-color: #f9a0ab;
+		}
+		.weiwen-btn-bcshade{/*已售完或者结束*/
+			background-color: #afafaf;
+		}
+		.commo_sale{position: absolute;width: 70px;left: 15px;}
+		.line{height: 10px;border-top:1px solid #E1E1E1 ;border-bottom: 1px solid #E1E1E1;background-color: #F7F9F8}
+    	
+    	/*.commoTimer_1{padding:0px 3px;border: 1px solid #f34258;color:#f34258;margin: 3px;width: 28px;display: inline-block;text-align: center;border-radius: 5px;}
+    	.commoTimer_2{padding:0px 3px;border: 1px solid #f34258;color:#f34258;margin: 3px;width: 28px;display: inline-block;text-align: center;border-radius: 5px;}*/
+    	.commo_sign{margin: 0px;margin-left: 10px;padding-top: 15px;}
+    	.commo_name{color: #2B2B2B;line-height: 14px;height: 25px;}
+    	.commo_price{color: #888888;font-weight: bold;margin-top: 5%;line-height:14px ;}
+    	.commo_price_num{font-size: 1.3em;color: #f34258;padding: 0px 2%;}
+    	.commo_money{font-size: .8em;}
+    	.commo_money span{text-decoration: line-through;}
+    	.commo_poli_all{margin-top: 20px;background-color: #FFFFFF;}
+    	.commo_poli_img{margin: 0px;margin-left: 10px;color: #888888;}
+    	.commo_all{text-align: left;}
+    	.commo_all_name{font-weight: 400;font-size: 1em;color: #2b2b2b;white-space:nowrap;text-overflow: ellipsis;overflow: hidden;}
+    	.commo_all_num{color: #f34258;padding-right: 5px;font-size: 1.3em;}
+    	.commo_all_str{font-size: .6em;color:#888888}
+    	.commo_saleout{filter:alpha(opacity=40); -moz-opacity:0.4; -khtml-opacity: 0.4; opacity: 0.4;}/*售完或结束的商品半透明*/
+    	.commo_saleout_mask{width: 1.06rem;background-color: rgba(0,0,0,0.5);height:1.06rem;position:absolute;left: 45%;top:23%;text-align: center;vertical-align: middle;line-height: 1.06rem;color: #FFF;font-size: 0.32rem;;}
+    	.monmo_Tim{color: #b6b6b6;font-size: 1em;widows: 140px;}
+    	.commoTimer_1{color:#f34258;}
+    	.commoTimer_2{color:#f34258;}
+    	.robbedNum{font-size: 11px;margin-left: 20px;}
+    	.processcontainer{  
+    		margin-top: 6px;
+    		margin-right: 10px;
+    		float: right;
+		   width:35%;  
+		   border:1px solid #f34258;  
+		   height:7px;  
+		   border-radius: 5px;
+		 } 
+		#processbar{  
+		   background:#f77a8a;  
+		   float:left; 
+		   height:100%;  
+		   text-align:center;  
+		   line-height:150%; 
+		 }  
+    	.line{height: 10px;border-top:1px solid #E1E1E1 ;border-bottom: 1px solid #E1E1E1;background-color: #F7F9F8}
+		.mui-table-view-cell{padding-top: 5px;padding: 11px 10px;}
+		.mui-table-view-cell>a:not(.mui-btn){padding-bottom:7px;margin:-11px -10px ;}
+    </style>
+	</head>
+	<body>
+	<div class="mui-content">
+		
+		<div><!--广告栏,尺寸大小：4：1;749:188-->
+			<img src="../img/Healthy_polite/组 35.png"  style="width: 100%;margin-bottom: -7px;"/>
+		</div>
+		<div class="mui-table-view mui-grid-view clearStyle"><!--功能区-->
+			<div id="myIntegal" class="mui-table-view-cell mui-media mui-col-xs-7 clearStyle" onclick="myIntegral()">
+				我的积分<span class="commo_myInte">0</span><span class="mui-icon mui-icon-forward"></span>
+			</div>
+			<div id="myHistory" class="mui-table-view-cell mui-media mui-col-xs-5 clearStyle" onclick="myHistory()">
+				<span>我的礼品</span> 
+			</div>
+		</div>
+		<div class="line"></div>
+		<!--<div style="background-color: #FFFFFF;">
+			<ul class="mui-table-view tab2">
+				<li class="mui-table-view-cell mui-media " onclick="commodityDetail()" style="">
+					<a style="padding-bottom:7px;margin:-11px -10px ;">
+						
+						<span><img src="../img/Healthy_polite/燃情预热中.png" class="commo_sale"/></span>
+						<img class="mui-media-object mui-pull-left" src="../img/Healthy_polite/图1.png"/>
+						<div class="mui-media-body" style="margin-bottom:5px ;">
+							<p class="commo_name" style="vertical-align: middle;">万达、</p>
+							<p class="commo_price"><span>兑换价：</span><span class="commo_price_num">50</span>积分</p>
+							<p class="commo_money">市场价：<span>&#165;50元</span></p>
+							<p><button class="weiwen-btn weiwen-btn-bcred">立即抢购</button></p>
+						</div>
+						<div style="height: 21px;">
+							<div class="monmo_Tim" style="float: left;">
+								距离结束
+								<span class="commoTimer_1">01</span>天
+								<span class="commoTimer_2">23</span>:
+								<span class="commoTimer_2">53</span>:
+								<span class="commoTimer_2">32</span>
+							</div>
+							<div style="color: #2b2b2b;line-height: 21px;"> 
+								<span class="robbedNum" style="line-height: 21px;">已抢80%</span>
+								<div class="processcontainer">  
+								   <div id="processbar" style="width:0%;"></div>  
+								</div>
+							</div>
+							
+						</div>
+					</a>
+		 		</li>
+		 		<div class="line"></div>
+		 		<li class="mui-table-view-cell mui-media " onclick="commodityDetail()" style="">
+					<a style="padding-bottom:7px;margin:-11px -10px ;">
+						
+						<span><img src="../img/Healthy_polite/燃情预热中.png" class="commo_sale"/></span>
+						<img class="mui-media-object mui-pull-left" src="../img/Healthy_polite/图1.png"/>
+						<div class="mui-media-body" style="margin-bottom:5px ;">
+							<p class="commo_name">万达、和法规和法国恢复</p>
+							<p class="commo_price"><span>兑换价：</span><span class="commo_price_num">50</span>积分</p>
+							<p class="commo_money">市场价：<span>&#165;50元</span></p>
+							<p><button class="weiwen-btn weiwen-btn-bcred">立即抢购</button></p>
+						</div>
+						<div>
+							<div class="monmo_Tim" style="float: left;">
+								距离结束
+								<span class="commoTimer_1">01</span>天
+								<span class="commoTimer_2">23</span>:
+								<span class="commoTimer_2">53</span>:
+								<span class="commoTimer_2">32</span>
+							</div>
+							<div style="color: #2b2b2b;"> 
+								<span class="robbedNum" style="">已抢80%</span>
+								<div class="processcontainer">  
+								   <div id="processbar" style="width:0%;"></div>  
+								</div>
+							</div>
+							
+						</div>
+					</a>
+		 		</li>
+		 		<div class="line"></div>
+		 		<li class="mui-table-view-cell mui-media " onclick="commodityDetail()" >
+					<a style="padding-bottom:7px;">
+						<img class="mui-media-object mui-pull-left commo_saleout"  src="../img/Healthy_polite/图1.png"/>
+						
+						<div class="mui-media-body">
+							<p class="commo_name">万达、星美橙规范的风格号地块</p>
+							<p class="commo_price"><span>兑换价：</span><span class="commo_price_num">50</span>积分</p>
+							<p class="commo_money" style="">市场价：<span>&#165;50元</span></p>
+							<p><button class="weiwen-btn weiwen-btn-bcshade">已结束</button></p>
+						</div>
+					</a>
+		 		</li>
+			</ul>
+		</div>-->
+		<div class="commo_poli_all" ><!--兑换商品-->
+			<p class="commo_poli_img" style="height: 0.85rem;font-size:0.32rem;line-height: 0.85rem;"><img src="../img/Healthy_polite/兑.png" width="14" style="width: 14;margin-right: 5px;" />积分兑换</p>
+				<ul class="mui-table-view mui-grid-view" style="padding-left: 0px;background-color: #FFF;">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				        	<span class="commo_saleout_mask"  style="">售罄</span>
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name" style="font-size: 0.32rem;line-height: 1.4;">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num" style="font-size: 0.32rem;line-height: 1.4;">50</span><span class="commo_all_str" style="font-size: 0.24rem;">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-6" style="border-bottom: 0px;">
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				        	<span class="commo_saleout_mask"  style="">售罄</span>
+				            <img class="mui-media-object " src="../img/Healthy_polite/图1.png" >
+				            <div class="commo_all">
+				            	<p class="commo_all_name" style="font-size: 0.32rem;line-height: 1.4;">万达、星美更何况是读后发个电饭锅电饭锅<p>
+				            	<p><span class="commo_all_num" style="font-size: 0.32rem;line-height: 1.4;">50</span><span class="commo_all_str" style="font-size: 0.24rem;">积分</span></p>
+				            </div>
+				        </a>
+				    </li>
+				</ul> 
+			
+		</div>
+	</div>
+		<script>
+			var scale = 1 / devicePixelRatio;
+document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+		document.addEventListener()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=1" />
+		<title></title>
+	</head>
+	<body>
+		<div id="tletil">
+			<p id="ad">回复康师傅开始看发挥的设计费</p>
+			<div style="position: fixed;">
+				<button id="fullBtn">全局</button>				
+				<button id="cancelBtn">取消全局</button>
+			</div>
+		</div>
+		
+
+		<script type="text/javascript">
+		function launchFullScreen(element){
+			if(element.requestFullScreen){
+				element.requestFullScreen();
+			}else if(element.webkitRequestFullScreen){
+				element.webkitRequestFullScreen();
+			}else if(element.mozRequestFullScreen){
+				element.mozRequestFullScreen();
+			}
+		}
+		function cancelFullScreen(){
+			if(document.cancelFullScreen){
+				document.cancelFullScreen();
+			}else if(document.webkitCancelFullScreen){
+				document.webkitCancelFullScreen();
+			}else if(document.mozCancelFullScreen){
+				document.mozCancelFullScreen();
+			}
+		}
+		document.getElementById('fullBtn').addEventListener("click",function(){
+			launchFullScreen(document.getElementById("tletil"));			
+		})
+		document.getElementById("cancelBtn").addEventListener("click",function(){
+			cancelFullScreen();
+		})
+		document.addEventListener("fullscreenchange",function(event){
+			alert("1");
+			console.log("a");
+			var fullScreen=document.msFullscreenEnabled||document.fullscreenEnabled||document.mozFullscreenEnabled||document.webkitFullscreenEnabled;
+			console.log(fullScreen);
+			console.log()
+			if(document.msFullscreenEnabled){
+				console.log("yes");
+			}
+		})
+		</script>
+	</body>
+</html>

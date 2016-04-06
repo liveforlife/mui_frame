@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/app.css"/>-->
+		<style>
+			.mui-control-content {
+				background-color: white;;
+				min-height: 450px;
+				height: 100%;
+			}
+			.mui-table-view{
+				height: 100%;
+			}
+			.mui-control-content .mui-loading {
+				/*border-top: 40px solid #E1E1E1;  */
+			}
+			h4{
+				font-weight: normal;
+			}
+			.mui-table-view .mui-media-object{
+				max-width: 80px;
+				height: 60px;
+			}
+			.mui-table-view .mui-media, .mui-table-view .mui-media-body{
+				overflow:visible;
+			}
+			.mui-table-view-cell>a:not(.mui-btn){
+				white-space:normal;
+				margin: -15px -18px;
+			}
+			.mui-table-view-cell:after{
+				background-color: #E1E1E1;
+			}
+			.read_amount{
+				margin-top: 10px;
+			}
+			.read_amount_p{
+				border-top: 1px solid #EEEEEE;
+			}
+			.read_amount_font{
+				margin-top: 3px;color: #8F8F94;font-size: 14px;
+			}
+			.triangle_border_nw{
+			    position:absolute;
+			    width: 25px;
+			    display: block;
+			}
+			/*title目录的样式*/
+			#scroller {
+				width:560px;
+				height:40px;
+				float:left;
+				padding:0;
+			}
+						
+			#scroller ul {
+				list-style:none;
+				display:block;
+				float:left;
+				width:100%;
+				height:100%;
+				padding:0;
+				margin:0;
+				text-align:left;
+			}
+			
+			#scroller li {
+				display:block;
+				vertical-align:middle;
+				float:left;
+				padding:0 10px;
+				width:80px;
+				height:100%;
+				background-color:#eef0f1;
+				font-size:14px;
+			}
+			.mui-slider-title{
+	font-size: 18px;
+	opacity:.2;
+	
+	background:rgba(0,0,0,0.2) none repeat scroll !important;
+}
+		</style>
+	</head>
+	<body>
+		<div class="mui-content">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-scroll">
+					<div id="scroller">
+						<ul id="thelist">
+							<li>
+								<a class="mui-control-item mui-active" href="#item1mobile">
+									精选
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item2mobile">
+									疾病
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item3mobile">
+									母婴
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item4mobile">
+									减肥
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item5mobile">
+									我的收藏
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item6mobile">
+									心血管
+								</a>
+							</li>
+							<li>
+								<a class="mui-control-item" href="#item7mobile">
+									美白防嗮
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>-->
+				<!--<div id="slider" class="mui-slider">-->
+<!--				<div class="mui-slider-group">-->
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div id="scroll1" class="pullContent mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<!--精选的轮播-->
+								<div id="slider" class="mui-slider"  >
+									<div class="mui-slider-group mui-slider-loop">
+										<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate" >
+											<a href="#">
+												<img src="img/060906.png">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<!-- 第一张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="img/060904.png">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<!-- 第二张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="img/060905.png">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<!-- 第三张 -->
+										<div class="mui-slider-item">
+											<a href="#">
+												<img src="img/060906.png">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+										<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+										<div class="mui-slider-item mui-slider-item-duplicate">
+											<a href="#">
+												<img src="../images/060904.png">
+												<p class="mui-slider-title">静静看这世界</p>
+											</a>
+										</div>
+									</div>
+									<div class="mui-slider-indicator">
+										<div class="mui-indicator mui-active"></div>
+										<div class="mui-indicator"></div>
+										<div class="mui-indicator"></div>
+									</div>
+							</div>
+								
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell" style="border-top:10px solid #e9edee;" >
+										<a>
+											<div>
+												<img class="mui-media-object mui-pull-left" src="img/little_heald.png" />
+												<div class="mui-media-body">
+													<h4>这是标题这是标题这是标</h4>
+													<p>这是正文这是正文这是正文这是正这是正文这是正正</p>
+												</div>
+											</div>
+											<div style="clear: both;"></div>
+											<div class="read_amount">
+												<p class="read_amount_p"></p>
+												<div  class="read_amount_font">
+													<div class="mui-pull-left">
+														<span >今天</span>
+														<div style="display: inline-block;margin-left: 5px;">
+															<img src="img/biaoqian.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">疾病</span>
+														</div>
+														
+													</div>
+													<div class="mui-pull-right">
+														<div style="display: inline-block;">
+															<img src="img/yanjing.gif" style="display: inline;width: 20px;position: relative;top: 4px;"/>
+															<span style="position: relative;top: 4px;">998</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/thumb-up_1.gif" style="display: inline-block;width: 20px;position: relative;top: 4px;"/>
+															<span style="display: inline-block;">250</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/share.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">250</span>
+														</div>											
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell" style="border-top:10px solid #e9edee;">
+										<a>
+											<div>
+												<img class="mui-media-object mui-pull-left" src="img/little_heald.png" />
+												<div class="mui-media-body">
+													<h4>这是标题这是标题这是标</h4>
+													<p>这是正文这是正文这是正文这是正这是正文这是正正</p>
+												</div>
+											</div>
+											<div style="clear: both;"></div>
+											<div class="read_amount">
+												<p class="read_amount_p"></p>
+												<div  class="read_amount_font">
+													<div class="mui-pull-left">
+														<span >今天</span>
+														<div style="display: inline-block;margin-left: 5px;">
+															<img src="img/biaoqian.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">疾病</span>
+														</div>
+														
+													</div>
+													<div class="mui-pull-right">
+														<div style="display: inline-block;">
+															<img src="img/yanjing.gif" style="display: inline;width: 20px;position: relative;top: 4px;"/>
+															<span style="position: relative;top: 4px;">998</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/thumb-up_1.gif" style="display: inline-block;width: 20px;position: relative;top: 4px;"/>
+															<span style="display: inline-block;">250</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/share.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">250</span>
+														</div>											
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell" style="border-top:10px solid #e9edee;">
+										<a>
+											<div>
+												<img class="mui-media-object mui-pull-left" src="img/little_heald.png" />
+												<div class="mui-media-body">
+													<h4>这是标题这是标题这是标</h4>
+													<p>这是正文这是正文这是正文这是正这是正文这是正正</p>
+												</div>
+											</div>
+											<div style="clear: both;"></div>
+											<div class="read_amount">
+												<p class="read_amount_p"></p>
+												<div  class="read_amount_font">
+													<div class="mui-pull-left">
+														<span >今天</span>
+														<div style="display: inline-block;margin-left: 5px;">
+															<img src="img/biaoqian.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">疾病</span>
+														</div>
+														
+													</div>
+													<div class="mui-pull-right">
+														<div style="display: inline-block;">
+															<img src="img/yanjing.gif" style="display: inline;width: 20px;position: relative;top: 4px;"/>
+															<span style="position: relative;top: 4px;">998</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/thumb-up_1.gif" style="display: inline-block;width: 20px;position: relative;top: 4px;"/>
+															<span style="display: inline-block;">250</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/share.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">250</span>
+														</div>											
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell" style="border-top:10px solid #e9edee;">
+										<a>
+											<div>
+												<img class="mui-media-object mui-pull-left" src="img/little_heald.png" />
+												<div class="mui-media-body">
+													<h4>这是标题这是标题这是标</h4>
+													<p>这是正文这是正文这是正文这是正这是正文这是正正</p>
+												</div>
+											</div>
+											<div style="clear: both;"></div>
+											<div class="read_amount">
+												<p class="read_amount_p"></p>
+												<div  class="read_amount_font">
+													<div class="mui-pull-left">
+														<span >今天</span>
+														<div style="display: inline-block;margin-left: 5px;">
+															<img src="img/biaoqian.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">疾病</span>
+														</div>
+														
+													</div>
+													<div class="mui-pull-right">
+														<div style="display: inline-block;">
+															<img src="img/yanjing.gif" style="display: inline;width: 20px;position: relative;top: 4px;"/>
+															<span style="position: relative;top: 4px;">998</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/thumb-up_1.gif" style="display: inline-block;width: 20px;position: relative;top: 4px;"/>
+															<span style="display: inline-block;">250</span>
+														</div>
+														<div style="display: inline-block;vertical-align: middle;">
+															<img src="img/share.gif" style="display: inline;width: 20px;position: relative;top: 4px;" />
+															<span style="display: inline-block;">250</span>
+														</div>											
+													</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-6
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-7
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-8
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-9
+									</li>
+									<li class="mui-table-view-cell">
+										第一个选项卡子项-10
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class=" pullContent mui-scroll-wrapper">
+							<div class="mui-scroll">
+			<!--					<div class="mui-loading">
+									<div class="mui-spinner">-->
+										<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+									</div>
+								</div>
+						<!--	</div>
+						</div>-->
+
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>				
+					<div id="item4mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll4" class=" mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="mui-loading">
+									<div class="mui-spinner">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="item5mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll5" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										第五个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第五个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第五个选项卡子项-5
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item6mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll6" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										第六个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第六个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第六个选项卡子项-5
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="item7mobile" class="mui-slider-item  mui-control-content">
+						<div id="scroll7" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-3
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-4
+									</li>
+									<li class="mui-table-view-cell">
+										第七个选项卡子项-5
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		
+		<!--<script>
+			mui.init({
+				swipeBack: true,
+				pullRefresh : {
+				    container:'.pullContent',//待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+				    up : {
+				      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+				      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+				      callback :pullfresh //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+				    }
+				  }
+			});
+			/*头部的title的滑动*/
+			var myScroll;
+			function loaded() {
+				myScroll = new iScroll('sliderSegmentedControl',{hScrollbar:false, vScrollbar:false});
+				
+			}
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			document.addEventListener('DOMContentLoaded', loaded, false);
+			
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+			  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+			});
+			/*下部内容的设置*/
+			(function($) {
+				$('.mui-scroll-wrapper').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var html2 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第二个选项卡子项-1</li><li class="mui-table-view-cell">第二个选项卡子项-2</li><li class="mui-table-view-cell">第二个选项卡子项-3</li><li class="mui-table-view-cell">第二个选项卡子项-4</li><li class="mui-table-view-cell">第二个选项卡子项-5</li></ul>';
+				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li></ul>';
+				var html3 = '<ul class="mui-table-view"><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-5</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li><li class="mui-table-view-cell">第三个选项卡子项-1</li><li class="mui-table-view-cell">第三个选项卡子项-2</li><li class="mui-table-view-cell">第三个选项卡子项-3</li><li class="mui-table-view-cell">第三个选项卡子项-4</li></ul>';
+				var html4 ='<ul class="mui-table-view"><li class="mui-table-view-cell">也许就有第四项了</li></ul>'
+				var item2 = document.getElementById('item2mobile');
+				var item3 = document.getElementById('item3mobile');
+				var item4 = document.getElementById("item4mobile");
+				item3.innerHTML=html3;
+	/*			document.getElementById('slider').addEventListener('slide', function(e) {
+					console.log(e.detail);
+					if (e.detail.slideNumber === 1) {
+						if (item2.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item2.querySelector('.mui-loading').innerHTML = html2;
+							}, 500);
+						}
+					} else if (e.detail.slideNumber === 2) {
+						if (item3.querySelector('.mui-loading')) {
+							setTimeout(function() {
+								item3.querySelector('.mui-scroll').innerHTML = html3;
+							}, 500);
+						}
+					}else if(e.detail.slideNumber === 3){
+						if(item4.querySelector('.mui-loading')){
+							setTimeout(function(){
+								item4.querySelector('.mui-scroll').innerHTML=html4;
+							},500);
+						}
+					}
+				});*/
+			})(mui);
+		</script>-->
+
+	</body>
+
+</html>

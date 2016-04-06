@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#lunbo_div{
+				left: 30%;
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+				position: relative;
+			}
+			#lunbo_div ul{
+				
+				padding: 0px;
+				width: 11100px;
+				height: 500px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				display: inline-block;
+				float: left;
+			}
+			#lunbo_div ul li{
+				
+				display: inline-block;
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+				float: left;
+			}
+			#lunbo_div ul li img{
+				width: 500px;
+			}
+        #div1{
+            margin: 0 auto;
+            width:200px;
+            height:200px;
+            background:#ccc;
+            color: white;}
+        #div1 p{
+            position: relative;
+            top: 90px;
+            left: 50px;
+        }
+        li{ width:200px; height:200px; margin:5px; float:left; list-style:none;}
+        li img{ width:500px;height: auto}
+		</style>
+		<script>
+			
+			window.onload=function(){
+				
+				//轮播功能
+				var oDiv=document.getElementById('lunbo_div');
+				var oUi=oDiv.getElementsByTagName('ul');
+			var aLi=oUi[0].getElementsByTagName('li');
+			var btnL=document.getElementById("btnLeft");
+			var btnR=document.getElementById("btnRight");
+			var timeInterval=3000;
+			var curIndex=0;
+			var baseWidth=aLi[0].offsetWidth;
+			var iNow=0;
+			
+			/*var stcan=0;*/
+				//setInterval(change,timeInterval);
+				btnL.addEventListener('click',function(){
+					//clearInterval();
+					if(iNow==0){
+						iNow==aLi.length-1;
+					}else{
+						iNow--;
+					}
+					console.log(iNow);
+					move(iNow);
+				})
+				btnR.addEventListener('click',function(){
+					if(iNow == aLi.length-1){
+						iNow=0;
+					}else{
+						iNow++;
+					}
+					console.log(iNow);
+					move(iNow);
+				})
+				//console.log(baseWidth);
+				function change(){
+					
+					if(curIndex == aLi.length){
+						curIndex=0;
+					}else{
+						move(curIndex)
+						curIndex++;
+					}
+					console.log(curIndex);
+					
+				}
+				function move(index){
+					oUi[0].style.left=-baseWidth*index+'px';
+				}
+				document.getElementById('one').addEventListener('dragstart',function(){
+					//alert("aaa");
+					console.log("a");
+				})
+				
+				
+				//拖拽上传图片
+            var oUl = document.getElementById('ul1');
+            var oDiv = document.getElementById('div1');
+            oDiv.ondragenter = function(){
+                this.innerHTML = '可以释放';
+            };
+            oDiv.ondragover = function(ev){
+                ev.preventDefault();
+            };
+            oDiv.ondragleave = function(){
+                this.innerHTML = '请拖拽到此区域';
+            };
+            oDiv.ondrop = function(ev){
+                ev.preventDefault();
+                var fs = ev.dataTransfer.files;
+                for(var i=0;i<fs.length;i++){
+                    var fr = new FileReader();
+                    if( fs[i].type.indexOf('image')!=-1 ){
+                        fr.readAsDataURL( fs[i] );
+                        fr.onload = function(){
+                            var oLi = document.createElement('li');
+                            var oImg = document.createElement('img');
+                            console.log(this.result);
+                            oImg.src = this.result;
+                            oLi.appendChild( oImg );
+                            oUl.appendChild( oLi );
+                        };
+                    }
+                    else{
+                        alert('亲,请拖拽图片格式');
+                    }
+                }
+            };
+           
+            var eledus=document.getElementById('dustbin');
+            var tbd=document.getElementsByClassName('tbdil');
+            var dropg=document.getElementById('dropmind');
+            var tbds=null;
+            for (var i=0;i<tbd.length;i++) {
+            	tbd[i].onselectstart=function(){
+            		return false;
+            	}
+            	tbd[i].ondragstart=function(ev){
+            		ev.dataTransfer.effectAllowed="move";
+            		ev.dataTransfer.setData('text',ev.target.innerHTML);
+            		ev.dataTransfer.setDragImage(ev.target,0,0);
+            		tbds=ev.target;
+            		return true;
+            	}
+            	tbd[i].ondragenter=function(ev){
+            		ev.dataTransfer.clearData("text");
+            		tbds=null;
+            		return false
+            	}
+            }
+           	eledus.ondragover = function(ev) {
+			    /*拖拽元素在目标元素头上移动的时候*/
+			    ev.preventDefault();
+			    return true;
+			};
+
+       	 	eledus.ondragenter=function(ev){
+            	console.log("b");
+            	this.innerHTML="可以释放";
+            	this.style.backgroundColor='#FFF';
+            	ev.preventDefault();
+            }
+            eledus.ondrop=function(ev){
+            	ev.preventDefault();
+            	/*alert("a");*/
+            	
+            	/*console.log(tbds.innerHTML);*/
+            	/*dropg.innerHTML='<strong>hfskhdfksh</strong>被扔进了垃圾桶';*/
+            	/*tbd.parentNode.removeChild(tbds);*/
+            	this.innerHTML="垃圾桶";
+            	this.style.backgroundColor='#000000';
+            	this.style.color='#FFF';
+            	 
+            }
+        };//window.onload结束
+         	
+    </script>
+
+		</script>
+	</head>
+	<body>
+		<div id="lunbo_div">
+			<a id="btnLeft" href="javascript:void(0);">左边一张</a>
+			<a id="btnRight" href="javascript:void(0);">右边一张</a>
+			<ul>
+				<li>
+					<img src="img/lunbo/yuantiao.jpg"/>
+				</li>
+				<li>
+					<img src="img/lunbo/cbd.jpg"/>
+				</li>
+				<li>
+					<img src="img/lunbo/muwu.jpg"/>
+				</li>
+				<li>
+					<img src="img/lunbo/shuijiao.jpg"/>
+				</li>
+			</ul>		
+		</div>
+		<div style="background-color: #F5F5F5;text-align: center;line-height: 40px;padding: 50px;">
+			<div id="one" draggable="true" style="background-color: #2AC845;">one</div>
+			<div id="second" draggable="true" style="background-color: #6641E2;">second</div>
+		</div>
+		<!--拖拽上传图片-->
+		<div id="div1"><p>请拖拽到此区域</p></div>
+		<ul id="ul1"></ul>
+		<!--拖拽删除垃圾-->
+		<div>
+			<div id="dustbin" style="background-color: #555555;height: 50px;">垃圾箱</div>
+			<div>
+				<li class="tbdil" style="background-color: #888888" draggable="true"> 第一项</li>
+				<li class="tbdil" style="background-color: #888888" draggable="true">第二项</li>
+				<li class="tbdil" style="background-color: #888888" draggable="true">第三项</li>
+				<li class="tbdil" style="background-color: #888888" draggable="true">第四项</li>
+				<li class="tbdil" style="background-color: #888888" draggable="true">第五项</li>
+			</div>
+			<div id="dropmind">gdfgdg</div>
+		</div>
+	</body>
+</html>

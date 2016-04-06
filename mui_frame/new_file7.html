@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+		</style>
+	</head>
+	<body>
+		<div id="contrlty" style="height: 100px;background-color: #CCC;">
+			fksdfkdsjfk
+		</div>
+		<span class="triangle-up"></span>
+		<button onclick="lick()">测试测试测试</button>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script>
+			/*var object={
+				name:'fsdf',
+				sex:'fsdfs',
+				adress:'fsdgfdsfg',
+				show:function(){
+					alert(object.name+','+object.sex+','+object.adress);
+				}
+			};*/
+			/*var object=new Object();
+			object.name='hgfkdg';
+			object.sex='ghfdkgh';
+			object.adress='gkdfhg';
+			object.show=function(){
+				alert(object.name+','+object.sex+','+object.adress);
+			}*/
+			var  object=new lic("fgdfg","fsdfs","dfsd");
+			function lic(name,sex,adress){
+				this.name=name;
+				this.sex=sex;
+				this.adress=adress;
+				this.show=function(){
+					alert(this.name+','+this.sex+','+this.adress);
+				}
+			}
+			function lick(){
+				object.show();
+			}
+			$(function () {
+				
+			var tly=document.getElementById("contrlty");
+			tly.addEventListener("swipedown",function(){
+				alert("A");
+				console.log("D");
+			});
+			tly.addEventListener("tap",function(){
+				alert("A");
+				console.log("D");
+			});
+			
+			
+			});
+			
+		</script>
+	</body>
+</html>

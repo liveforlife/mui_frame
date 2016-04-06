@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>商品订单</title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style>
+    	body{
+    		font-size: 12px;
+    	}
+    	p{font-size: 12px;}
+    	.mui-table-view-cell>a:not(.mui-btn){
+	    	white-space: normal;
+    	}
+    	.mui-bar{
+	    	box-shadow:0px 0px 0px #FFF;
+	    }
+	    .mui-content{background-color: #FFF;}
+	    .mui-table-view:after{
+	    	height: 0px;
+	    }
+	    .line{height: 10px;border-top:1px solid #E1E1E1 ;border-bottom: 1px solid #E1E1E1;background-color: #F7F9F8}
+    	.weiwen-btn-div{
+			text-align: center;margin-top: 5px;border: 0px;
+		}
+		.weiwen-btn{
+			width: 95%;
+			 border: #47a1ec;
+			 height:40px;
+			 color: #FFFFFF;
+		}
+		.weiwen-btn-bcred{
+			background-color: #f34258;
+		}
+		.order_careful{text-align: center;background-color: #fffcd7;border-bottom: 1px solid #e1e1e1;height: 30px;vertical-align: middle;}
+		.order_careful p{line-height: 30px;color: #cb7546;margin-bottom: 0px;}
+		.order_detail p{margin-left: 15px;color: #888888;margin-bottom: 5px;}
+		.order_detail p span{color: #2b2b2b;padding-left:15px ;}
+		.order_detail .order_detail_tab{color: #f34258;margin: 15px;font-size:1.3em ;padding-bottom: 10px;border-bottom:1px solid #E1E1E1 ;}
+		
+		.order_addre p{margin-left: 15px;color: #888888;margin-bottom: 5px;}
+		.order_addre p span{color: #2b2b2b;padding-left:5px ;}
+		.order_addre .order_addre_tab{color: #f34258;margin: 15px;font-size:1.3em ;padding-bottom: 10px;border-bottom:1px solid #E1E1E1 ;}
+   		.hli{line-height: 20px;margin-bottom: 0px;}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="row weiwen-btn-div">
+			<button class="weiwen-btn weiwen-btn-bcred" onclick="clit()">立即抢兑</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div class="order_careful" >
+			<p>
+				请认真核对兑换信息!
+			</p>
+		</div>
+		<div class="order_detail">
+			<p class="order_detail_tab">礼品信息</p>
+			<div class="mui-table-view">
+				<div class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<img class="mui-col-xs-6"  src="../img/Healthy_polite/图1.png" />
+						<div class="mui-pull-right mui-col-xs-6">
+							哈萨克回复康师傅的老和尚来开发和 
+						</div>	
+					</a>
+					
+				</div>
+				
+			</div>
+			<p>礼品数量<span>1</span></p>
+			<p>兑换价格<span>100积分</span></p>
+			<p>邮费说明<span>包邮</span></p>
+		</div>
+		<div class="line"></div>
+		<div class="order_addre">
+			<p class="order_addre_tab">收货地址</p>
+			<p>收货人：<span>发多少</span></p>
+			<p>手机：<span style="padding-left:15px;">41663464646</span></p>
+			<p><span style="padding-left:52px;">发送到放假了圣诞节饭</span></p>
+		</div>
+	</div>
+	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../js/jquery.similar.msgbox.js"></script>
+	<script>
+		function clit(){
+			/*$.MsgBox.Alert('消息','兑换成功！！',function(){
+	 		        		
+        	});*/
+        	$.MsgBox.Confirm('消息',"<h4>兑换失败</h4><p class='hli'>你的积分不足，分享朋友圈即可获取积分</p><p class='hli'>立即查看如何获得积分？</p>","查看更多方式","立即分享",function(){ 
+                 window.location.href='<%=basePath%>promot/gainPoint';       
+             });
+		}
+	</script>
+</body>
+</html>

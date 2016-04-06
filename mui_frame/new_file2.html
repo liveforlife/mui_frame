@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+			<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	</head>
+	<body>
+		<!--<div id="pullrefresh" class="mui-content mui-scroll-wrapper" >
+			<div class="mui-scroll">
+				<!-- <div>
+					<ul class="mui-table-view mui-grid-view" style="padding-right: 0px;">
+				        <li class="mui-table-view-cell mui-media mui-col-xs-7" >
+				             <div class="mui-input-row mui-search" >
+								<input id="hospitalName" type="search" class="mui-input-clear" placeholder="查找医院" value="">
+								<input id="regionId" type="text" style="display: none" value=""/>
+						    </div>
+				        </li>
+				        <li class="mui-table-view-cell mui-media mui-col-xs-5" >
+			                <div class="mui-media-body mui-col-xs-3" style="border-left: 2px solid #f5f5f5;margin-top:0px">
+			                	<button id="showCityPicker" class="mui-btn mui-btn-block mui-col-xs-10">选择城市</button>
+			                	<div id='cityResult' class="ui-alert"></div>
+			                	<button onclick="pullupRefresh(1);">搜索</button>
+			                </div>
+				        </li>
+				    </ul> 
+				</div> -->
+				<!--数据列表-->
+			<!--	<ul id="list" class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-media">
+			<div class="row"><a id="'+val.hospitalId+'"  >
+				<div class="mui-media-object mui-pull-left mui-col-xs-4">
+					<img style="width:100%;line-height:0px;" src="img/cloud/logo(1).jpg" onerror="adf(this)" style="">
+					<p style="display:block;color：#888888;font-size:.7em;line-height:0px;">已关注：200</p>		
+				</div>
+				
+				
+				<div>
+					<span class="black cloud-title">hfghfgh</span>
+				</div>-->
+				<!--<div class="shallow ">
+					<span class="cloud-list-font">dfgdfgd</span>
+					<span class="cloud-list-font">人关注</span>
+					<span class="shallow cloud-distance-font">&nbsp;&nbsp;&nbsp;fsdfsd</span>
+				</div>
+				<p class="shallow cloud-addr" >gdfgdgd</p>-->
+			<!--	
+				<p style="display: inline-block;"><img style="width:50px;" src="<%=basePath%>/images/inquire.png"><img style="width:60px;padding-left:10px" src="<%=basePath%>/images/online.png"><img style="width:60px;padding-left:10px" src="<%=basePath%>/images/order.png"></p>
+				
+			</div>
+			
+			</a>
+				
+				</div>
+				
+			</li>
+				</ul>
+			</div>-->
+		</div>
+		<div>
+			<div style="width:100%;height:50px;background-color:#FFFFFF;" id="confirmBtn"> 点击弹出消息框</p>
+		</div>
+		<p style="height: 10px;background-color:#0062CC ;margin: 0px;"></p>
+		<div style="width: 100px;background-color: #000000 ;">
+			<p style="width: 90%;background-color: #FFF ;margin: 0px;border-right: ;">
+				<span style="width: 40px;background-color: #6641E2;display: inline-block;"></span>
+			</p>
+		</div>
+<script src="js/mui.min.js"></script>
+<script>
+	document.getElementById("confirmBtn").addEventListener('tap',function(){
+		var tered=["是","否"];
+		mui.confirm('确定购买此产品？','确定弹框',tered,function(e){
+			
+			if(e.index==0){
+				alert("fdsd");
+			}else{
+				alert("fgdgfdg");
+			}
+		})
+	})
+</script>
+	</body>
+</html>

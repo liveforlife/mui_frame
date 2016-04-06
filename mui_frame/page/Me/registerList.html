@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link href="css/gyy.css" rel="stylesheet" />
+	<style>
+		
+	/*定义基本的样式*/
+	
+		/*图片切圆*/
+		.pdiv{
+			width: 90px;
+			height: 90px;
+			border: 1px solid #c6c5c5;
+			margin-left:0px;
+			margin-right: 10px;
+		}
+		.mui-table-view:after{
+			background-color:#FFF;
+		}
+		.doc-info p{
+			font-size: .8em;
+			padding: 0px;
+			line-height: 22px;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="mui-content" >
+			<ul id="reportList" class="mui-table-view mui-fullscreen">
+			  	<li class="mui-table-view-cell" >
+					<a  href="registerInfo.html">
+						<div class="tiply">
+							<div class="mui-pull-left" >
+								<img class="register-icon"  src="img/checkup.png"/>
+								<span class="register-Ltimer">2015-07-28 12:45 </span>
+							</div>
+							<div class="mui-pull-right">
+								<span class="blueco register-state" >预约成功</span>
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div  class="pdiv" >
+								<img class="t-img"  id="yaoshi" src="img/xg.png" /><!--  -->
+							</div>
+							<div class="mui-col-xs-12 doc-info">
+								<div class="mui-col-xs-9">富小梅<span style="padding: 0px 3px;font-size: .8em;">骨科</span><span class="doc-indruce" style="padding: 0px 3px;font-size: .8em;">副主任医师</span></div>
+								<p>成都中医药大学附属医院</p>
+								<p>普通门诊（挂号费8元）</p>
+								<p>就诊时间：2015-07-31下午</p>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" style="border-top:15px solid #e9edee;">
+					<a  href="registerInfo.html">
+						<div class="tiply">
+							<div class="mui-pull-left" >
+								<img class="register-icon"  src="img/checkup.png"/>
+								<span class="register-Ltimer">2015-07-28 12:45 </span>
+							</div>
+							<div class="mui-pull-right" >
+								<span class=" blueco register-state">预约成功</span>
+							</div>	
+						</div>
+						<div style="clear: both;"></div>
+						<div class="repdetail">
+							<div  class="pdiv" >
+								<img class="t-img"  id="yaoshi" src="img/xg.png" /><!--  -->
+							</div>
+							<div class="mui-col-xs-12" >
+								<div class="mui-col-xs-9"><span >富小梅 骨科 副主任医师</span></div>
+								<p>成都中医药大学附属医院</p>
+								<p>就诊时间：2015-07-31下午</p>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+	$(function(){
+	zmnImgCenter();
+})
+		/*自适应切割图片*/
+		function zmnImgCenter(){
+			$(".t-img").each(function(index){
+					var $this=$(this);
+					var objHeight=$this.height();//图片高度
+					var objWidth=$this.width();//图片宽度
+					var parentHeight=$this.parent().height();//图片父容器高度
+					var parentWidth=$this.parent().width();//图片父容器宽度
+					var ratio=objHeight/objWidth;
+					if(objHeight>parentHeight && objWidth>parentWidth){//当图片宽高都大于父容器宽高
+						if(objHeight>objWidth) {//赋值宽高
+							$this.width(parentWidth);
+							$this.height(parentWidth*ratio);
+							}
+						else {
+							$this.height(parentHeight);
+							$this.width(parentHeight/ratio);
+							}
+						objHeight=$this.height();//重新获取宽高
+						objWidth=$this.width();
+						if(objHeight>objWidth) {
+							$(this).css("top",(parentHeight-objHeight)/2);
+							//定义top属性
+						}
+						else
+						{
+							//定义left属性
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+					}
+					else{//当图片宽高小于父容器宽高
+						if(objWidth>parentWidth){//当图片宽大于容器宽，小于时利用css text-align属性居中
+							$(this).css("left",(parentWidth-objWidth)/2);
+							}
+						$(this).css("top",(parentHeight-objHeight)/2);
+						}
+				})
+			}
+</script>
+	</body>
+</html>
