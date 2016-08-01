@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>商品的详情</title>
-    <script src="../js/mui.min.js"></script>
-    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
     <style>
 	     body{
 		    	font-size: 12px;
@@ -43,9 +43,10 @@
     	.commo_explain{padding-left:20px ;}
     	.commo_explain li{list-style: none;color: #888888;}
     	.commo_explain span{color: #2b2b2b;padding-left:15px ;}
+    	.polite_explain{padding-left:20px ;}
     	.polite_explain li{list-style: none;color: #888888;}
     	.polite_explain li :first-child{width: 14%;vertical-align: top;}
-    	.polite_explain li :last-child{color: #2b2b2b;display: inline-block;width: 81%;padding-left: 3%;}
+    	.polite_explain li :last-child{color: #2b2b2b;display: inline-block;width: 81%;padding-left: 3%;} 
     </style>
 </head>
 <body>
@@ -60,7 +61,7 @@
 	</header>
 	<footer class="mui-bar mui-bar-tab " id="footer">
 			<div class="row weiwen-btn-div">
-				<button class="weiwen-btn weiwen-btn-bcred">立即兑换</button>
+				<button class="weiwen-btn weiwen-btn-bcred" onclick="lic()">立即兑换</button>
 			</div>
 	</footer>
 	<div class="mui-content">
@@ -76,7 +77,7 @@
 				<!-- 第一张 -->
 				<div class="mui-slider-item">
 					<a href="#">
-						<img src="../img/Healthy_polite/图1.png">
+						<img src="../../img/Healthy_polite/图1.png">
 					</a>
 				</div>
 				<!-- 第二张 -->
@@ -127,13 +128,11 @@
 			<div ><!--商品说明-->
 				<li class="commo_produce">商品说明</li>
 				<ul class="commo_explain">
-					<li>品牌<span>3M</span></li>
-					<li>型号<span>9001V/9002V</span></li>
-					<li>毛重<span>0.1</span></li>
-					<li>货号 <span>XV003889278</span></li>
-					<li>颜色<span>9002V头戴式环保装</span></li>
-					<li>材质<span>3M高效静电棉滤材</span></li>
-					<li>人群 <span>成人</span></li>
+					<li>使用说明<span>兑换价值280元的套餐</span></li>
+					<li>使用范围<span>仅限于四川省成都地区</span></li>
+					<li>使用时间<span>2016年1月20日</span></li>
+					<li>使用方式<span>的粉红色的恢复流口水的发挥结算方式功能的风格的客户456555555555555555555555555555555555555555555555555555观看个地方规定客户更快的何飞开过黄金分割点客户规定规范的法规的法规的个梵蒂冈的风格的</span></li>
+					<li>注意事项<span>每个用户限兑换一张</span></li>
 				</ul>
 			</div>
 			<div class="line"></div>
@@ -149,7 +148,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="../js/jquery-1.9.1.min.js"></script>
+	<script src="../../js/jquery-1.9.1.min.js"></script>
+	<script src="../../js/jquery.similar.msgbox.js"></script>
 	<script type="text/javascript" charset="UTF-8">
 	var i=0;
 	if(i==0){
@@ -163,6 +163,13 @@
       	slider.slider({
 						interval: 5000
 					});
+	function lic(){
+		$.MsgBox.Confirm("删除记录","删除本条上门服务记录？","否","是",function(){},function(){
+		
+	      		}
+		)	
+	}
+	
     </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.min.css">
 		<style>
 			.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
 				height: auto;
@@ -35,8 +35,20 @@
 			.mui-table-view .mui-media-object{line-height: 1.7rem;max-width: 1.7rem;height: 1.7rem;}
 			.mui-table-view .mui-media-object.mui-pull-left{margin-right: 0.24rem;}
 			.mui-table-view-cell:after{height: 0px;}
-			.docCard{margin: 0.21rem;}
-			
+			.docCard{margin: 0.21rem;border:0.01rem solid #E1E1E1;box-shadow: 0.01rem 0.02rem 0.02rem 0.02rem rgba(0,0,0,0.1);border-radius:0.08rem;}
+			/*图片切圆*/
+			.pdiv{
+				width: 2.0rem;
+				height: 2.0rem;
+				float:left;
+				margin-right: 0.26rem;
+				border-radius:50%;
+				overflow: hidden;
+				border: 1px solid #d7d8dc;
+				text-align:center; position:relative;
+				Z-index:1;				
+			}
+			.pdiv img{position:relative; vertical-align:text-top;}
 		</style>
 	</head>
 	<body>
@@ -47,15 +59,24 @@
             	描述：医师列表
             -->
 			<ul id="list"  class="mui-table-view">	           	
-		          <li id='drug_help' class="mui-table-view-cell mui-media docCard" style="border:0.01rem solid #E1E1E1;box-shadow: 0.01rem 0.02rem 0.02rem 0.02rem rgba(0,0,0,0.1);border-radius:0.08rem;">
+		          <li id='drug_help' class="mui-table-view-cell mui-media docCard" style="">
 	          		<div class="row">
-						<a href="docxiangqing.html">
-							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../img/private/touxiang.png" style="width: 1.7rem;"  >
+						<!--<a href="docxiangqing.html">-->
+							<div class=" mui-pull-left mui-col-xs-3" style="margin-right: 15px">
+         						<div class="pdiv">
+         							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../../img/private/touxiang.png" style="width: 3.6rem;"  >
+         						</div>
+         						<p style="color: #4c4c4c;margin-top: 0.86rem;">
+         							<span style="margin-left: 0.45rem;font-size: 0.24rem;">
+         								<img src="<%=basePath%>/images/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">'+row.focusNum+'</span>
+         						</p>
+        					</div>'
+							
 							<div class="mui-media-body">
 								<div style="line-height: 1.4;">
 									<span class="black" style="font-size:0.45rem ;color: #464646;">付医生</span>
 									<span style="font-size:0.34rem ;color: #464646;margin-left: 0.26rem;">副主任医生</span>
-									<img class="mui-pull-right" src="../img/private/statusCare.png" style="width: 0.53rem;"/>
+									<img class="mui-pull-right" src="../../img/private/statusCare.png" style="width: 0.53rem;"/>
 									<div>
 										<span class="blue" style="font-size:0.34rem ;color: #888888;">全科</span>
 										<span class="blue" style="font-size:0.34rem ;color: #888888;margin-left: 0.26rem;">微问诊平台</span>
@@ -66,28 +87,28 @@
 								</div>
 							</div>
 							<div style="color: #4c4c4c;margin-top: 0.26rem;">
-								<span style="margin-left: 0.45rem;font-size: 0.24rem;"><img src="../img/private/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">875</span>
+								<span style="margin-left: 0.45rem;font-size: 0.24rem;"><img src="../../img/private/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">875</span>
 								<span style="color: #f76d02;margin-left: 0.72rem;font-size: 0.24rem;">
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
 								3.7</span> 
-								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
+								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
 							</div>
-						</a>
+						<!--</a>-->
 					</div>
 				</li>
 				 <li id='drug_help' class="mui-table-view-cell mui-media docCard" style="border:0.01rem solid #E1E1E1;box-shadow: 0.01rem 0.02rem 0.02rem 0.02rem rgba(0,0,0,0.1);border-radius:0.08rem;">
 	          		<div class="row">
 						<a href="xiangqing.html">
-							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../img/private/touxiang.png" style="width: 1.7rem;"  >
+							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../../img/private/touxiang.png" style="width: 1.7rem;"  >
 							<div class="mui-media-body">
 								<div style="line-height: 1.4;">
 									<span class="black" style="font-size:0.45rem ;color: #464646;">付医生</span>
 									<span style="font-size:0.34rem ;color: #464646;margin-left: 0.26rem;">副主任医生</span>
-									<img class="mui-pull-right" src="../img/private/statusCare.png" style="width: 0.53rem;"/>
+									<img class="mui-pull-right" src="../../img/private/statusCare.png" style="width: 0.53rem;"/>
 									<div>
 										<span class="blue" style="font-size:0.34rem ;color: #888888;">全科</span>
 										<span class="blue" style="font-size:0.34rem ;color: #888888;margin-left: 0.26rem;">微问诊平台</span>
@@ -100,13 +121,13 @@
 							<div style="color: #4c4c4c;margin-top: 0.26rem;">
 								<span style="margin-left: 0.45rem;font-size: 0.24rem;"><img src="../img/private/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">875</span>
 								<span style="color: #f76d02;margin-left: 0.72rem;font-size: 0.24rem;">
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
 								3.7</span> 
-								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
+								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
 							</div>
 						</a>
 					</div>
@@ -114,7 +135,7 @@
 				<li id='drug_help' class="mui-table-view-cell mui-media docCard" style="border:0.01rem solid #E1E1E1;box-shadow: 0.01rem 0.02rem 0.02rem 0.02rem rgba(0,0,0,0.1);border-radius:0.08rem;">
 	          		<div class="row">
 						<a href="xiangqing.html">
-							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../img/private/touxiang.png" style="width: 1.7rem;"  >
+							<img class="mui-media-object mui-pull-left mui-col-xs-3"  src="../../img/private/touxiang.png" style="width: 1.7rem;"  >
 							<div class="mui-media-body">
 								<div style="line-height: 1.4;">
 									<span class="black" style="font-size:0.45rem ;color: #464646;">付医生</span>
@@ -130,15 +151,15 @@
 								</div>
 							</div>
 							<div style="color: #4c4c4c;margin-top: 0.26rem;">
-								<span style="margin-left: 0.45rem;font-size: 0.24rem;"><img src="../img/private/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">875</span>
+								<span style="margin-left: 0.45rem;font-size: 0.24rem;"><img src="../../img/private/priAtten.png" style="width: 0.24rem;margin-right: 0.09rem;">875</span>
 								<span style="color: #f76d02;margin-left: 0.72rem;font-size: 0.24rem;">
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starColor.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
-									<img src="../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starColor.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
+									<img src="../../img/private/starShade.png" style="width: 0.24rem;"/>
 								3.7</span> 
-								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
+								<span class="mui-pull-right" style="font-size: 0.24rem;"><img src="../../img/private/priService.png" style="width: 0.24rem;margin-right: 0.09rem;">2173人</span>
 							</div>
 						</a>
 					</div>
@@ -146,13 +167,12 @@
 	        </ul> 		
 
 		</div>
-<script src="../js/mui/mui.min.js"></script>
-<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../../js/mui/mui.min.js"></script>
+<script src="../../js/jquery-1.9.1.min.js"></script>
 <script>
 		var scale = 1 / devicePixelRatio;
     document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
 	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
-	document.addEventListener()
 	function abc(){
 		window.location.href="xiangqing.html";
 	}

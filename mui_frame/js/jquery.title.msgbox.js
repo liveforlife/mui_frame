@@ -49,17 +49,17 @@
         });
 
         $("#mb_con").css({ zIndex: '999999', width: '220px', position: 'fixed',
-            backgroundColor: 'White', borderRadius: '3px', 
+            backgroundColor: 'White', borderRadius: '3px',
         });
 
         $("#mb_tit").css({ fontSize: '14px', color: '#33b5e5',
         	padding: '10px 15px',fontWeight: 'bold',
-        	borderBottom: '3px solid #33b5e5',display:'block'
+        	borderBottom: '3px solid #33b5e5',display:'none'
         });
 
         $("#mb_msg").css({lineHeight: '40px',
             borderBottom: '1px solid #e1e1e1', fontSize: '13px',
-            textAlign:'center',
+            textAlign:'center',maxHeight:'200px',overflow:'hidden'
         });
 
         $("#mb_ico").css({ display: 'none', position: 'absolute', right: '10px', top: '9px',

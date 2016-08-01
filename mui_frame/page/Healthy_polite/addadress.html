@@ -12,6 +12,10 @@
     <script src="../../js/jquery-1.9.1.min.js"></script>
     <script src="../../js/jquery.title.msgbox.js"></script>
     <style>
+    .mui-content{
+		background-color: #FFFFFF;
+		box-shadow:0 0 1px rgba(0, 0, 0, 0);
+	}
     	.pile{
     		border-bottom: 1px solid #E1E1E1;
     		margin: 0px;
@@ -23,6 +27,37 @@
 	#mb_msg{
 		padding: 0px
 	}
+	#ippk:active{
+		color: #0379a6;
+	}
+	.chek_1{
+    		display: none;
+    	}
+    /*方式一*/
+    	.chek_1 + label{
+    		vertical-align: text-bottom;
+    		background-color: #FFF;
+			border: 1px solid #C1CACA;
+			padding: 6px;
+			display: inline-block;
+			position: relative;
+			margin-top: 2px
+    	}
+    	.chek_1:checked + label{
+    		background-color: #FFF;
+			border: 1px solid #C1CACA;
+    	}
+    	.chek_1:checked + label:after{
+    		color:#2eaedf;
+    		content: '\2714';
+    		font-size:10px;
+			vertical-align: text-top;
+			position: absolute;
+			top: -3px;
+			left: 0px;
+			width: 100%;
+			text-align: center;
+    	}
     </style>
 </head>
 <body>
@@ -39,14 +74,14 @@
 			</div>
 			<p>收货地址</p>
 			<p style="color: #24292f;">
-				<input type="checkbox" value="2"/>
+				<input type="checkbox" id="checkbox_a1" class="chek_1" checked="checked" /> <label for="checkbox_al"></label>
 			使用速递易</p>
-			<!--<div class="mui-input-row">
+			<div class="mui-input-row">
 				<input class="mui-col-xs-3" type="text" placeholder="" id="receiveAddr" style="width: 85%;">
-				<span class="mui-icon mui-icon-location mui-pull-right" style="font-size: 34px;"></span>
-			</div>-->
+				<span id="ippk" class="mui-icon mui-icon-location mui-pull-right" style="font-size: 34px;"></span>
+			</div>
 			<div class="mui-input-row" onclick="dic()">
-				<input class="mui-col-xs-3" type="text" placeholder="" id="receiveAddr" disabled="true">
+				<input class="mui-col-xs-3" type="text" placeholder="" id="receiveAddr" disabled="true" value="发斯蒂芬海口市反馈的哈萨克斯柯达福克斯就放开手的福克斯的股份第六届" style="padding: 10px 20px 10px 5px;white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">
 				<span class="mui-icon mui-icon-arrowdown" style="position: absolute;top: 9px;right: 5px;color: rgba(0,0,0,0.3);"></span>
 			</div>
 		</form>
@@ -59,7 +94,7 @@
 	</div>
 	<script>
 		function dic(){
-			$.MsgBox.Alert("选择地址",'<p class="pile">新都</p><p class="pile">北京</p><p class="pile">上海</p>',function(){
+			$.MsgBox.Alert("选择地址",'<p class="pile">新都富士康减肥的快圣诞节疯狂第三季度开发</p><p class="pile">北京</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p><p class="pile">上海</p>',function(){
 						/*  alert("1"); */
 					 }); 
 		}

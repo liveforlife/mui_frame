@@ -56,7 +56,7 @@
 
         $("#mb_tit").css({  fontSize: '14px', color: '#444', padding: '10px 15px',
             backgroundColor: '#DDD', borderRadius: '15px 15px 0 0',
-            borderBottom: '3px solid #009BFE', fontWeight: 'bold'
+            borderBottom: '3px solid #009BFE', fontWeight: 'bold',display:'none'
         });
 
         $("#mb_msg").css({ padding: '20px', lineHeight: '40px',

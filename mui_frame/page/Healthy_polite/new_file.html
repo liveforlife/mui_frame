@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		   <link href="../css/mui.min.css" rel="stylesheet"/>
+		   <link href="../../css/mui.min.css" rel="stylesheet"/>
 		<style>
 			p{
 				display: box;
@@ -16,9 +16,115 @@
 			li{
 				position: sticky;
 			}
+			/*弹出框*/
+			.mb_blank{
+				width: 100%; height: 100%; z-index: 99999; position: fixed; top: 0px; left: 0px; opacity: 0.6; background-color: black; display:none;
+			}
+			.mb_cont{
+				color:#2EAEDF;font-size:15px;line-height: 25px;z-index: 199999; display:none;position:fixed;background-color: #FFF;width: 260px;
+			}
+			.mb_title{
+				border-bottom: 1px solid #00BCD4;padding: 10px;
+			}
+			.mb_inport{
+				padding: 10px;padding-bottom:20px;border-bottom: 1px solid rgb(225,225,225);color:#2b2b2b
+			}
+			.mb_inportIN div:first-child{
+				padding-bottom: 10px;
+			}
+			.mb_inportIN div label{
+				margin-left: -5px;
+			}
+			.mb_inportIN div input{
+				height:30px;font-size: 1em;width: 100%;margin-top: 5px;
+			}
+			.mb_button{
+				text-align: center;
+			}
+			.mb_button input:first-child{
+				width: 123px; height: 35px; color: #888888; border: none; padding: 5px 0px;font-size: 17px;background-color: rgb(255, 255, 255);
+			}
+			.mb_button input:last-child{
+				width: 123px; height: 35px; color: rgb(46, 174, 223); border-style: none none none solid;font-size: 17px;border-left-width: 1px; border-left-color: rgb(225, 225, 225); padding: 5px 0px; background-color: rgb(255, 255, 255);
+			}
 		</style>
 	</head>
-	<body>
+	<body style="overflow: hidden;">
+		<span onclick="al()">sdfhskfhksfhksh </span>
+		<div id="mb_box" class="mb_blank"></div>
+		<div id="mb_con" class="mb_cont">
+			<div class="mb_title">填写身份证和姓名</div>
+			<div class="mb_inport">
+				<form class="mb_inportIN" >
+					<div>
+						<label>身份证号码：</label>
+						<input type="text" placeholder="身份证号码">
+					</div>
+					<div class="">
+						<label>姓名：</label>
+						<input type="text" class="mui-input-clear" placeholder="姓名">
+					</div>
+				</form>
+			</div>	
+			<div class="mb_button" style="text-align: center;">
+				<input type="button" value="取消" onclick="ao()">
+				<input type="button" value="确定">
+			</div>		
+		</div>
 		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		<p>暑假的联发科技术开发</p>
+		
 	</body>
+	<script src="../../js/jquery-1.9.1.min.js"></script>
+	<script src="../../js/jquery.similar.msgbox.js"></script>
+	<script src="../../js/mui.min.js"></script>
+	<script>
+		var mask = mui.createMask(li);//callback为用户点击蒙版时自动执行的回调；
+		
+		function al(){
+        	var _widht = document.documentElement.clientWidth;  //屏幕宽
+	        var _height = document.documentElement.clientHeight; //屏幕高
+	
+	        var boxWidth = $("#mb_con").width();
+	        var boxHeight = $("#mb_con").height();
+        	$("#mb_con").css({ top: (_height - boxHeight) / 2 + "px", left: (_widht - boxWidth) / 2 + "px" });
+        	/*$("#mb_box").show();*/
+			mask.show();//显示遮罩
+			
+			$("#mb_con").show();
+		}
+		function ao(){
+			/*$("#mb_box").hide();*/
+			mask.close();//关闭遮罩
+        	$("#mb_con").hide();
+		}
+		function li(){
+			$("#mb_con").hide();
+		}
+	</script>
 </html>
