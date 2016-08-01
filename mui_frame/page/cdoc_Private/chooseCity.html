@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Choose State</title>
+	<link rel="stylesheet" href="../../css/mui.min.css">
+	<link rel="stylesheet" href="../../css/cdoc/physical.css" />
+    <script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+</head>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="c_choose_commonlist">
+			<p class="c_choose_cmcontentB">Adamsvill</p><!--edfshfkshjhjshfjshfjhsjfhsjhfshfjshdfjshdfjhsfjhsjhdf-->
+			<p class="c_choose_cmcontentB">Alabaster</p>
+			<p class="c_choose_cmcontentB">Allgood</p>
+			<p class="c_choose_cmcontentB">Alton</p>
+			<p class="c_choose_cmcontentB">Abernant</p>
+			<p class="c_choose_cmcontentB">Alicaville</p>
+			<p class="c_choose_cmcontentB">Athens</p>
+		</div>
+		
+	</div>
+<script src="../../js/mui.min.js"></script>	
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+  	window.onload=function(){
+		var a;
+	  	a=document.getElementsByClassName('c_choose_cmcontentB');
+	  	for(var i=0;i<a.length;i++){
+		  	a[i].addEventListener('click',function(){
+		  		window.location.href='list.html';
+		  	})
+	  	}
+	  	console.log(a[1]);
+  	}
+</script>		
+</body>
+</html>

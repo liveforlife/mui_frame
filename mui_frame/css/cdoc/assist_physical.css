@@ -1,0 +1,78 @@
+/*套餐医生样式*/
+.m-header-gyypri{
+	text-align: left;font-size: 0.4rem;height:1.13rem;
+}
+.m-header-gyypri div{
+	display: inline-block;line-height:1.13rem;color: #01133;
+	padding-left: 0.24rem;
+}
+.m-header-gyypri .c_onclickback img:first-child{
+	vertical-align: middle;width: 0.37rem;margin-right: 0.24rem;
+}
+.m-header-gyypri .c_onclickback img:last-child{
+	margin-left: 0.24rem;width: 0.22rem;
+}
+.m-hospitalpri-taocan{
+	padding: 0.13rem;font-size: 0.4rem;line-height: 1.4;border-bottom: 1px solid #E1E1E1;background-color: #ecf9ff;padding-top: 0.37rem;
+}
+.m-hospitalpri-taocan .m-hospitalpri-price{
+	vertical-align: middle;text-align: center;margin-top: 0.4rem;
+}
+.m-hospitalpri-taocan .m-hospitalpri-price img{
+	position: absolute;width: 0.66rem;top: -0.6rem;left: -0.01rem;
+}
+.m-hospitalpri-taocan .m-hospitalpri-price span{
+	color: #1c61dd;
+}
+.m-hospitalpri-taocan-name{
+	font-size:0.32rem;
+	color: #001133;
+}
+.m-hospitalpri-taocan-name .m-hospitalpri-taocan-na{
+	margin-right: 0.2rem;
+}
+.m-hospitalpri-taocan-name .m-hospitalpri-taocan-pro{
+	font-size: 0.26rem;
+}
+.m-hospitalpri-taocan-name div:last-child span{
+	font-size:0.24rem;color: #888888;
+}
+.m-hospitalpri-taocan-name div:last-child span img{
+	width: 0.33rem;vertical-align: middle;
+}
+.m-content-hospitalpri .m-content-hospitalpri-more{
+	font-size: 0.32rem;line-height: 1.4;text-align: center;padding: 0.3rem 0rem;margin-bottom: 0rem;color: #001133;
+}
+/*icon大小*/
+.mui-bar .mui-icon{
+	font-size: 0.42rem;
+}
+.mui-bar{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.mui-icon{
+	font-size: 0.42rem;
+}
+ /*选择按钮*/
+#sex_male ,
+#sex_female ,
+#sex_nomale
+{
+	display:none
+}
+label
+{
+	display:-moz-inline-block;
+	display:inline-block;
+	cursor:pointer;
+	padding-top:5px;
+	/*margin-right:0.39rem;*/
+	line-height:15px;
+	background:url(../../img/cdoc/private/cdoc_circle.png) no-repeat left top;
+	vertical-align: middle;
+}
+label.checked
+{
+	background:url(../../img/cdoc/private/cdoc_Checked.png) no-repeat left top;
+}   

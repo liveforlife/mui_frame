@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>私人医生套餐</title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/moban/physical.css" rel="stylesheet"/>
+    <style>
+		.mui-bar-nav~.mui-content{
+			padding-top:0.88rem
+		}
+		.m-header-gyypri{
+			text-align: center;font-size: 0.32rem;height:0.88rem;
+		}
+		.m-header-gyypri div{
+			display: inline-block;line-height:0.88rem;
+		}
+		
+		.m-hospitalpri-taocan{
+			padding: 0.13rem;font-size: 0.32rem;line-height: 1.4;border-bottom: 1px solid #E1E1E1;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name span:first-child{
+			color: #2B2B2B;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name .nowprice{
+			color: #f34258;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name .oldprice{
+			text-decoration: line-through;color: #d2d2d2;font-size: 0.24rem;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name span:last-child{
+			border: 1px solid #ff2c04;color: #ff2c04;border-radius: 0.05rem;font-size: 0.24rem;padding: 0.02rem;
+		}
+		.m-hospitalpri-taocan div:last-child{
+			color: #888888;font-size: 0.26rem;line-height: 1.4;padding: 0.13rem 0rem;
+		}
+		.m-content-hospitalpri .m-content-hospitalpri-more{
+			font-size: 0.34rem;line-height: 1.4;text-align: center;padding: 0.26rem 0.13rem 0.13rem 0.13rem;margin-bottom: 0rem;
+		}
+		.mui-bar .mui-icon{
+			font-size: 0.42rem;
+		}
+		.mui-icon{
+			font-size: 0.42rem;
+		}
+		.mui-backdrop{
+			top: 0.88rem;	
+		}
+		.mui-popover .mui-table-view{
+			max-height:820px
+		}
+		.mui-col-sm-3{
+			width: 24%;
+		}
+		.accordSt{
+			top:0.88rem;width: 100%;height: 120px;left:0px;font-size: 0.34rem;line-height: 1.6;
+		}
+		.taocanSt{
+			top:0.88rem;width: 100%;height: 820px;left:0px;font-size: 0.34rem;line-height: 1.6;
+		}
+		.taocanSt .taocanlist{
+			font-size: 0.34rem;line-height: 1.6;color: #888888;
+		}
+		.taocanSt .taocanlist p{
+			font-size: 0.34rem;line-height: 1.6;
+		}
+		.taocanSt .taocanlist p{
+			font-size: 0.34rem;line-height: 2.0;color: #888888;
+		}
+		.taocanSt .taocanlist p .taocanCon{
+			font-size: 0.34rem;line-height: 1.6;display: inline-block;text-align: center;
+		}
+		.taocanSt .taocanlist p .taocanCon .taocanBor{
+			border: 1px solid #2eaedf;padding: 5px 30px;
+		}
+		.weiwen-btn-div{
+			text-align: center;
+			margin-top: 5px;
+			border: 0px;
+			padding: 0.1rem 0rem;
+			margin-bottom: 0.1px;
+		}
+		.weiwen-btn{
+			text-align: center;
+			margin: 0rem 0.1rem 0.1rem;
+			 border: #47a1ec;
+			 height:0.88rem;
+			 color: #FFFFFF;
+			 font-size: 0.42rem
+		}
+		.weiwen-btn-5{
+			width: 48%;
+		}
+		.weiwen-btn-bcred{
+			background-color: #e72020;
+		}
+		.weiwen-btn-bclan{
+			background-color: #2eaedf;
+		}
+		/*方式一*/
+		.chek_1{
+    		display: none;
+    	}
+    	.chek_1 + label{
+    		vertical-align: text-bottom;
+    		background-color: #FFF;
+			border: 1px solid #C1CACA;
+			padding: 16px;
+			display: inline-block;
+			position: relative;
+			margin-top: 2px
+    	}
+    	.chek_1:checked + label{
+    		background-color: #FFF;
+			border: 1px solid #C1CACA;
+    	}
+    	.chek_1:checked + label:after{
+    		color:#2eaedf;
+    		content: '\2714';
+    		font-size:30px;
+			vertical-align: text-top;
+			position: absolute;
+			top: -5px;
+			left: 0px;
+			width: 100%;
+			text-align: center;
+    	}
+    </style>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav m-header-gyypri">
+			<div class="mui-col-sm-6" style="border-right: 1px solid #E1E1E1;" onclick="switchMenu()">
+				机构排序<span class="mui-icon mui-icon-arrowdown"></span>
+			</div>
+			<div class="mui-col-sm-6 mui-pull-right" onclick="switchTaocan()">
+				套餐筛选<span class="mui-icon mui-icon-arrowdown"></span>
+			</div>
+	</header>
+	<div class="mui-content">
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="other.html">
+						<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>成都市青羊区第二人民医院</span>
+							</div>
+							<p class="cloud-addr">
+								台北市光复南路116巷1号
+							</p>
+							<div>
+								<span >4.4分  12人评价 </span>
+								<span class="mui-pull-right">900米</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<div class="m-hospitalpri-taocan" onclick="xq()"> 
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<div class="m-hospitalpri-taocan" onclick="xq()">
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<p class="m-content-hospitalpri-more">其它31个套餐<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media" >
+				<div class="row">
+					<a href="other.html">
+						<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>成都市青羊区第二人民医院</span>
+							</div>
+							<p class="cloud-addr">
+								台北市光复南路116巷1号
+							</p>
+							<div>
+								<span >4.4分  12人评价 </span>
+								<span class="mui-pull-right">900米</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<div class="m-hospitalpri-taocan" onclick="xq()">
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<div class="m-hospitalpri-taocan" onclick="xq()">
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<p class="m-content-hospitalpri-more">其它31个套餐<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="cloud_details.html">
+						<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>成都市青羊区第二人民医院</span>
+							</div>
+							<p class="cloud-addr">
+								台北市光复南路116巷1号
+							</p>
+							<div>
+								<span >三级甲等 126关注</span>
+								<span class="mui-pull-right">900米</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<div class="m-hospitalpri-taocan">
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<div class="m-hospitalpri-taocan">
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+					<span class="mui-pull-right" style="display: none;">推荐</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right"> 已售：45</span>
+				</div>
+			</div>
+			<p class="m-content-hospitalpri-more">其它31个套餐<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+	</div>
+	<div id="accord" class="mui-popover accordSt">
+		<ul class="mui-table-view" style="text-align: center;">
+			<li class="mui-table-view-cell">按距离
+			</li>
+			<li class="mui-table-view-cell">按评分
+			</li>
+		</ul>
+	</div>
+	<div id="taocanFilter" class="mui-popover taocanSt">
+		<ul class="mui-table-view">
+			<li  class="mui-table-view-cell taocanlist">
+				<p>
+					<span class="mui-col-sm-3 taocanCon">
+					<input type="checkbox" id="checkbox_a1" class="chek_1" checked="checked" /> <label for="checkbox_al"></label>
+					免预约
+					</span>
+				</p>
+			</li>
+			<li class="mui-table-view-cell taocanlist">
+				<p>性别：</p>
+				<p>
+					<span class="mui-col-sm-3 taocanCon"><span class="taocanBor">不限</span></span>
+					<span class="mui-col-sm-3 taocanCon"><span>男</span></span>
+					<span class="mui-col-sm-3 taocanCon"><span>女</span></span>
+				</p>
+			</li>
+			<li class="mui-table-view-cell taocanlist">
+				<p>价格范围：</p>
+				<p>
+					<span class="mui-col-sm-3 taocanCon" style=""><span class="taocanBor">不限</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>200以下</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>200~500</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>500~1000</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>1000以上</span></span>
+				</p>
+			</li>
+			<li class="mui-table-view-cell taocanlist">
+				<p>检查类型：</p>
+				<p>
+					<span class="mui-col-sm-3 taocanCon"><span class="taocanBor">不限</span></span>
+					<span class="mui-col-sm-3 taocanCon"><span>入职体检</span></span>
+					<span class="mui-col-sm-3 taocanCon"><span>青年体检</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>中年体检</span></span>
+					<span class="mui-col-sm-3 taocanCon" ><span>老年体检</span></span>
+				</p>
+			</li>
+			<li  class="mui-table-view-cell taocanlist">
+				<p class="weiwen-btn-div"><button class="weiwen-btn weiwen-btn-bclan weiwen-btn-5">确定</button></p>
+			</li>
+		</ul>
+	</div>
+<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	function xq(){
+		window.location.href="xiangqing.html";
+	}
+	function switchMenu(){
+				mui('#accord').popover('toggle');
+			}
+	function switchTaocan(){
+				mui('#taocanFilter').popover('toggle');
+			}
+</script>
+</body>
+</html>

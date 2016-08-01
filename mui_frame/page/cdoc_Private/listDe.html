@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Contract Details</title>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+	<link href="../../css/cdoc/physical.css" rel="stylesheet"/>
+    <script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+    	.mui-bar-tab~.mui-content{
+			padding-bottom:1.34rem
+		}
+		.mui-table-view .mui-media-object.mui-pull-left{
+			margin-right: 0.37rem;
+		}
+    	.m-content-hospitalpri{
+    		margin: 0rem;
+    	}
+    	.mui-content>.mui-table-view:first-child{
+    		margin-top: 0rem;
+    	}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="c_button_basestyle">
+			<button class="c_button_basefull c_background_blue"  onclick="ab()">Sign up</button>
+			<!--<button class="c_button_basehalf c_background_red"  onclick="ab()">Delete</button>
+			<button class="c_button_basehalf c_background_blue mui-pull-right"  onclick="ab()">Pay now</button>-->
+		</div>
+	</footer>
+	<div class="mui-content">
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="doctorDet.html">
+						<img class="mui-media-object mui-pull-left m-hospitalpri-hospimg" src="../../img/cdoc/private/icon_1.png" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div style="margin-right: 1rem;">
+								<span style="">Dr. Mitesh Patel-MD fdshdkfhkdfsdfsfds</span>
+							</div>
+							<p class="cloud-addr">
+								pediatric  [New York]
+							</p>
+							<div>
+								<span style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;">Massachusetts General Hospital dfgdljg</span>
+								<p>
+									<img src="../../img/cdoc/private/cdoc_locat.png"><span >New York </span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="c_listdetail_package">
+			<p>Private doctor's package during pregnancy</p>
+			<p>Service period:390 days</p>
+			<p>
+				<span class="c_listdetail_price">$90</span>
+				<span class="c_listdetail_people">
+					<img  src="../../img/cdoc/private/cdoc_users.png"/>
+					<span>2534</span>
+				</span>
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Services introduce</span><span class="mui-pull-right">Service tel:<span class="c_font_blue">26512354</span></span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Suitable crowd</span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Service content</span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+			<p style="background-color: #FFFFFF;font-size: 0.4rem;height: 0.8rem;padding:0rem 0.22rem;color: #1c61dd;">
+				<span id="intropen" class="mui-pull-right" onclick="introductopen(1)" style="display: none;">Details<span class="mui-icon mui-icon-arrowdown"></span></span>
+				<span id="elliopen" class="mui-pull-right" onclick="introductopen(2)" style="">Hidden<span class="mui-icon mui-icon-arrowup"></span></span>
+				
+			</p>
+		</div>
+	</div>
+<script src="../../js/mui.min.js"></script>
+<script>
+	function ab(){
+		window.location.href="order.html";
+	}
+</script>
+</body>
+
+</html>

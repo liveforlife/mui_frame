@@ -1,0 +1,554 @@
+@padding10:0.02rem;
+@fontMore:0.42rem;
+@fontMiddle:0.34rem;
+@fontLittel:0.24rem;
+
+@MaintitleCor:#1c60dd;
+@MainbackCor:#f7f9f8;
+@MainfontCor:#001133;
+@MainWhite:#FFF;
+@AidCorblack:#888888;
+@AidCorshade:#E5E5E5;
+@AidCorred:#ff5f5a;
+/*之前系色*/
+@fontCorB:#2B2B2B;
+@fontCorS:#888888;
+
+@fontCorL:#E1E1E1;
+@lineHei:1.2;
+@border:1px solid #e2e2e2;
+
+
+body{
+    background-color:  #f7f9f8;
+}
+p{
+    margin-bottom: 0rem;
+}
+.m-arrange-icon-Onetwo{
+    ul{
+        margin-top: @padding10*10;
+        border-top:@border ;
+        border-bottom: @border;
+        li:first-child{
+            border-right:@border ;
+            a{
+                margin-top: 0rem;
+                padding-bottom: @padding10*40;
+                padding-top: @padding10*40;
+                img{
+                    display: inline-block;
+                    width: @padding10*90 ;
+                }
+            }
+            .m-font-title{
+             font-size: @fontMore;
+             line-height: @lineHei+0.2;
+             color: @fontCorB;   
+            }
+            .m-font-content{
+              line-height: @lineHei+0.2;
+               font-size: @fontMiddle;
+              color: @fontCorS;  
+            }
+        }
+        li:last-child{
+            //text-align: center;
+            div{
+                padding: @padding10*15 0rem;
+                a{
+                    padding-left: 33%;
+                    
+                    img{
+                        vertical-align: middle;
+                        width: @padding10*45;
+                        height: @padding10*45;
+                        line-height: @padding10*45;
+                        max-width: @padding10*45;
+                    }
+                    div{
+                        text-align: left;
+                        display: inline-block;
+                        margin: 0rem @padding10*10;
+                        vertical-align: middle;
+                        p{
+                            margin-bottom: 0rem;
+                        }
+                    }
+                }
+            }
+            div:first-child{
+               border-bottom: @border; 
+            }
+            .m-font-title{
+             font-size: @fontMore;
+             line-height: @lineHei+0.2;
+             color: @fontCorB;   
+            }
+            .m-font-content{
+              line-height: @lineHei+0.2;
+              font-size: @fontMiddle;
+              color: @fontCorS;  
+            }
+        }
+        
+    }
+    .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object{
+        width:1.6rem ;
+    }
+}
+.line{
+    color: @fontCorL;
+    height: @padding10*12;
+    background-color:#efeff4;
+    
+}
+.m-arrage-recommend{
+    font-size:@fontMiddle ;
+    background-color: #FFF;
+    line-height: @lineHei;
+    margin-bottom: 0rem;
+    border-bottom: @border;
+    p:first-child{
+        padding: @padding10*10 0rem;
+        margin-bottom: 0rem;
+        span{
+            font-size: @fontMiddle;
+            margin: @padding10*10 @padding10*20 0rem;
+            img{
+                width: @padding10*16.5;
+                margin: 0rem @padding10*6;
+                vertical-align: middle;
+            }
+        }
+    }
+   
+}
+.m-arrange-recomDoc{
+        height: @padding10*73;
+        display: table;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        padding-top: @padding10*10;
+        background-color: #FFF;
+        .m-arrange-Doc{
+            height: @padding10*145;
+            width:680px;
+            white-space: nowrap;
+            overflow-x:auto ;
+            margin-bottom: -@padding10;
+            a{
+                div{
+                    margin: auto;
+                    img{
+                        width: @padding10*80;
+                    }
+                    span{
+                        position: absolute;
+                        top: @padding10*65;
+                        left: @padding10*80;
+                        z-index: 11;
+                        img{
+                            width: @padding10*17;
+                        }
+                    }
+                }
+                
+                p{
+                    font-size: @fontMiddle;
+                    margin-bottom: 0rem;
+                    line-height: @lineHei;
+                }
+            }
+        }
+}
+
+.m-content-hospitalpri{
+    margin: @padding10*10 @padding10*6.5 0rem @padding10*6.5;
+    .m-content-hostitle{
+        font-size:@fontMiddle ;
+        padding: @padding10*10 0rem;
+        border-bottom: @border;
+        img{
+            vertical-align: middle;
+            width: @padding10*16.5;
+            margin: 0rem @padding10*6.5;
+        }
+        span{
+            font-size: @fontMiddle;
+            line-height: @lineHei;
+        }
+    }
+    .m-hospitalpri-hospimg{
+        margin:0rem  @padding10*18 0rem 0rem;
+        line-height: @lineHei+0.2;
+        height: @padding10*105;
+        max-width: @padding10*105;
+    }
+    .m-hospitalpri-content{
+        margin-top: @padding10*16;
+      div:first-child{
+          font-size:@fontMore ;
+          line-height: @lineHei+0.2;
+          color:#001133;
+          margin-bottom: @padding10*6;
+      }
+      p{
+          font-size: @fontLittel+0.02;
+          line-height: @lineHei+0.2;
+          color: #001133;
+          margin-bottom: @padding10*6;
+      }  
+      div:last-child{
+          font-size: @fontLittel;
+          line-height: @lineHei+0.2;
+          color: #001133;
+          p{
+               margin-top: @padding10*6;
+              color: #888888;
+              img{
+                  width: @padding10*12;
+              }
+              span{
+                  margin-left: @padding10*8;
+              }
+          }
+      }
+    } 
+}
+
+.m-content-hospitalpriNo{
+    margin: @padding10*10 0rem 0rem 0rem;
+}
+/*医生基本详情*/
+.c_doctorDe_basemass{
+    text-align: center;
+    padding-top: @padding10*23;
+    background-color: #FFF;
+    p{
+        font-size: @fontLittel+0.08;
+        line-height: @lineHei;
+        color: #001133;
+        margin-bottom: @padding10*13;
+    }
+    .c_doctorDe_bsimage{
+        img{
+            width: @padding10*160;
+        }
+        margin-bottom:@padding10*11 ;
+    }
+    .c_doctorDe_bmname{
+        font-size: @fontMore;
+        line-height: @lineHei;
+        font-weight: bolder;
+    }
+    .c_doctorDe_bmdepartment{
+        font-size: @fontMiddle;
+        line-height: @lineHei;
+        font-weight: lighter;
+    }
+    .c_doctorDe_bmstar img{
+        width: @padding10*25;
+    }
+    .c_doctorDe_bmadress{
+        margin-bottom: 0rem;padding-bottom:@padding10*61;
+    }
+    .c_doctorDe_bmlanguage{
+        color: #888888;
+    }
+}
+.c_doctordDe_baselabel {
+    background-color: #FFF;
+    padding-top: @padding10*13;;
+    div{
+        width: 32%;
+        display: inline-block;
+        text-align: center;
+        p:first-child{
+            font-size: @fontMore+0.11;
+            line-height: @lineHei;
+            margin-bottom: @padding10*16;
+        }
+        p:last-child{
+            font-size: @fontMiddle+0.08;
+            line-height: @lineHei;
+            margin-bottom: 0rem;
+        }
+    }
+    div:first-child{
+        p:first-child{
+            color: #001133;
+        }
+    }
+    div:last-child{
+        p:first-child{
+            color: #ff5f5a;
+        }
+    }
+}
+/*医生详情页的咨询样式，已废弃*/
+.c_doctorDe_bmoperation{
+    padding: @padding10*27 @padding10*16 @padding10*23;
+    background-color: #FFF;
+    button{
+        height: @padding10*67;
+        background-color: #1c61dd;
+        
+        font-size: @fontMore+0.04;
+        line-height: @lineHei;
+        color: #FFF;
+        width: 100%;
+        border-radius: @padding10*34;
+    }
+}
+.c_doctorDe_bmbasepackage{
+    p{
+        background-color: #FFF;
+        color: #001133;
+        padding:@padding10*2rem @padding10*11;
+        font-size: @fontMiddle+0.06;
+        line-height: @lineHei;
+        span:first-child{
+            color: #888888;
+        }
+    }
+    .packname{
+            padding:@padding10*15rem @padding10*11;
+        }
+    p:first-child{
+        border-top:@padding10 solid #E5E5E5;
+        padding:@padding10*19 @padding10*11;
+        font-size: @fontLittel+0.08;
+        line-height: @lineHei;
+        color: #888888;
+        background-color:#efeff4;
+    }
+    
+}
+.c_doctorDe_bmbaseinfor{
+    p:first-child{
+        border-top:@padding10 solid #E5E5E5;
+        padding:@padding10*19 @padding10*11;
+        font-size: @fontLittel+0.08;
+        line-height: @lineHei;
+        color: #888888;
+    }
+    p:last-child{
+        background-color: #FFF;
+        color: #001133;
+        padding:@padding10*19rem @padding10*11;
+        font-size: @fontMiddle+0.06;
+        line-height: @lineHei;
+        input{
+            width: 90%;
+            font-size: 0.36000000000000004rem;
+            line-height: 1.2;
+            border: 0rem;
+            margin-bottom: 0rem;
+        }
+    }
+    .c_font_red span{
+        color: @AidCorred;
+    }
+}
+.c_doctorDe_bmbaseinforval{
+    .c_doctorDe_bmtitle{
+        border-top:@padding10 solid #E5E5E5;
+        padding:@padding10*19 @padding10*11;
+        font-size: @fontLittel+0.08;
+        line-height: @lineHei;
+        span:last-child{
+            color: #1C61DD;
+        }
+    }
+    .c_doctorDe_bmevaluate{
+        background-color: #FFF;
+        color: #001133;
+        
+        font-size: @fontMiddle+0.06;
+        line-height: @lineHei;
+        
+        p:first-child{
+            font-size: @fontMiddle+0.06;
+            padding: @padding10*33 @padding10*11;   
+           span:first-child{
+               color: #001133;
+           }
+           span{
+               color: #1c61dd
+           }
+           span:last-child{
+               img{
+                   width: @padding10*19;
+               }
+           }
+        }
+        p:last-child{
+            font-size: @fontMiddle+0.06;
+            padding:0rem @padding10*11 @padding10*33;
+            border-bottom:@padding10 solid #E5E5E5 ;
+        }
+    }
+}
+/*普通列表的样式*/
+.c_choose_commonlist{
+    .c_choose_cmcontent{
+        padding:@padding10*24 0rem @padding10*24 @padding10*27 ;
+        font-size: @fontMiddle+0.06;
+        line-height: @lineHei;
+        border-bottom: @padding10 solid #E5E5E5;
+        background-color: #FFF;
+        color: #001133;
+    }
+    .c_choose_cmlineM{
+        height: @padding10*24;
+        background-color: #F7F9F8;
+    }
+    .c_choose_cmlineL{
+        height: @padding10*10;
+        background-color: #F7F9F8;
+    }
+    .c_choose_cmcontentB{
+        padding:@padding10*24 0rem @padding10*24 @padding10*27 ;
+        font-size: @fontMiddle+0.06;
+        line-height: @lineHei;
+        border-bottom: @padding10 solid #E5E5E5;
+        background-color: #FFF;
+        color: #001133;
+        img{
+            width: @padding10*44;
+            margin-right: @padding10*25;
+            vertical-align: middle;
+        }
+    }
+    .c_choose_cmcontentB:hover{
+        background-color: #E1E1E1;
+    }
+}
+/*套餐详情的价格展示样式*/
+.c_listdetail_package{
+      background-color: @MainWhite;
+      padding-bottom: @padding10*20;
+  p{
+      font-size: @fontMore+0.06;
+      line-height: @lineHei;
+      color: @MainfontCor;
+      font-weight: bolder;
+      padding-top: @padding10*20;
+      padding-left: @padding10*11;
+  } 
+  p:last-child{
+      position: relative;
+  }
+  .c_listdetail_price{
+      display: inline-block;
+      color: @MainWhite;
+      background:no-repeat url(../../img/cdoc/private/cdoc_detialback.png) ;
+      background-size: 100% 100%;
+      padding: @padding10*5 @padding10*26;
+  }  
+  .c_listdetail_people{
+      position: absolute;
+      top: @padding10*10;
+      right: 0rem;
+      margin-right: @padding10*25;
+      text-align: center;
+      img{
+          width:@padding10*14;
+      }
+      span{
+          display: block;color: #888888;font-size: 0.26rem;margin-top:-0.13rem;
+      }
+  }
+}
+/*信用卡基本样式*/
+.c_credit_list{
+    background-color: @MainWhite;
+    margin-top: @padding10*11;
+    p{
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+        color: @MainfontCor;
+        padding: @padding10*10 @padding10*15;
+    }
+    p:first-child{
+        border-bottom: @padding10 solid @AidCorshade;
+        padding: @padding10*18 @padding10*15;
+        img{
+            width: @padding10*44;
+            margin-right: @padding10*25;
+            vertical-align: middle;
+        }
+    }
+}
+.c_credit_base{
+    margin: 0rem @padding10*11;    
+}
+.c_credit_add{
+    .c_credit_form{
+        div{
+            border-bottom: @padding10 solid @AidCorshade;
+            padding: @padding10*15 @padding10*15;
+            vertical-align: middle;
+            label{
+                color: @MainfontCor;
+                margin-right: @padding10*25;
+            }
+            input{
+                width: 75%;
+                font-size: @fontMiddle+0.02;
+                line-height: @lineHei;
+                border: 0rem;
+                margin-bottom: 0rem;
+            }
+        }
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+    }
+}
+/*基本下方悬浮按钮*/
+.c_button_basestyle{
+    .c_button_basefull{
+        color: @MainWhite;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 100%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+    }
+    .c_button_basehalf{
+        color: @MainWhite;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 50%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+        display: inline-block;
+    }
+    .c_button_addfull{
+        color: @MaintitleCor;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 100%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+        margin: @padding10*40 0rem;
+    }
+}
+/*基础背景色*/
+.c_background_red{
+    background-color: @AidCorred;
+}
+.c_background_blue{
+    background-color: @MaintitleCor;
+}
+.c_background_shade{
+    background-color: @AidCorblack;
+}
+/*基础字体样式*/
+
+.c_font_blue{
+    color: @MaintitleCor;
+    text-decoration: underline;
+}

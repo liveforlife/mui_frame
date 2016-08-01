@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购买私人医生</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/moban/mui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/moban/basephy.css" />
+     <link rel="stylesheet" href="../../css/Ratimer/mobiscroll_002.css" />
+    <link rel="stylesheet" href="../../css/Ratimer/mobiscroll.css" />
+    <link rel="stylesheet" href="../../css/Ratimer/mobiscroll_003.css" />
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+        <style>
+        body{
+        	background-color: #F7F9F8;
+        }
+    	.mui-table-view-cell>a:not(.mui-btn){
+	    	white-space: normal;
+    	}
+	    .mui-content{background-color: #F7F9F8;border-top: 0.24rem solid #f7f9f8;}
+	    .mui-table-view:after{
+	    	height: 0px;
+	    }
+		.weiwen-btn-div{
+			text-align: left;
+		}
+		 
+		  #sex_male ,
+		 #sex_female ,
+		 #sex_nomale
+		 {
+		  display:none
+		 }
+		 label
+		 {
+		  display:-moz-inline-block;
+		  display:inline-block;
+		  cursor:pointer;
+		  margin:5px 0;
+		  padding-left:20px;
+		  line-height:15px;
+		  background:url(../../img/private/gou2.png) no-repeat left top;
+		  background-size:.5rem .5rem; 
+		 }
+		 label.checked
+		 {
+		   background:url(../../img/private/gou.png) no-repeat left top;
+		     background-size:.5rem .5rem; 
+		 }
+		 
+		 
+		 .mui-input-group .mui-input-row{
+		 	height: 60px;
+		 }
+		 .mui-toast-container {
+		  bottom: 1.44rem;
+		}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer" style="vertical-align: middle;">
+		<div class="weiwen-btn-div">
+			<span style="text-align: left;margin-top: 0.5rem;display: inline-block;">
+				<span class="totle-money" >金额：</span>
+				<span class="totle-num redcol">￥287</span>
+			</span>
+			<button class="weiwen-btn weiwen-btn-bcred mui-pull-right money-btn" onclick="lic()">立即支付</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div class="order_bass weiwen-btn-bcblue">
+			<p class="order_bass_title">标准入职体检套餐</p>
+			<div class="orderbassCon" >
+				<p>套餐性别:<span>不限</span></p>
+				<p><span style="display: inline-block;text-indent: 0px;margin-left: 0rem;width: 20%;text-align: left;vertical-align: top;">体检机构:</span><span style="display: inline-block;margin-left: 0rem;width: 75%;margin-left: 0rem;text-indent: 0px;">美年大健康体检医院（西门店）放到手机复活电击谁房间</span></p>
+				<p>套餐价格:<span>￥1999</span></p>
+			</div>
+		</div>
+		<div class="line"></div>
+		<div class="order_addre">
+			<p class="order_addre_tab">请认真填写体检人信息</p>
+				<form class="m-cumstomer-order"  style="font-size: 0.34rem;">
+					<div >
+						<span >体检日期:</span>
+						<input id="appDateTime" type="text" readonly="readonly" placeholder="日期(如2011\10\13)"  >
+					</div>
+					<div >
+						<span >体检人姓名:</span>
+						<input  type="text" placeholder="体检人姓名" >
+					</div>
+					<div >
+						<span>身份证号码:</span>
+						<input  type="text" placeholder="身份证号码" >
+					</div>
+					<div id="male">
+						<span >性别:</span>
+						<span>
+							<label name="sex_male" for="" style="width: 0.5rem;height: 0.5rem;" value="1"></label>
+							<span style="position: relative;bottom: 0.1rem;">男</span>
+						</span>
+						<span>
+							<label name="sex_male" for="" style="width: 0.5rem;height: 0.5rem;" value="2"></label>
+							<span style="position: relative;bottom: 0.1rem;">女</span>
+						</span>
+					</div>
+					<div id="married">
+						<span>婚否:</span>
+						<span>
+							<label name="marry" for="" style="width: 0.5rem;height: 0.5rem;" value="3"></label>
+							<span style="position: relative;bottom: 0.1rem;">已婚</span>
+						</span>
+						<span>
+							<label name="marry" for="" style="width: 0.5rem;height: 0.5rem;" value="4"></label>
+							<span style="position: relative;bottom: 0.1rem;">未婚</span>
+						</span>
+					</div>
+					<div >
+						<span >手机号:</span>
+						<input  type="text" placeholder="手机号" >
+					</div>
+				</form>
+			</p>
+		</div>
+	</div>
+	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/jquery-1.9.1.min.js"></script>
+	<script src="../../js/Ratimer/mobiscroll_002.js"></script>
+	<script src="../../js/Ratimer/mobiscroll_004.js"></script>
+	<script src="../../js/Ratimer/mobiscroll_003.js"></script>
+	<script src="../../js/Ratimer/mobiscroll.js"></script>
+	<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	
+	</script>
+	<script type="text/javascript">
+	window.onload=function(){
+		//绑定时间控件
+		var currTime = new Date();
+		var currYear = currTime.getFullYear();
+		var opt={};
+		opt.date = {preset : 'date'};
+		opt.datetime = {preset : 'datetime'};
+		opt.time = {preset : 'time'};
+		opt.default = {
+			theme: 'android-ics light', //皮肤样式
+	        display: 'modal', //显示方式 
+	        mode: 'scroller', //日期选择模式
+			dateFormat: 'yyyy-mm-dd',
+			lang: 'zh',
+	        startYear: currYear, //开始年份
+	        endYear: currYear   //结束年份
+		};
+	  	var optDateTime = $.extend(opt['date'], opt['default']);
+	   	$("#appDateTime").val('').scroller('destroy').scroller(optDateTime );
+	   	
+   	 labels = document.getElementById('male').getElementsByTagName('label');
+	  for(i=0,j=labels.length ; i<j ; i++)
+	  {
+	   labels[i].onclick=function() 
+	   {
+	    if(this.className == '') {
+	     for(k=0,l=labels.length ; k<l ; k++)
+	     {
+	      labels[k].className='';
+	     }
+	     this.className='checked';
+	    }
+	   };
+	  }
+	  
+   		labells = document.getElementById('married').getElementsByTagName('label');
+	  for(i=0,j=labells.length ; i<j ; i++)
+	  {
+	   labells[i].onclick=function() 
+	   {
+	    if(this.className == '') {
+	     for(k=0,l=labells.length ; k<l ; k++)
+	     {
+	      labells[k].className='';
+	     }
+	     this.className='checked';
+	    }
+	   };
+	  }
+	}
+	function lic(){
+		mui.toast("暂未开放");
+	}
+	</script>
+</body>
+</html>

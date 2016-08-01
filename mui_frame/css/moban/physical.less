@@ -1,0 +1,380 @@
+@padding10:0.02rem;
+@fontMore:0.42rem;
+@fontMiddle:0.34rem;
+@fontLittel:0.24rem;
+@fontCorL:#E1E1E1;
+@lineHei:1.2;
+@border:1px solid #e2e2e2;
+
+@MaintitleCor:#1c60dd;
+@MainbackCor:#f7f9f8;
+@MainfontCor:#001133;
+@MainfontWWZ:#2b2b2b;
+@Mainfontblue:#2eaedf;
+@MainWhite:#FFF;
+@AidCororange:#ff6b50;
+@AidCorblack:#888888;
+@AidCorshade:#E5E5E5;
+@AidCorred:#ff5f5a;
+/*之前系色*/
+@fontCorB:#2B2B2B;
+@fontCorS:#888888;
+
+
+
+p{
+    margin-bottom: 0rem;
+}
+.m-arrange-icon-Onetwo{
+    ul{
+        margin-top: @padding10*10;
+        border-top:@border ;
+        border-bottom: @border;
+        li:first-child{
+            border-right:@border ;
+            a{
+                margin-top: 0rem;
+                padding-bottom: @padding10*40;
+                padding-top: @padding10*40;
+                img{
+                    display: inline-block;
+                    width: @padding10*90 ;
+                }
+            }
+            .m-font-title{
+             font-size: @fontMore;
+             line-height: @lineHei+0.2;
+             color: @fontCorB;   
+            }
+            .m-font-content{
+              line-height: @lineHei+0.2;
+               font-size: @fontMiddle;
+              color: @fontCorS;  
+            }
+        }
+        li:last-child{
+            //text-align: center;
+            div{
+                padding: @padding10*15 0rem;
+                a{
+                    padding-left: 33%;
+                    
+                    img{
+                        vertical-align: middle;
+                        width: @padding10*45;
+                        height: @padding10*45;
+                        line-height: @padding10*45;
+                        max-width: @padding10*45;
+                    }
+                    div{
+                        text-align: left;
+                        display: inline-block;
+                        margin: 0rem @padding10*10;
+                        vertical-align: middle;
+                        p{
+                            margin-bottom: 0rem;
+                        }
+                    }
+                }
+            }
+            div:first-child{
+               border-bottom: @border; 
+            }
+            .m-font-title{
+             font-size: @fontMore;
+             line-height: @lineHei+0.2;
+             color: @fontCorB;   
+            }
+            .m-font-content{
+              line-height: @lineHei+0.2;
+              font-size: @fontMiddle;
+              color: @fontCorS;  
+            }
+        }
+        
+    }
+    .mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object{
+        width:1.6rem ;
+    }
+}
+.line{
+    color: @fontCorL;
+    height: @padding10*12;
+    background-color:#efeff4;
+    
+}
+.m-arrage-recommend{
+    font-size:@fontMiddle ;
+    background-color: #FFF;
+    line-height: @lineHei;
+    margin-bottom: 0rem;
+    border-bottom: @border;
+    p:first-child{
+        padding: @padding10*10 0rem;
+        margin-bottom: 0rem;
+        span{
+            font-size: @fontMiddle;
+            margin: @padding10*10 @padding10*20 0rem;
+            img{
+                width: @padding10*16.5;
+                margin: 0rem @padding10*6;
+                vertical-align: middle;
+            }
+        }
+    }
+   
+}
+.m-arrange-recomDoc{
+        height: @padding10*73;
+        display: table;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        padding-top: @padding10*10;
+        background-color: #FFF;
+        .m-arrange-Doc{
+            height: @padding10*145;
+            width:680px;
+            white-space: nowrap;
+            overflow-x:auto ;
+            margin-bottom: -@padding10;
+            a{
+                div{
+                    margin: auto;
+                    img{
+                        width: @padding10*80;
+                    }
+                    span{
+                        position: absolute;
+                        top: @padding10*65;
+                        left: @padding10*80;
+                        z-index: 11;
+                        img{
+                            width: @padding10*17;
+                        }
+                    }
+                }
+                
+                p{
+                    font-size: @fontMiddle;
+                    margin-bottom: 0rem;
+                    line-height: @lineHei;
+                }
+            }
+        }
+}
+
+.m-content-hospitalpri{
+    padding: @padding10*6;
+    margin: @padding10*10 @padding10*6.5 0rem @padding10*6.5;
+    .m-content-hostitle{
+        font-size:@fontMiddle ;
+        padding: @padding10*10 0rem;
+        border-bottom: @border;
+        img{
+            vertical-align: middle;
+            width: @padding10*16.5;
+            margin: 0rem @padding10*6.5;
+        }
+        span{
+            font-size: @fontMiddle;
+            line-height: @lineHei;
+        }
+    }
+    .m-hospitalpri-hospimg{
+        line-height: @lineHei+0.2;
+        height: @padding10*100;
+        max-width: @padding10*135;
+        margin: @padding10*10 0rem;
+    }
+    .m-hospitalpri-content{
+        
+      div:first-child{
+          font-size:@fontMore ;
+          line-height: @lineHei+0.2;
+          color:@MainfontWWZ;
+      }
+      p{
+          font-size: @fontLittel+0.02;
+          line-height: @lineHei+0.2;
+          color: @MainfontWWZ;
+      }  
+      div:last-child{
+          font-size: @fontLittel;
+          line-height: @lineHei+0.2;
+          p{
+              color: #888888;
+              img{
+                  width: @padding10*12;
+              }
+              span{
+                  margin-left: @padding10*8;
+              }
+          }
+      }
+    } 
+}
+
+.m-content-hospitalpriNo{
+    margin: @padding10*10 0rem 0rem 0rem;
+}
+/*普通列表的样式*/
+.c_choose_commonlist{
+    .c_choose_cmcontent{
+        padding:@padding10*24 @padding10*27 @padding10*24 @padding10*27 ;
+        font-size: @fontLittel+0.02;
+        line-height: @lineHei;
+        border-bottom: @padding10 solid #E5E5E5;
+        color: #000;
+    }
+    .c_choose_cmlineM{
+        height: @padding10*24;
+        background-color: #F7F9F8;
+    }
+    .c_choose_cmlineL{
+        height: @padding10*10;
+        background-color: #F7F9F8;
+    }
+    .c_choose_cmcontentB{
+        padding:@padding10*24 0rem @padding10*24 @padding10*27 ;
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+        border-bottom: @padding10 solid #E5E5E5;
+        background-color: #FFF;
+        color: #464646;
+        img{
+            width: @padding10*44;
+            margin-right: @padding10*25;
+            vertical-align: middle;
+        }
+    }
+    .c_choose_cmcontentB:hover{
+        background-color: #E1E1E1;
+    }
+    .c_choose_cmconwwwAgency{
+        padding:@padding10*24 0rem @padding10*24 @padding10*27 ;
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+        margin: @padding10*11 0rem;    
+        border: 2px solid @Mainfontblue; 
+        background-color: #FFF;
+        color: @Mainfontblue;
+    }
+     .c_choose_cmconwwwAgency:hover{
+        background-color: @Mainfontblue;
+        color: #FFF;
+    }
+    .c_choose_cmcontentPrompt{
+        padding:Orem @padding10*27;
+        font-size: @fontLittel;
+        line-height: @lineHei;
+        color: @AidCorblack;;
+    }
+}
+/*输入框的基本样式*/
+.c_credit_list{
+    background-color: @MainWhite;
+    margin-top: @padding10*11;
+    p{
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+        color: @MainfontCor;
+        padding: @padding10*10 @padding10*15;
+    }
+    p:first-child{
+        border-bottom: @padding10 solid @AidCorshade;
+        padding: @padding10*18 @padding10*15;
+        img{
+            width: @padding10*44;
+            margin-right: @padding10*25;
+            vertical-align: middle;
+        }
+    }
+}
+.c_credit_base{
+    margin: 0rem @padding10*11;    
+}
+.c_credit_baseTop{
+    margin: @padding10*11 0rem;    
+}
+.c_credit_basebor{
+    border: 2px solid @Mainfontblue;    
+}
+.c_credit_add{
+    .c_credit_form{
+        div{
+            border-bottom: @padding10 solid @AidCorshade;
+            padding: @padding10*15 @padding10*15;
+            vertical-align: middle;
+            label{
+                color: @MainfontCor;
+                margin-right: @padding10*25;
+            }
+            input{
+                width: 70%;
+                font-size: @fontMiddle+0.02;
+                line-height: @lineHei+0.2;
+                height: @padding10*40;
+                border: 0rem;
+                margin-bottom: 0rem;
+            }
+        }
+        font-size: @fontMiddle+0.02;
+        line-height: @lineHei;
+    }
+}
+/*基本下方悬浮按钮*/
+.c_button_basestyle{
+    .c_button_basefull{
+        color: @MainWhite;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 100%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+    }
+    .c_button_basehalf{
+        color: @MainWhite;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 50%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+        display: inline-block;
+    }
+    .c_button_addfull{
+        color: @MaintitleCor;
+        height: @padding10*67;
+        line-height:@padding10*67 ;
+        width: 100%;
+        font-size: @fontMore+0.03;
+        line-height: @lineHei;
+        margin: @padding10*40 0rem;
+    }
+}
+/*基础背景色*/
+.c_background_red{
+    background-color: @AidCorred;
+}
+.c_background_blue{
+    background-color: @MaintitleCor;
+}
+.c_background_wblue{
+    background-color: @Mainfontblue;
+}
+.c_background_shade{
+    background-color: @AidCorblack;
+}
+.c_background_wwwblue{
+    background-color: @Mainfontblue;
+}
+/*基础字色*/
+.c_color_blue{
+    color: @Mainfontblue;
+}
+.c_color_shade{
+    color: @AidCorblack;
+}
+.c_color_orange{
+    color: @AidCororange;
+}

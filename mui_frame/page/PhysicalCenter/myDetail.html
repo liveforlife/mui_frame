@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购买私人医生</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/moban/basephy.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+        <style>
+    	p{font-size: 12px;}
+    	.mui-table-view-cell>a:not(.mui-btn){
+	    	white-space: normal;
+    	}
+	    .mui-content{background-color: #f7f9f8;}
+	    .mui-table-view:after{
+	    	height: 0px;
+	    }
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer" >
+		<div class="row weiwen-btn-div">
+			<!--<button class="weiwen-btn weiwen-btn-bcshade mui-pull-left weiwen-btn-5">取消预约</button>
+			<button class="weiwen-btn weiwen-btn-bcred mui-pull-right weiwen-btn-5">立马支付</button>-->
+			<button class="weiwen-btn weiwen-btn-bcred  mui-pull-right weiwen-btn-10">评价</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div class="order_addre">
+			<p class="order_addre_tab">订单详情</p>
+			<div class="orderCon" >
+				<p>订单编号<span class="mui-pull-right">FT20160403001</span></p>
+				<p>订单状态<span class="mui-pull-right orangecol">待付款</span></p>
+				<p>下单时间<span class="mui-pull-right">2016-04-07 17:12:22</span></p>
+				<p>支付方式<span class="mui-pull-right">在线支付</span></p>
+			</div>
+		</div>
+		<div class="order_addre">
+			<p class="order_addre_tab">预约套餐详情</p>
+			<div class="orderCon" >
+				<p>体检套餐<span class="mui-pull-right blueco" onclick="window.location.href='xiangqing.html'">标准入职体检套餐</span></p>
+				<p>套餐性别<span class="mui-pull-right">不限</span></p>
+				<p>体检机构<span class="mui-pull-right">美年大健康体检医院（西门店）</span></p>
+				<p>套餐价格<span class="mui-pull-right">￥1999</span></p>
+				<p>套餐数量<span class="mui-pull-right">1</span></p>
+			</div>
+		</div>
+		<div class="order_addre" style="margin-bottom: 0.69rem;">
+			<p class="order_addre_tab">预约人详情<span class="mui-pull-right" style="font-size: 0.35rem;line-height: 1.2;color: #2EAEDF;" onclick="window.location.href='order.html'">修改预约人<span class="mui-icon mui-icon-forward "></span></span></p>
+			<div class="orderCon" >
+				<p>体检日期:<span class="mui-pull-right">2016-04-10</span></p>
+				<p>体检人姓名:<span class="mui-pull-right">张三</span></p>
+				<p>身份证号码:<span class="mui-pull-right">510902199009129511</span></p>
+				<p>性别:<span class="mui-pull-right">男</span></p>
+				<p>婚否:<span class="mui-pull-right">是</span></p>
+			</div>
+		</div>
+	</div>
+	<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+</script>
+</script>
+</body>
+</html>

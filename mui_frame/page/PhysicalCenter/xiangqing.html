@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>私人医生套餐</title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+     <link href="../../css/moban/basephy.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style>
+		body{background-color: #FFF;}
+		.mui-content{background-color: #FFF;}
+	   	.mui-media-body{padding:0.48rem 0.48rem 0.4rem 0.48rem ;}
+		.mui-toast-container{
+			font-size: 0.34rem;line-height: 1.4;
+		}
+		.mui-toast-message{
+			font-size: 0.24rem;line-height: 1.4;
+		}
+		.title_bar{
+			width:0.11rem;background-color: #66ccff;height: 0.29rem;display: inline-block;border-radius:5px;
+		}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="weiwen-btn-div">
+			<button class="weiwen-btn weiwen-btn-bcblue"  onclick="ab()">选择您的私人医生</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div><!--广告栏,尺寸大小：2:1;700:350-->
+			<img src="../../img/private/detail_back.png"  style="width: 100%;margin-bottom: -7px;"/>
+		</div>
+		<div class="borderT">
+			<p class="private_content">
+				标准入职体检套餐
+			</p>
+			<div class="private_range">
+				<span class="private_ran"><span>【入职体检】</span></span>
+			</div>
+			<div class="private_range">
+				<p class="private_fee">
+					<span class="private_sec">&#165;3000</span><span class="private_feeUnit redcol">/年</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span class="privte_fir">&#165;3000</span><span class="private_feeUnit">/年</span>
+				</p>
+				<span class="mui-pull-right shade">
+					已售:15
+				</span>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<!--<p class="detail-title">
+				<img class="detail_image" src="../../img/private/detail_term.png"/>
+				服务机构
+				<span class="mui-icon mui-icon-arrowright mui-pull-right" style="font-size: 0.48rem;margin-right: 0.24rem;" onclick="window.location.href='other.html'"></span>
+			</p>-->
+			<!--<div class="line"></div>-->
+			<div class="detail-comcon">
+				<p>
+					美年大健康体检医院（西门店）   
+				</p>
+				<p>
+					营门口金沙路234号  
+					<img class="mui-pull-right" style="height:0.4rem;" onclick="oli()" src="../../img/private/detail_service.png"/>
+				</p>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA">
+			<p class="detail-title">
+				<span class="title_bar"></span>
+				检前须知
+			</p>
+			<div class="line"></div>
+			<div class="detail-comcon">
+				<p class="blueco">
+					须提前3天预约
+				</p>
+				<p>
+					请空腹，高血压、心脏病等慢性病患者，清晨可用少量白开水服药，以免血压波动。糖尿病患者请在检查完空腹项目、就餐前及时服药。
+				</p>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA">
+			<p class="detail-title">
+				<span class="title_bar"></span>
+				体检项目
+				<span class="mui-pull-right">详情<span class="mui-icon mui-icon-arrowright blueco" ></span></span>
+			</p>
+			<div class="line"></div>
+			<ul class="detail-comcon" style="line-height: 1.4;">
+				<li>免费咨询</li>
+				<li>7*24电话</li>
+				<li>体检报告解读</li>
+				<li>处方查看</li>
+				<li>定期回访</li>
+				<li>测量数据分析</li>
+			</ul>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<p class="detail-title">
+				<span class="title_bar"></span>
+				服务评价
+				
+			</p>
+			<div class="line"></div>
+			<div class="detail-comcon"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+				</div>	
+			</div>
+			<div class="line"></div>
+			<div class="detail-comcon1"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+				</div>	
+			</div>
+			<div class="line"></div>
+			<div class="detail-comcon1"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+				</div>	
+			</div>
+			<div class="line"></div>
+			<div class="detail-comcon1"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	document.addEventListener()
+	function ab(){
+		window.location.href='order.html'
+	}
+	function oli(){
+		mui.toast('未知的客服热线');
+	}
+</script>
+</body>
+
+</html>

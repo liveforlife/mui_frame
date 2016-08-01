@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<style>
+			.mui-bar-nav~.mui-content{padding-top:80px}
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			.mui-control-content {
+				height: 150px;
+			}
+			.mui-bar{
+				padding: 0px;
+			}
+			.mui-bar .mui-segmented-control{top: 44px;}
+			.mui-segmented-control{
+				position: absolute;
+			}
+			.mui-segmented-control{border: 0px;}
+			.mui-segmented-control .mui-control-item.mui-active{color: #FFF;background-color: #2eaedf;}
+			.mui-segmented-control .mui-control-item{border-left:0px;background-color: #FFF;color: #2eaedf;}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="height: 80px;">
+			<div style="display: block;height: 44px;border-bottom: 1px solid #E5E5E5;">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: #2eaedf;"></a>
+				<h1 class="mui-title" style="color: #2eaedf;">seadoctor</h1>
+			</div>
+			<div>
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item" href="#item1">
+						云端医院
+					</a>
+					<a class="mui-control-item" href="#item2">
+						医生列表
+					</a>
+				</div>
+			</div>
+		</header>
+		<div class="mui-content" style="background-color: #FFF;">
+			<!--<div>
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">
+						云端医院
+					</a>
+					<a class="mui-control-item" href="#item2">
+						医生列表
+					</a>
+				</div>
+			</div>-->
+			<div>
+				<div id="item1" class="mui-control-content ">
+					<!--<div id="scroll" class="mui-scroll-wrapper">
+						<div class="mui-scroll">-->
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-1
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-2
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-3
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-4
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-5
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-6
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-7
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-8
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-9
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-10
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-11
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-12
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-13
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-14
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-15
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-16
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-17
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-18
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-19
+								</li>
+								<li class="mui-table-view-cell">
+									第一个选项卡子项-20
+								</li>
+							</ul>
+						<!--</div>
+					</div>-->
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="含mui的html.html">第二个选项卡子项-1</a>
+						</li>
+						<li class="mui-table-view-cell">
+							第二个选项卡子项-2
+						</li>
+						<li class="mui-table-view-cell">
+							第二个选项卡子项-3
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.9.1.min.js"></script>
+		<script>
+			/*mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			(function($) {
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var segmentedControl = document.getElementById('segmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						var styleEl = document.querySelector('input[name="style"]:checked');
+						var colorEl = document.querySelector('input[name="color"]:checked');
+						if (styleEl && colorEl) {
+							var style = styleEl.value;
+							var color = colorEl.value;
+							segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+						}
+					}
+				});
+			})(mui);*/
+			$(function(){ 
+			/*	var segmentedControl = document.getElementById('segmentedControl');
+				var item1=document.getElementById("item1");
+				var item2=document.getElementById("item2");
+				segmentedControl.getElementsByClassName('mui-control-item')[0].className="mui-control-item";
+				segmentedControl.getElementsByClassName('mui-control-item')[1].className="mui-control-item mui-active"
+				item1.className="mui-control-content";
+				item2.className="mui-control-content mui-active";*/
+			});
+		</script>
+
+	</body>
+
+</html>

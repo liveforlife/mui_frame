@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Signing private doctors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/cdoc/physical.css" rel="stylesheet"/>
+    <link href="../../css/cdoc/assist_physical.css" rel="stylesheet" />
+    <script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+    	/*重定义*/
+		.mui-bar-nav~.mui-content{
+			padding-top:1.13rem
+		}
+		.mui-table-view .mui-media-object.mui-pull-left{
+			margin-right: 0.37rem;
+		}
+		.mui-table-view-cell:after{
+			height: 0px;
+		}
+
+    </style>
+</head>
+<body>
+	<header id="header" class="mui-bar mui-bar-nav m-header-gyypri">
+			<div class="mui-col-sm-6 c_onclickback" onclick="switchMenu()">
+				<img src="../../img/cdoc/private/cdoc_location.png"/>
+				<span>City</span><img src="../../img/cdoc/private/cdoc_pull.png" />
+			</div>
+			<div class="mui-col-sm-6 mui-pull-right c_onclickback" onclick="switchTaocan()">
+				<img src="../../img/cdoc/private/cdoc_feat.png"/>
+				<span id="al" style="width:40%;overflow:hidden;text-overflow:ellipsis;white-space: nowrap;display: inline-block;vertical-align: middle;">Specialty</span><img src="../../img/cdoc/private/cdoc_pull.png" />
+			</div>
+	</header>
+	<div class="mui-content">
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="doctorDet.html">
+						<img class="mui-media-object mui-pull-left m-hospitalpri-hospimg" src="../../img/cdoc/private/icon_1.png" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>Dr. Mitesh Patel-MD</span>
+							</div>
+							<p class="cloud-addr">
+								pediatric  [New York]
+							</p>
+							<div>
+								<span >Massachusetts General Hospital</span>
+								<p>
+									<img src="../../img/cdoc/private/cdoc_locat.png"><span >New York </span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<div class="mui-table-view-cell mui-media m-hospitalpri-taocan" onclick="xq()"> 
+					<div class=" mui-col-xs-3 mui-pull-left m-hospitalpri-price" >
+						<img src="../../img/cdoc/private/cdochot.png" >
+						<span>$1999</span>
+					</div>
+					<div class="mui-media-body m-hospitalpri-taocan-name">
+						<div class="m-hospitalpri-taocan-na">
+							<span>Private doctor's package during pregnancy</span>
+						</div>
+						<div class="m-hospitalpri-taocan-pro">
+							<span >pregnancy | 390 days</span>
+						</div>
+						<div>
+							<span class="mui-pull-right">
+								<img src="../../img/cdoc/private/cdoc_users.png"/>1091</span>
+						</div>
+					</div>
+			</div>
+			<div class="mui-table-view-cell mui-media m-hospitalpri-taocan" onclick="xq()"> 
+					<div class=" mui-col-xs-3 mui-pull-left m-hospitalpri-price" >
+						<img src="../../img/cdoc/private/cdochot.png" >
+						<span>$1999</span>
+					</div>
+					<div class="mui-media-body m-hospitalpri-taocan-name">
+						<div class="m-hospitalpri-taocan-na">
+							<span>Private doctor's package during pregnancy</span>
+						</div>
+						<div class="m-hospitalpri-taocan-pro">
+							<span >pregnancy | 390 days</span>
+						</div>
+						<div>
+							<span class="mui-pull-right">
+								<img src="../../img/cdoc/private/cdoc_users.png"/>1091</span>
+						</div>
+					</div>
+			</div>
+			<p class="m-content-hospitalpri-more">other 7<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="doctorDet.html">
+						<img class="mui-media-object mui-pull-left m-hospitalpri-hospimg" src="../../img/cdoc/private/icon_1.png" style="width: 3.2rem;">
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>Dr. Mitesh Patel-MD</span>
+							</div>
+							<p class="cloud-addr">
+								pediatric  [New York]
+							</p>
+							<div>
+								<span >Massachusetts General Hospital</span>
+								<p>
+									<img src="../../img/cdoc/private/cdoc_locat.png"><span >New York </span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+			<div class="mui-table-view-cell mui-media m-hospitalpri-taocan" onclick="xq()"> 
+					<div class=" mui-col-xs-3 mui-pull-left m-hospitalpri-price" >
+						<img src="../../img/cdoc/private/cdochot.png" >
+						<span>$1999</span>
+					</div>
+					<div class="mui-media-body m-hospitalpri-taocan-name">
+						<div class="m-hospitalpri-taocan-na">
+							<span>Private doctor's package during pregnancy</span>
+						</div>
+						<div class="m-hospitalpri-taocan-pro">
+							<span >pregnancy | 390 days</span>
+						</div>
+						<div>
+							<span class="mui-pull-right">
+								<img src="../../img/cdoc/private/cdoc_users.png"/>1091</span>
+						</div>
+					</div>
+			</div>
+			<div class="mui-table-view-cell mui-media m-hospitalpri-taocan" onclick="xq()"> 
+					<div class=" mui-col-xs-3 mui-pull-left m-hospitalpri-price" >
+						<img src="../../img/cdoc/private/cdochot.png" >
+						<span>$1999</span>
+					</div>
+					<div class="mui-media-body m-hospitalpri-taocan-name">
+						<div class="m-hospitalpri-taocan-na">
+							<span>Private doctor's package during pregnancy</span>
+						</div>
+						<div class="m-hospitalpri-taocan-pro">
+							<span >pregnancy | 390 days</span>
+						</div>
+						<div>
+							<span class="mui-pull-right">
+								<img src="../../img/cdoc/private/cdoc_users.png"/>1091</span>
+						</div>
+					</div>
+			</div>
+			<p class="m-content-hospitalpri-more">Other 7<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+	</div>
+<script>
+	window.onload=function(){
+		if(window.localStorage && window.localStorage.getItem("regionName")!=null){
+			document.getElementById("al").innerHTML=window.localStorage.getItem("regionName");
+		}
+	  	/*alert(window.localStorage.getItem("regionName"));*/
+  	}
+	function xq(){
+		window.location.href="listDe.html";
+	}
+	function switchMenu(){
+				window.location.href="chooseState.html"
+			}
+	function switchTaocan(){
+		window.location.href='chooseSpecialty.html'
+	}
+</script>
+</body>
+</html>

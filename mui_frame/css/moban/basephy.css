@@ -1,0 +1,249 @@
+/*基本定义*/
+p{margin-bottom: 0px;}
+/*体检列表*/
+	.m-header-gyypri{
+		text-align: center;font-size: 0.32rem;height:1.88rem;
+	}
+	.m-header-gyypri div{
+		display: inline-block;
+	}
+	.m-header-gyypri div p{
+		display: block;font-size: 0.32rem;color: #2B2B2B;margin-top: 0.15rem
+	}
+	.m-hospitalpri-taocan{
+		padding: 0.13rem;font-size: 0.4rem;line-height: 1.4;border-bottom: 1px solid #E1E1E1;padding-top: 0.37rem;
+	}
+	.m-hospitalpri-taocan .m-hospitalpri-price{
+		vertical-align: middle;text-align: center;margin-top: 0.4rem;
+	}
+	.m-hospitalpri-taocan .m-hospitalpri-price img{
+		position: absolute;width: 0.66rem;top: -0.6rem;left: -0.01rem;
+	}
+	.m-hospitalpri-taocan .m-hospitalpri-price span{
+		color: #2EAEDF;
+	}
+	.m-hospitalpri-taocan .m-hospitalpri-price span:last-child{
+		display:block;text-decoration: line-through;color: #888888;
+	}
+	.m-hospitalpri-taocan-name{
+		font-size:0.36rem;
+		color: #2B2B2B;
+		margin-top:0.1rem ;
+	}
+	.m-hospitalpri-taocan-name .m-hospitalpri-taocan-na{
+		margin-right: 0.2rem;
+		margin-bottom: 0.1rem;
+	}
+	.m-hospitalpri-taocan-name .m-hospitalpri-taocan-pro{
+		font-size: 0.26rem;
+		margin-bottom: 0.1rem;
+	}
+	.m-hospitalpri-taocan-name div:last-child span{
+		font-size:0.24rem;color: #888888;
+	}
+	.m-hospitalpri-taocan-name div:last-child span img{
+		width: 0.33rem;vertical-align: middle;
+	}
+	.m-content-hospitalpri .m-content-hospitalpri-more{
+		font-size: 0.32rem;line-height: 1.4;text-align: center;padding: 0.3rem 0rem;margin-bottom: 0rem;color: #2B2B2B;
+	}
+
+/*套餐详情*/
+.borderT{border-bottom:0.01rem solid #E1E1E1;}
+		.borderA{border:0.01rem solid #E1E1E1;}
+		
+		
+    	.private_num{font-size: 0.34rem;color: #2EAEDF;line-height: 1.4;padding-bottom: 0.48rem;margin-bottom: 0px;}
+    	.private_content{padding: 0.2rem 0.34rem 0.1rem 0.34rem;font-size: 0.34rem;line-height: 1.4;color: #2b2b2b;margin-bottom: 0px;font-weight: bold;}
+    	
+    	.private_range{line-height: 1.4;padding: 0.1rem 0rem 0.2rem 0.34rem;}
+    	.private_ran{font-size: 0.34rem;color: #888888;}
+    	.private_ran span{color: #2EAEDF;}
+    	.private_fee{padding-right: 0.34rem;display: inline-block;}
+    	.privte_fir{font-size: 0.38rem;color: #888888;text-decoration: line-through;}
+    	.private_feeUnit{
+    		font-size: 0.38rem;
+    	}
+    	.private_sec{font-size: 0.48rem;color: #f34258;}
+    	.private_sec span{font-size: 0.24rem;}
+    	.line{
+    		color: #E1E1E1;height: 0.01rem;background-color: #E1E1E1;margin: 0rem 0.21rem;
+    	}
+    	.block-mar{height: 0.26rem;background-color: #f7f9f8;}
+    	.detail-title{font-size: 0.34rem;color: #888888;margin:0.33rem 0rem 0.26rem 0.37rem ;}
+    	.detail-title .datail-mass{
+    		margin-right: 0.33rem ;font-size: 0.34rem;line-height: 1.4;
+    	}
+    	.detail_image{height:0.4rem;padding-right: 0.14rem;vertical-align:text-bottom}
+    	.detail-comcon{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;line-height: 1.1;}
+    	.detail-comcon p{font-size: 0.37rem;color: #2B2B2B;line-height: 1.4;}
+    	.detail-comcon .blueco{color: #2EAEDF;}
+    	.detail-comcon1{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;}
+		.weiwen-qa-rq{color: #B3B3B3;line-height: 1.4;}
+		.weiwen-xq-p{color: #525755;font-size: 0.34rem;line-height: 1.4;margin-top:0.28rem ;}
+		.weiwen-xq-hf{color: #525755;font-size: 0.34rem;line-height: 1.4;background-color: #d4eff7;padding:0.22rem 0.2rem ;margin-top: 0.26rem;}
+		.weiwen-xq-n{color: #d6d6d6;}
+		.weiwen-xq-m{color: #f34258;}
+		.sanjiao{
+			width: 0;
+		    height:0;
+		  	margin-left: 0.32rem;
+		    margin-top:0.13rem ;
+		    border-left: 0.14rem solid transparent;
+		    border-right: 0.14rem solid transparent;
+		    border-bottom: 0.16rem solid #D5EFF9;
+		}
+/*我的预约详情*/
+.order_addre{padding-bottom: 5px;}
+.order_addre .order_addre_tab{color: #c4c4c4;padding: 0.29rem 0.26rem 0.2rem 0.26rem;font-size:0.32rem  ;line-height: 1.2;margin-bottom: 0px;}
+.orderCon{background-color:#FFF ;margin: 0rem 0.22rem;border-left: 1px solid #E1E1E1;border-right: 1px solid #E1E1E1;border-top: 1px solid #E1E1E1;}
+.orderCon p{font-size: 0.36rem;color: #2B2B2B;line-height: 1.4;border-bottom: 1px solid #E1E1E1;padding: 0.4rem 0.26rem;}
+
+.orderCon .orderfee{color: #f34258;}
+.orderMode div{font-size: 0.35rem;color: #2B2B2B;text-indent: 0.26rem;line-height: 1.4;border-bottom: 1px solid #F7F9F8;margin: 0.26rem 0rem 0.26rem;height: 0.8rem;line-height: 1.33rem;padding: 0rem 0.26rem 0rem 0.4rem;}
+.prayName{font-size: 0.4rem;line-height: 1.2;}
+.prayMode{font-size: 0.24rem;line-height: 1.2;}
+/*我的订单*/
+.order_bass{padding-bottom: 5px;margin: 0rem 0.24rem;color: #FFF;}
+.order_bass .order_bass_title{font-size:0.35rem ;padding:0.68rem 0rem;border-bottom:1px solid #249bc9;line-height: 1.2;color: #FFF;text-align: center;}
+.orderbassCon{margin: 0.34rem 0rem;}
+.orderbassCon p{font-size: 0.35rem;color: #FFF;text-indent: 0.26rem;line-height: 1.4;border: 0rem;margin: 0rem;padding: 0rem;}
+.orderbassCon p span{margin-left: 0.4rem;}
+.order_addre{padding-bottom: 5px;margin: 0rem 0.24rem;}
+.order_addre .order_addre_tab{color: #888888;padding: 0.48rem 0rem 0.48rem 0.26rem;font-size:0.35rem ;line-height: 1.2;text-align: center;}
+.m-cumstomer-order{
+ 	background-color: #FFF;border:1px solid #E1E1E1 ;border-bottom: 0px;margin-bottom: 0.4rem;
+ }
+ .m-cumstomer-order div{
+ 	border-bottom: 1px solid rgba(0,0,0,.2);padding: 0.4rem 0rem;
+ }
+ .m-cumstomer-order div span{
+ 	display: inline-block;width:25%;
+ }
+ .m-cumstomer-order div input{
+ 	display: inline-block;width:72%;border: 0px;font-size: 0.34rem;line-height: 1.4;margin-bottom: 0px;
+ 	height: 60px;
+ }
+ .totle-money{
+ 	font-size:0.34rem ;
+ }
+ .totle-num{
+ 	font-size:0.52rem ;
+ }
+/*按钮控件*/
+.mui-bar-tab{height: 1.44rem;}
+.mui-bar-tab~.mui-content{padding-bottom: 1.44rem;}
+.mui-bar{box-shadow:0 0 0px}
+
+.weiwen-btn-div{
+	text-align: center;border: 0px;padding: 0.21rem 0.21rem;height: 1.44rem;
+}
+.weiwen-btn{
+	font-size: 0.42rem;
+	width: 100%;
+	padding: 0.2rem 0rem;
+	border: #47a1ec;
+	color: #FFFFFF;
+	height:1.06rem ;
+}
+.weiwen-btn-5{
+	width: 48%;
+}
+.weiwen-btn-10{
+	width: 98%;
+}
+.money-btn{
+ 	width: 3.22rem;display: inline-block;
+ }
+/*定义基本的样式*/
+.repdetail{
+	border-top: 1px solid #EEEEEE;
+	padding: 0.32rem 0rem;
+	font-size: 0.34rem;
+	line-height: 1.4;
+	
+}
+#reportList {
+	background-color: #e9edee;
+}
+#reportList li{
+	margin: 0px 10px;
+	background-color: #FFF;
+}
+.repdetail div{
+	font-size: 0.34rem;
+	line-height: 1.6;
+}
+.tiply{
+	margin:0.32rem 0rem;
+	font-size: 0.38rem;
+	line-height: 1.4;
+}
+/*重新定义项*/
+.mui-icon-forward:before{
+	font-size: 0.34rem;
+	color: #888888;
+}
+.mui-table-view:before{
+	background-color:#FFF;
+}
+.mui-table-view:after{
+	background-color:#FFF;
+}
+/*定义基本的颜色，字体等*/
+.shade{
+	color: #888888;
+}
+.blackcol{
+	color: #2b2b2b;
+}
+.redcol{
+	color: #f34258;
+}
+.cancelcol{
+	color:#C7C7C7;
+}
+.orangecol{
+	color: #ff7733;
+}
+.blueco{
+	color: #2EAEDF;
+}
+.greencol{
+	color: #04be5b;
+}
+.weiwen-btn-bcblue{
+	background-color: #2eaedf;
+}
+.weiwen-btn-bcred{
+	background-color: #ff5f5a;
+}
+.weiwen-btn-bcshade{
+	background-color: #B3B3B3;
+}
+}
+
+/* 组件修改 */
+.mui-toast-container {
+  position: fixed;
+  bottom: 1.44rem;
+  z-index: 9999;
+  width: 100%;
+}
+.mui-toast-message{
+	font-size: 0.36rem;
+	width: 4.4rem;
+	margin: 0.2rem auto;
+	padding: 0.2rem;
+}
+ /*icon大小*/
+.mui-bar .mui-icon{
+	font-size: 0.42rem;
+}
+.mui-bar{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.mui-icon{
+	font-size: 0.42rem;
+}	

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购买私人医生</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/cdoc/physical.css" rel="stylesheet" />
+    <link href="../../css/cdoc/assist_physical.css" rel="stylesheet" />
+    <script>
+		var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	</script>
+	 <style>
+		.mui-table-view .mui-media-object.mui-pull-left{
+			margin-right: 0.37rem;
+		}
+    	.m-content-hospitalpri{
+    		margin: 0rem;
+    	}
+    	.mui-content>.mui-table-view:first-child{
+    		margin-top: 0rem;
+    	}
+  
+	 
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<form>
+			<div class="c_doctorDe_bmbaseinfor">
+				<p><span>信用卡号</span></p>
+				<p>
+					2351 1546 1646 542
+				</p>
+			</div>
+			<div class="c_doctorDe_bmbaseinfor">
+				<p><span>安全码</span></p>
+				<p>
+					<input placeholder="请输入安全码" />
+				</p>
+			</div>	
+		</form>
+		
+		<div class="c_button_basestyle" style="margin-top: 1.04rem;">
+			<button class="c_button_basefull c_background_blue"  onclick="ab()">Pay now</button>
+		</div>
+		
+		
+	</div>
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+	
+</script>	
+</body>
+</html>

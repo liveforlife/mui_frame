@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购买私人医生</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/cdoc/physical.css" rel="stylesheet" />
+    <link href="../../css/cdoc/assist_physical.css" rel="stylesheet" />
+    <script>
+		var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	</script>
+	 <style>
+    	.mui-bar-tab~.mui-content{
+			padding-bottom:1.34rem
+		}
+		.mui-table-view .mui-media-object.mui-pull-left{
+			margin-right: 0.37rem;
+		}
+    	.m-content-hospitalpri{
+    		margin: 0rem;
+    	}
+    	.mui-content>.mui-table-view:first-child{
+    		margin-top: 0rem;
+    	}
+    	
+	 
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="c_button_basestyle">
+			<button class="c_button_basefull c_background_shade"  onclick="ab()">Pay now</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<li class="mui-table-view-cell mui-media">
+				<div class="row">
+					<a href="doctorDet.html">
+						<img class="mui-media-object mui-pull-left m-hospitalpri-hospimg" src="../../img/cdoc/private/icon_1.png" >
+						<div class="mui-media-body m-hospitalpri-content" >
+							<div>
+								<span>Dr. Mitesh Patel-MD</span>
+							</div>
+							<p class="cloud-addr">
+								pediatric  [New York]
+							</p>
+							<div>
+								<span >Massachusetts General Hospital</span>
+								<p>
+									<img src="../../img/cdoc/private/cdoc_locat.png" ><span >New York </span>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Contract name</span></p>
+			<p>
+				Private doctor's package during pregnancy
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Service period</span></p>
+			<p>
+				390 days
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Price</span></p>
+			<p>
+				$2880.00
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Payment</span></p>
+			<p onclick="li()">
+				<img src="../../img/cdoc/private/cdoc_credict.png"  style="vertical-align:middle;margin-right: 0.50rem;width: 0.85rem;"/>
+				请选择信用卡
+				<span class="mui-icon mui-icon-arrowright mui-pull-right" style="color: #001133;font-size: 0.42rem;"></span>
+			</p>
+		</div>
+		<div id="male" class="c_doctorDe_bmbaseinfor">
+			<p >
+				<input type="radio" id="sex_male" checked="checked" name="sex" value="male">
+				<label name="sex_male"  for="" style="width: 0.47rem;height: 0.47rem;"></label>
+				I agree to the
+				<span class="c_font_blue">Terms of service</span>
+			</p>
+			<p style="background-color: #f7f9f8;">
+			</p>
+		</div>
+		
+	</div>
+<script src="../../js/mui.min.js"></script>
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+	function ab(){
+		window.location.href="orderDe.html";
+	}
+	function li(){
+		window.location.href="chooseCredit.html"
+	}
+	window.onload = function() 
+	 {
+	  labels = document.getElementById('male').getElementsByTagName('label');
+	  radios = document.getElementById('male').getElementsByTagName('input');
+	  for(i=0,j=labels.length ; i<j ; i++)
+	  {
+	   labels[i].onclick=function() 
+	   {
+	    if(this.className == '') {
+	     for(k=0,l=labels.length ; k<l ; k++)
+	     {
+	      labels[k].className='';
+		  radios[k].checked = false;
+	     }
+	     this.className='checked';
+		 try{
+		 	document.getElementById(this.name).checked = true;
+		 } catch (e) {}
+	    }
+	   }
+	  }
+	 }
+</script>	
+</body>
+</html>

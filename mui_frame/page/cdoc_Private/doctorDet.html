@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Doctor Profile</title>
+	<link rel="stylesheet" href="../../css/mui.min.css">
+	<link rel="stylesheet" href="../../css/cdoc/physical.css" />
+	<script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+	    body{
+	    	background-color: #f7f9f8;
+	    }
+	    .mui-bar-tab~.mui-content{
+			padding-bottom:1.34rem
+		}
+	    .mui-btn, button, input[type=button], input[type=reset], input[type=submit]{
+	    	border: 0px;
+	    }
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab " id="footer">
+		<div class="c_button_basestyle">
+			<button class="c_button_basefull c_background_blue"  onclick="ab()">Sign up</button>
+			<!--<button class="c_button_basehalf c_background_red"  onclick="ab()">Delete</button>
+			<button class="c_button_basehalf c_background_blue mui-pull-right"  onclick="ab()">Pay now</button>-->
+		</div>
+	</footer>
+	<div class="mui-content">
+		<!--doctor detail-->
+		<div class="c_doctorDe_basemass">
+			<div class="c_doctorDe_bsimage">
+				<img src="../../img/cdoc/private/icon_1.png"/>
+			</div>
+			<p class="c_doctorDe_bmname" >Dr. Mitesh Patel-MD</p>
+			<p class="c_doctorDe_bmdepartment" >pediatrics</p>
+			<p class="c_doctorDe_bmhospital">Massachusetts General Hospital</p>
+			<p class="c_doctorDe_bmstar">
+				<img src="../../img/cdoc/private/cdoc_BBstar.png" />
+				<img src="../../img/cdoc/private/cdoc_BBstar.png" />
+				<img src="../../img/cdoc/private/cdoc_BBstar.png" />
+				<img src="../../img/cdoc/private/cdoc_BEstar.png" />
+				<img src="../../img/cdoc/private/cdoc_BEstar.png" />
+			</p>
+			<p class="c_doctorDe_bmadress">490 2nd St, Suite 300 San Francisco,CA 94107</p>
+			<p class="c_doctorDe_bmlanguage" style="margin-bottom: 0rem;"><span>Chinses</span>&nbsp;<span>English</span></p>
+		</div>
+		<div class="c_doctordDe_baselabel">
+			<div >
+				<p>$15</p>
+				<p>Within 15/m</p>
+			</div>
+			<div>
+				<p><img src="../../img/cdoc/private/cdoc_timer.png" style="width: 0.42rem;vertical-align: middle;"></p>
+				<p>Beyond</p>
+			</div>
+			<div>
+				<p>$13.0</p>
+				<p>minute</p>
+			</div>
+		</div>
+		<div class="c_doctorDe_bmoperation">
+			<button>consult</button>
+		</div>
+		<div class="c_doctorDe_bmbasepackage">
+			<p><span>套餐</span></p>
+			<p class="packname">
+				Private doctor's package during pregnancy
+			</p>
+			<p><span>Free consultations:</span><span>124</span></p>
+			<p><span>Due time:</span><span>2016-3-20</span><span class="mui-icon mui-icon-arrowright mui-pull-right"></span></p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Profile</span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Specialty</span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinfor">
+			<p><span>Education</span></p>
+			<p>
+				In the year of clinical work has accumulated rich clinical experience,especially good at using minimally invasive techniques combined with traditional texhniques 
+			</p>
+		</div>
+		<div class="c_doctorDe_bmbaseinforval ">
+			<p class="c_doctorDe_bmtitle"><span>Comment</span><span class="mui-pull-right">(13)</span></p>
+			<div class="c_doctorDe_bmevaluate">
+					<p>
+						<span>01.26.2016</span>
+						<span>by Marta J.</span>
+						<span class="mui-pull-right">
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LEstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LEstar.png" />
+						</span>
+					</p>
+					<p>
+						Think great thoughts and you will be great.
+					</p>
+			</div>
+			<div class="c_doctorDe_bmevaluate">
+					<p>
+						<span>01.26.2016</span>
+						<span>by Marta J.</span>
+						<span class="mui-pull-right">
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LBstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LEstar.png" />
+							<img src="../../img/cdoc/private/cdoc_LEstar.png" />
+						</span>
+					</p>
+					<p>
+						Think great thoughts and you will be great.
+					</p>
+			</div>
+		</div>
+	</div>
+<script src="../../js/mui.min.js"></script>
+<script>
+	function li(){
+		window.location.href='order.html'
+	}
+</script>
+</body>
+</html>

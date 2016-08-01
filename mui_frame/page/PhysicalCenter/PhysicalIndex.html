@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../css/moban/physical.css" rel="stylesheet"/>
+    <style>
+    .mui-table-view.mui-grid-view .mui-table-view-cell>a:not(.mui-btn){
+    	
+    }
+    #list a{
+		display: inline-block;padding: 0px 20px;text-align: center; 
+	}
+		
+		
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<!--功能-->
+		<div class="m-arrange-icon-Onetwo">
+			<ul class="mui-table-view mui-grid-view" >
+			    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+			        <a href="list2.html" >
+			            <img class="mui-media-object " src="../../img/Physical/ys.png" >
+			            <div  >
+			            	<p class="m-font-title">预约体检</p>
+			            	<p class="m-font-content">预约体检套餐</p>
+			            </div></a>
+			    </li>
+			    <li class="mui-col-xs-6 mui-pull-right">
+			    	<div>
+				        <a href="myPhysical.html">
+				            <img class="mui-media-object " src="../../img/health/lifeHabit.png" >
+				           <div>
+				            	<p class="m-font-title">我的预约</p>
+					            <p class="m-font-content">预约记录</p>
+				            </div> 
+				        </a>
+			    	</div>
+			    	<div>
+				        <a href="<%=basePath%>/webapi/searchPhar">
+				            <img class="mui-media-object " src="../../img/health/lifeHabit.png" >
+				           <div>
+				            	<p class="m-font-title">报告查询</p>
+					            <p class="m-font-content">手机查报告</p>
+				            </div> 
+				        </a>
+			    	</div>
+			    </li>
+			</ul> 		
+		</div>
+		<div class="line"></div>
+		<!--推荐医生-->
+		<div class="m-arrage-recommend">
+			<p>
+				<span ><img src="../../img/message.png"/>推荐医生</span>	
+			</p>
+			
+		</div>
+		<div class="m-arrange-recomDoc" >
+				<div class="m-arrange-Doc" id="list" >
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+					<a class="mui-col-xs-3">
+						<div class="pdiv">
+							<img class="t-img" src="../../img/touxiang.png" >
+							<span>
+								<img src="../../img/icon_online.png" />
+							</span>
+						</div>
+						<p>付医生</p>
+						<p>副主任医生</p>
+					</a>
+				</div>
+			</div>
+		
+		<!--广告-->
+		<div id="slider" class="mui-slider" >
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="../../img/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 第一张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../img/shuijiao.jpg">
+					</a>
+				</div>
+				<!-- 第二张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../img/muwu.jpg">
+					</a>
+				</div>
+				<!-- 第三张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../img/cbd.jpg">
+					</a>
+				</div>
+				<!-- 第四张 -->
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="../../img/yuantiao.jpg">
+					</a>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				<div class="mui-slider-item mui-slider-item-duplicate">
+					<a href="#">
+						<img src="../../img/shuijiao.jpg">
+					</a>
+				</div>
+			</div>
+			<div class="mui-slider-indicator">
+				<div class="mui-indicator mui-active"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+		<!--活动-->
+		<div>
+			<div>
+				<ul  class="mui-table-view m-content-hospitalpri m-content-hospitalpriNO">	 
+					<p class="m-content-hostitle">
+						<img src="../../img/message.png"/>体检活动
+						<!--<span class="mui-pull-right" onclick="abi()">更多
+							<span class="mui-icon mui-icon-arrowright"></span>
+						</span>-->
+					</p>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<ul  class="mui-table-view m-content-hospitalpri">	 
+					<p class="m-content-hostitle">
+						<img src="../../img/message.png"/>附近体检
+						<!--<span class="mui-pull-right">更多
+							<span class="mui-icon mui-icon-arrowright"></span>
+						</span>-->
+					</p>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<div class="row">
+							<a href="cloud_details.html">
+								<img class="mui-media-object mui-pull-left mui-col-xs-4 m-hospitalpri-hospimg" src="../../img/cloud/logo(2).jpg" >
+								<div class="mui-media-body m-hospitalpri-content" >
+									<div>
+										<span>成都市青羊区第二人民医院</span>
+									</div>
+									<p class="cloud-addr">
+										台北市光复南路116巷1号
+									</p>
+									<div>
+										<span >三级甲等 126关注</span>
+										<span class="mui-pull-right">900米</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	function abc(){
+		window.location.href="xiangqing.html";
+	}
+	function abi(){
+		window.location.href='list2.html';
+	}
+	
+	document.getElementById("list").style.width=document.documentElement.clientWidth+'px';
+</script>
+</body>
+</html>

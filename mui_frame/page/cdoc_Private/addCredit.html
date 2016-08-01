@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+     <link rel="stylesheet" href="../../css/cdoc/physical.css" />
+   	<script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="c_credit_base c_credit_list c_credit_add">
+			<p onclick="ab()">
+				<img src="../../img/cdoc/private/cdoc_credict.png" />
+				<span>万事达信用卡</span>
+				<span class="mui-icon mui-icon-arrowright mui-pull-right"></span>
+			</p>
+			<form class="c_credit_form">
+				<div >
+					<label >姓名:</label>
+					<input type="text" placeholder="请输入持卡人的姓名" >
+				</div>
+				<div >
+					<label >卡号</label>
+					<input  type="text" placeholder="请输入信用卡卡号" >
+				</div>
+				<div >
+					<label style="margin-right: 0.08rem;">安全码:</label>
+					<input  type="text" placeholder="请输入安全码" >
+				</div>
+				<div >
+					<label >有效期:</label>
+					<input  type="text" placeholder="" >
+				</div>
+			</form>
+		</div>
+		<div class="c_credit_base c_button_basestyle" style="margin: 0.8rem 0.22rem;">
+			<button class="c_button_basefull c_background_blue" onclick="li()">绑定</button>
+		</div>
+	</div>
+	<script>
+		function ab(){
+			window.location.href='creditName.html';
+		}
+	</script>
+</body>
+</html>

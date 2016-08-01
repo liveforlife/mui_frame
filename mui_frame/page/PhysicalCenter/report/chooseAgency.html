@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../js/mui.min.js"></script>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../../css/moban/physical.css" rel="stylesheet" />
+    <script type="text/javascript" charset="UTF-8">
+      	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+    	.font-footer{
+    		padding:0rem 0rem 0.24rem 0.54rem;font-size:.36rem;line-height:1.2;;text-align: center;background-color: #efeff4;
+    	}
+    	.font-footer p{
+    		font-size:.36rem;line-height:1.2;
+    	}
+    	.mui-bar-tab~.mui-content{
+    		padding-bottom: 2.12rem;
+    	}
+    	.mui-bar{
+    		box-shadow:0 0 0px;
+    	}
+    </style>
+</head>
+<body>
+	<div class="mui-bar mui-bar-tab font-footer" id="footer"  >
+		<p class="c_choose_cmcontentPrompt c_credit_baseTop">温馨提示</p>
+		<p class="c_choose_cmcontentPrompt" style="text-align: left;">如果您进行体检的机构没有出现在列表中，那么您就不需要在这里查询，报告完成后会自动推送给您.</p>
+	</div>
+	<div class="mui-content">
+		<div class="c_choose_commonlist c_credit_base" style="text-align: center;">
+			<p class="c_choose_cmconwwwAgency" onclick="li()">美年大健康体检中心</p>
+			<p class="c_choose_cmconwwwAgency">爱康国宾健康体检中心</p>
+			<p class="c_choose_cmconwwwAgency">瑞慈健康体检全国连锁机构</p>
+			<p class="c_choose_cmconwwwAgency">瑞慈健康体检全国连锁机构</p>
+			<p class="c_choose_cmconwwwAgency">瑞慈健康体检全国连锁机构</p>
+			<p class="c_choose_cmconwwwAgency">瑞慈健康体检全国连锁机构</p>
+			<p class="c_choose_cmconwwwAgency">瑞慈健康体检全国连锁机构</p>
+			
+		</div>
+	</div>
+	
+<script>
+	function li(){
+		window.location.href='importID.html'
+	}
+</script>
+</body>
+</html>

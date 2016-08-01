@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Choose State</title>
+	<link rel="stylesheet" href="../../css/mui.min.css">
+	<link rel="stylesheet" href="../../css/cdoc/physical.css" />
+    <script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="c_choose_commonlist">
+			<p class="c_choose_cmcontent">Not Filiter</p>
+			<p class="c_choose_cmlineM"></p>
+			<p class="c_choose_cmcontentB" onclick="abc()">Alabama</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">Alaska</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">American Samoa</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">Arizona</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">Arkansas</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">California</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">Colorado</p>
+			<p class="c_choose_cmlineL"></p>
+			<p class="c_choose_cmcontentB">Connecticut</p>
+		</div>
+	</div>
+<script src="../../js/mui.min.js"></script>	
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+  	function abc(){
+  		window.location.href="chooseCity.html"
+  	}
+  	window.onload=function(){
+		var a;
+	  	a=document.getElementsByClassName('c_choose_cmcontentB');
+	  	for(var i=0;i<a.length;i++){
+		  	a[i].addEventListener('click',function(){
+		  		window.location.href='chooseCity.html';
+		  	})
+	  	}
+	  	console.log(a[1]);
+  	}
+</script>	
+</body>
+</html>

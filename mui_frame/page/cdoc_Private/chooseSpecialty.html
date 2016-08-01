@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Choose State</title>
+	<link rel="stylesheet" href="../../css/mui.min.css">
+	<link rel="stylesheet" href="../../css/cdoc/physical.css" />
+    <script>
+    	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+    	li{
+    		list-style-type: none;
+    	}
+    </style>
+</head>
+</head>
+<body>
+	<div class="mui-content">
+		<div class="c_choose_commonlist">
+			<p class="c_choose_cmcontent" >Not Filiter</p>
+			<p class="c_choose_cmlineM"></p>
+			<li class="c_choose_cmcontentB" title="A Department" value=''>A Department</li>
+			<li class="c_choose_cmcontentB" title="B Department">B Department listly by for lisr</li>
+			<li class="c_choose_cmcontentB" title="C Department">C Department</li>
+			<li class="c_choose_cmcontentB" title="D Department">D Department</li>
+			<li class="c_choose_cmcontentB" title="E Department">E Department</li>
+			<li class="c_choose_cmcontentB" title="F Department">F Department</li>
+		</div>
+	</div>
+<script src="../../js/mui.min.js"></script>	
+<script type="text/javascript" charset="UTF-8">
+  	mui.init();
+  	window.onload=function(){
+		var a;
+		var regionName;
+	  	a=document.getElementsByClassName('c_choose_cmcontentB');
+	  	for(var i=0;i<a.length;i++){
+		  	a[i].addEventListener('click',function(e){
+		  		console.log(e);
+		  		regionName=e.srcElement.childNodes[0].nodeValue;
+		  		if(window.localStorage){
+					window.localStorage.setItem("regionName",regionName);
+				}
+		  		window.location.href='list.html';
+		  	})
+	  	}
+	  	/*alert(window.localStorage.getItem("regionName"));*/
+  	}
+</script>		
+</body>
+</html>

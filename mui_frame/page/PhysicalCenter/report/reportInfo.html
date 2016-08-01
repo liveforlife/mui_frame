@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../../../js/mui.min.js"></script>
+    <link href="../../../css/mui.min.css" rel="stylesheet"/>
+    <link href="../../../css/moban/physical.css" rel="stylesheet" />
+    <script type="text/javascript" charset="UTF-8">
+      	var scale = 1 / devicePixelRatio;
+	    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+		document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+    <style>
+	    .mui-bar-tab~.mui-content{
+	    	padding-bottom: 1.34rem;
+	    }
+    	table tr{
+    		margin-bottom: 0.2rem;
+    		height: 0.7rem;
+    		border-bottom: 2px solid #E5E5E5
+    	}
+    	
+    	table tr td{
+    		text-align: center;
+    		padding: 0.22rem 0rem;
+    	}
+    	.m_model_blueblock{
+    		width: 0.1rem;background-color: #66ccff;height: 0.4rem;display: inline-block;border-radius:5px;vertical-align: middle;
+    	}
+    	.m_model_table{
+    		background-color: #FFF;margin-bottom:0.22rem
+    	}
+    	.m_model_table p{
+    		font-size: 0.36rem;line-height: 1.2;padding: 0.38rem 0.22rem;color: #000;
+    	}
+    	.summaryTable{
+    		font-size: 0.36rem;line-height: 1.4;width: 100%;border-collapse: collapse;border-top:0.02rem solid #E1E1E1 ;
+    	}
+    	.summaryTable thead{
+    		background-color:#b1dae9 ;color: #4a5555;
+    	}
+    	.summaryTable tbody{
+    		color: #4a5555;
+    	}
+    	.summaryTable td:first-child{
+    		padding-left:0.22rem;
+    		width: 33%;
+    		text-align: left;
+    	}
+    	.summaryTabletrtr td:last-child{
+    		padding-right:0.22rem;
+    		text-align:right;
+    	}
+    	.nodulesTable{
+    		font-size: 0.36rem;line-height: 1.4;width: 100%;
+    	}
+    	.nodulesTable thead{
+    		background-color:#b1dae9 ;color: #4a5555;
+    	}
+    	.nodulesTable tbody{
+    		color: #4a5555;
+    	}
+    	.nodulesTable tr td:first-child{
+    		padding-left:0.22rem;
+    		width: 33%;
+    		text-align: left;
+    	}
+    	.nodulesTable tr td:last-child{
+    		padding-right:0.22rem;
+    		width: 22%;
+    		text-align:right;
+    	}
+    	.c_background_red {
+			background-color: #ff5f5a;
+		}
+    </style>
+</head>
+<body>
+	<footer class="mui-bar mui-bar-tab">
+		<div class="c_button_basestyle">
+			<button class="c_button_basefull c_background_wblue">咨询医生</button>
+		</div>
+	</footer>
+	<div class="mui-content">
+		<div class="m_model_table">
+			<p>
+				<span class="m_model_blueblock c_background_red"></span>
+				<span>
+					总结
+				</span>
+			</p>
+			<table class="summaryTable">
+				<thead>
+					<tr>
+						<td>检查项目</td>
+						<td>结果</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>一般检查</td>
+						<td>血压:142/104mmHg<br/>脉搏:50 次/分<br/> 左眼裸视力:0.3<br/> 右眼裸视力:0.3</td>
+					</tr>
+					<tr>
+						<td>内科检查</td>
+						<td>心律:频发早搏</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>外科检查</td>
+						<td>包皮:过长</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>心电图检查</td>
+						<td>频发室性早搏二联律</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="m_model_table">
+			<p>
+				<span class="m_model_blueblock"></span>
+				<span>
+					一般检查（1）
+				</span>
+				<span class="mui-pull-right">
+					医生：飞海口市
+				</span>
+			</p>
+			<table class="nodulesTable">
+				<thead>
+					<tr>
+						<td>检查项目</td>
+						<td>结果</td>
+						<td>正常值</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>身高</td>
+						<td>161</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>体重</td>
+						<td>62</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>体重指数(18.5-23.9)</td>
+						<td>23.90</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>理想体重(kg)</td>
+						<td>54.90</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>小结</td>
+						<td>体重指数:23.90<br/>血压:142/104mmHg<br/>脉搏:50 次/分<br/>左眼裸视力:0.3<br/>右眼裸视力:0.3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="m_model_table">
+			<p >
+				<span class="m_model_blueblock"></span>
+				<span>
+					膀胱输尿管超声
+				</span>
+				<span class="mui-pull-right">
+					医生：马新燕
+				</span>
+			</p>
+			<table class="nodulesTable">
+				<thead>
+					<tr>
+						<td>检查项目</td>
+						<td>结果</td>
+						<td>正常值</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>膀胱</td>
+						<td>膀胱充盈良好，壁光滑，延续性好，其内透声性良好，未见明显占位性病变。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>双侧输尿管</td>
+						<td>输尿管上段、膀胱壁间段无扩张。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>肝</td>
+						<td>肝脏大小、形态正常，包膜光整，肝内血管走行较清晰，光点分布尚均匀，其内未见明显异常光团。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>胆</td>
+						<td>胆囊大小、形态正常，囊壁光整，囊腔内透声好，胆总管无扩张。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>小结</td>
+						<td>体重指数:23.90<br/>血压:142/104mmHg<br/>脉搏:50 次/分<br/>左眼裸视力:0.3<br/>右眼裸视力:0.3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="m_model_table">
+			<p>
+				<span class="m_model_blueblock"></span>
+				<span>
+					膀胱输尿管超声
+				</span>
+				<span class="mui-pull-right">
+					医生：马新燕
+				</span>
+			</p>
+			<table class="nodulesTable">
+				<thead>
+					<tr>
+						<td>检查项目</td>
+						<td>结果</td>
+						<td>正常值</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>膀胱</td>
+						<td>膀胱充盈良好，壁光滑，延续性好，其内透声性良好，未见明显占位性病变。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>双侧输尿管</td>
+						<td>输尿管上段、膀胱壁间段无扩张。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>肝</td>
+						<td>肝脏大小、形态正常，包膜光整，肝内血管走行较清晰，光点分布尚均匀，其内未见明显异常光团。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>胆</td>
+						<td>胆囊大小、形态正常，囊壁光整，囊腔内透声好，胆总管无扩张。</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>小结</td>
+						<td>体重指数:23.90<br/>血压:142/104mmHg<br/>脉搏:50 次/分<br/>左眼裸视力:0.3<br/>右眼裸视力:0.3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="m_model_table">
+			<p>
+				<span class="m_model_blueblock"></span>
+				<span>
+					乙肝两对半
+				</span>
+				<span class="mui-pull-right">
+					医生：王斌瑶
+				</span>
+			</p>
+			<table class="nodulesTable">
+				<thead>
+					<tr>
+						<td>检查项目</td>
+						<td>结果</td>
+						<td>参考值</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>红细胞体积分布宽度-变异系数</td>
+						<td>12.3</td>
+						<td>0-14</td>
+					</tr>
+					<tr>
+						<td>血小板分布宽度</td>
+						<td>17.3</td>
+						<td>15.0-18.1</td>
+					</tr>
+					<tr>
+						<td>红细胞压积</td>
+						<td>48.6</td>
+						<td>38-50.8</td>
+					</tr>
+					<tr>
+						<td>血清甘油三酯</td>
+						<td>1.46</td>
+						<td>0.48-1.88</td>
+					</tr>
+					<tr>
+						<td>乙肝病毒表面抗原</td>
+						<td>阴性</td>
+						<td>阴性</td>
+					</tr>
+					<tr>
+						<td>乙肝病毒表面抗体</td>
+						<td>阴性</td>
+						<td>阴/阳</td>
+					</tr>
+					<tr>
+						<td>乙肝病毒e抗原</td>
+						<td>阴性</td>
+						<td>阴性</td>
+					</tr>
+					<tr>
+						<td>乙肝病毒e抗体</td>
+						<td>阴性</td>
+						<td>阴性</td>
+					</tr>
+					<tr>
+						<td>小结</td>
+						<td>体重指数:23.90<br/>血压:142/104mmHg<br/>脉搏:50 次/分<br/>左眼裸视力:0.3<br/>右眼裸视力:0.3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</body>
+</html>

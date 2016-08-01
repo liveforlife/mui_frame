@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>私人医生套餐</title>
+    <script src="../../js/mui.min.js"></script>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="UTF-8">
+      	mui.init();
+    </script>
+    <style>
+		body{background-color: #FFF;}
+		p{margin-bottom: 0px;}
+		.mui-bar-tab~.mui-content{padding-bottom: 1.06rem;}
+		.mui-bar{box-shadow:0 0 0px}
+    	.weiwen-btn-div{
+			text-align: center;margin-top: 5px;border: 0px;padding: 0rem 0.21rem;;
+		}
+		.weiwen-btn{
+			width: 100%;
+			 border: #47a1ec;
+			 height:1.06rem;
+			 color: #FFFFFF;
+			 font-size: 0.42rem
+		}
+		.weiwen-btn-bcred{
+			background-color: #2eaedf;
+		}
+		.borderT{border-bottom:0.01rem solid #E1E1E1;}
+		.borderA{border:0.01rem solid #E1E1E1;}
+		
+		.mui-content{background-color: #FFF;}
+	   	.mui-media-body{padding:0.48rem 0.48rem 0.4rem 0.48rem ;}
+    	.private_num{font-size: 0.34rem;color: #2EAEDF;line-height: 1.4;padding-bottom: 0.48rem;margin-bottom: 0px;}
+    	.private_content{padding: 0.2rem 0.34rem 0.1rem 0.34rem;font-size: 0.34rem;line-height: 1.4;color: #2b2b2b;margin-bottom: 0px;}
+    	.private_content p:first-child{
+    		font-size: 0.34rem;line-height: 1.4;color: #2B2B2B;
+    	}
+    	.private_content p:last-child{
+    		font-size: 0.34rem;line-height: 1.4;text-align: right;color: #FF7733;
+    	}
+    	.private_range{line-height: 1.4;padding: 0.1rem 0rem 0.2rem 0.34rem;}
+    	.private_ran{font-size: 0.37rem;color: #d2d2d2;}
+    	.private_ran span{color: #2B2B2B;}
+    	.private_fee{display: inline-block;float: right;padding-right: 0.34rem;}
+    	.privte_fir{font-size: 0.32rem;color: #d2d2d2;text-decoration: line-through;}
+    	.private_sec{font-size: 0.48rem;color: #f34258;}
+    	.private_sec span{font-size: 0.24rem;}
+    	.line{
+    		color: #E1E1E1;height: 0.01rem;background-color: #E1E1E1;margin: 0rem 0.21rem;
+    	}
+    	.block-mar{height: 0.26rem;background-color: #f7f9f8;}
+    	.detail-title{font-size: 0.34rem;color: #888888;margin:0.33rem 0rem 0.33rem 0.37rem ;}
+    	.detail-title .datail-mass{
+    		margin-right: 0.33rem ;font-size: 0.34rem;line-height: 1.4;
+    	}
+    	.detail_image{height:0.4rem;padding-right: 0.24rem;vertical-align:text-bottom}
+    	.detail-comcon{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;line-height: 1.1;}
+    	.detail-comcon p{font-size: 0.37rem;color: #2B2B2B;line-height: 1.4;}
+    	.detail-comcon1{font-size: 0.37rem;color: #2B2B2B;margin:0.33rem 0.33rem 0.33rem 0.37rem ;}
+		.weiwen-qa-rq{color: #B3B3B3;line-height: 1.4;}
+		.weiwen-xq-p{color: #525755;font-size: 0.34rem;line-height: 1.4;margin-top:0.28rem ;}
+		.weiwen-xq-hf{color: #525755;font-size: 0.34rem;line-height: 1.4;background-color: #d4eff7;padding:0.22rem 0.2rem ;margin-top: 0.26rem;}
+		.weiwen-xq-n{color: #d6d6d6;}
+		.weiwen-xq-m{color: #f34258;}
+		.sanjiao{
+			width: 0;
+		    height:0;
+		  	margin-left: 0.32rem;
+		    margin-top:0.13rem ;
+		    border-left: 0.14rem solid transparent;
+		    border-right: 0.14rem solid transparent;
+		    border-bottom: 0.16rem solid #D5EFF9;
+		}
+		
+		
+		
+		.m-content-hospitalpri{
+			padding: 0.13rem;margin: 0.2rem 0.13rem 0rem 0.13rem;
+		}
+		.m-content-hospitalpri .m-hospitalpri-hospimg {
+			line-height:1.50rem ;height: 1.50rem;max-width: 2.4rem;
+		}
+		.m-hospitalpri-content div:first-child{
+			font-size: 0.42rem;line-height: 1.4;color: #464646;
+		}
+		.m-hospitalpri-content p{
+			font-size: 0.32rem;line-height: 1.4;color: #2B2B2B;
+		}
+		.m-hospitalpri-content div:last-child{
+			font-size: 0.29rem;line-height: 1.4;color: #888888;
+		}
+		.m-hospitalpri-taocan{
+			padding: 0.13rem;font-size: 0.32rem;line-height: 1.4;border-bottom: 1px solid #E1E1E1;
+		}
+		.m-hospitalpri-taocan:after{
+			
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name span:first-child{
+			color: #2B2B2B;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name .nowprice{
+			color: #f34258;
+		}
+		.m-hospitalpri-taocan .m-hospitalpri-taocan-name .oldprice{
+			text-decoration: line-through;color: #d2d2d2;font-size: 0.24rem;
+		}
+		/*.m-hospitalpri-taocan .m-hospitalpri-taocan-name span:last-child{
+			border: 1px solid #ff2c04;color: #ff2c04;border-radius: 0.05rem;font-size: 0.24rem;padding: 0.02rem;
+		}*/
+		.m-hospitalpri-taocan div:last-child{
+			color: #888888;font-size: 0.26rem;line-height: 1.4;padding: 0.13rem 0rem;
+		}
+		.m-content-hospitalpri .m-content-hospitalpri-more{
+			font-size: 0.29rem;line-height: 1.4;text-align: center;padding: 0.13rem 0.13rem 0rem 0.13rem;margin-bottom: 0rem;
+		}
+		#grade{
+			font-size: 0.26rem;line-height: 1.4;color: #fabf00;
+		}
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+		<div>
+			<img class="mui-col-xs-12"  src="../../img/shuijiao.jpg" />
+		</div>
+		<div class="private_content">
+			<p>
+				成都美年大健康体检医院 （西门店）
+			</p>
+			<p>
+				4.8分 13人评价
+			</p>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA">
+			<p class="detail-title">
+				<img class="detail_image" src="../../img/private/detail_evaluate.png"/>机构简介
+			</p>
+			<div class="line"></div>
+			<div class="detail-comcon">
+				<p>
+					美年大健康产业(集团)股份有限公司始创于2004年,是中国预防性健康体检行业规模最大的服务提供商。集团以上海为全国总部,覆盖29个省、直辖市、自治区,辐
+				</p>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<p class="detail-title">
+				<img class="detail_image" src="../../img/private/detail_evaluate.png"/>基本信息
+			</p>
+			<div class="line"></div>
+			<div class="detail-comcon">
+				<p>
+					<span>营业时间：</span><span>9:00 ~ 17:00 周一至周五</span>   
+				</p>
+				<p>
+					<span>机构地址：</span><span>成都市营门口金沙路234号 </span>
+				</p>
+				<p>
+					<span>联系电话：</span><span>4000288099</span>
+				</p>
+			</div>
+		</div>
+		<div class="block-mar"></div>
+		<p class="detail-title"><img class="detail_image" src="../../img/private/detail_evaluate.png"/>推出套餐</p>
+		<ul  class="mui-table-view m-content-hospitalpri">	           	
+			<div class="m-hospitalpri-taocan" onclick="window.location.href='xiangqing.html'"> 
+				<div class="m-hospitalpri-taocan-name">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right">已售：45</span>
+				</div>
+			</div>
+			<div class="m-hospitalpri-taocan">
+				<div class="m-hospitalpri-taocan-name" onclick="window.location.href='xiangqing.html'">
+					<span>孕期私人医生套餐</span>
+					<span class="nowprice">￥1999</span>
+					<span class="oldprice">￥4534</span>
+				</div>
+				<div>
+					<span >[孕期]  290天  3次上门</span><span class="mui-pull-right">已售：45</span>
+				</div>
+			</div>
+			<p class="m-content-hospitalpri-more">其它31个套餐<span class="mui-icon mui-icon-arrowdown"></span></p>
+		</ul>
+		<div class="block-mar"></div>
+		<div class="borderA" >
+			<p class="detail-title"><img class="detail_image" src="../../img/private/detail_evaluate.png"/>
+				服务评价
+				<span class="mui-text-center">
+	                <img id="xx_1" src="../../img/starColor.png" width="25px"/>
+					<img id="xx_2" src="../../img/starColor.png" width="25px"/>
+					<img id="xx_3" src="../../img/starColor.png" width="25px"/>
+					<img id="xx_4" src="../../img/starColor.png" width="25px"/>
+					<img id="xx_5" src="../../img/starShade.png" width="25px"/>
+					<span id="grade">4.8</span>
+				</span>
+				<span class="mui-pull-right datail-mass">
+					13人评价
+				</span>
+			</p>
+			<div class="line"></div>
+			<div class="detail-comcon"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+					<div >
+						<span class="sanjiao"></span>
+						<p class="weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+					</div>
+				</div>	
+			</div>
+			<div class="line"></div>
+			<div class="detail-comcon1"> 
+				<div class="weiwen-xq-pj">
+					<div class="row " >
+						<div class="weiwen-qa-rq">
+							<span>2015-5-26</span>
+							<span>17.47</span>
+							<span class="mui-pull-right weiwen-xq-nm">
+								<span class="weiwen-xq-n">匿名</span>
+								<span class="weiwen-xq-m">4.8</span>
+							</span>
+						</div>
+					</div>
+					<div class="row">
+						<p class="weiwen-xq-p">用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评论用户评</p>
+					</div>
+					<div >
+						<span class="sanjiao"></span>
+						<p class="weiwen-xq-hf">医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复医生答复</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+<script>
+	var scale = 1 / devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+	document.addEventListener()
+	function ab(){
+		window.location.href='doclist.html'
+	}
+</script>
+</body>
+
+</html>
